@@ -1,0 +1,1513 @@
+
+[
+  {
+    "id": 1,
+    "nome": "Crepioca Clássica",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "1 ovo inteiro\n1 a 2 colheres de sopa de goma de tapioca\nOpcional para recheio: 1 fatia de queijo branco ou 2 colheres de sopa de frango\ndesfiado.",
+    "preparo": "Misture bem o ovo e a tapioca com um garfo. Despeje na frigideira quente, doure de um lado, vire, adicione o recheio se quiser e feche ao meio.",
+    "calorias": 235.0,
+    "proteinas": 18.0,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 2,
+    "nome": "Omelete de Claras com Espinafre e Ricota",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "2 ovos\n1 punhado de espinafre fresco picado\n1 colher de sopa de ricota ou queijo cottage\nSal e pimenta a gosto",
+    "preparo": "Bata os ovos, misture o espinafre e a ricota, tempere e despeje em uma frigideira antiaderente untada até dourar dos dois lados.",
+    "calorias": 192.0,
+    "proteinas": 14.0,
+    "carboidratos": 3.0
+  },
+  {
+    "id": 3,
+    "nome": "Muffins de Ovo com Legumes (Rende aprox. 4 muffins)",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "4 ovos inteiros\n1 xícara de legumes variados bem picados (brócolis, cenoura, tomate, cebola)\nSal e temperos a gosto",
+    "preparo": "Distribua os legumes picados em forminhas de silicone, bata os ovos com os temperos e despeje por cima. Asse no forno ou na airfryer a 180°C por cerca de 15 a 20 minutos.",
+    "calorias": 330.0,
+    "proteinas": 26.0,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 4,
+    "nome": "Panqueca Fit de Banana com Aveia",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "1 banana madura\n1 ovo inteiro\n2 colheres de sopa de aveia em flocos ou farelo de aveia\n1 pitada de canela em pó\nquantidade",
+    "preparo": "Amasse bem a banana, misture com o ovo, a aveia e a canela até virar uma massa homogênea. Coloque na frigideira em fogo baixo, espere firmar, vire e doure o outro lado.",
+    "calorias": 240.0,
+    "proteinas": 10.0,
+    "carboidratos": 32.0
+  },
+  {
+    "id": 5,
+    "nome": "Torrada Integral com Abacate e Ovo Cozido",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "1 ovo cozido\n1 fatia de pão 100% integral\n1/2 avocado (ou abacate pequeno)\nGotas de limão e sal a gosto",
+    "preparo": "Cozinhe o ovo na água por 7 a 9 minutos. Enquanto isso, amasse o abacate com limão e sal, passe no pão torrado e finalize com o ovo cozido fatiado por cima.",
+    "calorias": 250.0,
+    "proteinas": 10.0,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 6,
+    "nome": "Shakshuka Saudável (Porção individual)",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "2 ovos inteiros\n1 xícara de molho de tomate natural\n1/4 de cebola picada\n1 dente de alho picado\n1/4 de pimentão picado",
+    "preparo": "Refogue o alho, a cebola e o pimentão na frigideira. Junte o molho de tomate e espere esquentar. Faça dois espaços no molho, quebre os ovos ali dentro, tampe a frigideira e deixe cozinhar até o ponto desejado.",
+    "calorias": 195.0,
+    "proteinas": 13.0,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 7,
+    "nome": "Ovos Mexidos com Cúrcuma e Sementes",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "2 ovos inteiros\n1 pitada de cúrcuma (açafrão-da-terra) em pó\n1 colher de chá de sementes (chia ou linhaça)\nSal e pimenta-do-reino a gosto",
+    "preparo": "Quebre os ovos direto na frigideira em fogo baixo, adicione a cúrcuma e o sal, e mexa constantemente até ficarem cremosos. Desligue o fogo e jogue as sementes por cima.",
+    "calorias": 165.0,
+    "proteinas": 13.0,
+    "carboidratos": 3.0
+  },
+  {
+    "id": 8,
+    "nome": "Salada de Atum com Ovo Cozido",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "2 ovos cozidos picados\n1 lata de atum (em água, escorrido)\n2 colheres de sopa de iogurte natural desnatado\n1/4 de cebola roxa picada\n1/2 tomate picado\n1 porção de folhas verdes (alface, rúcula ou espinafre)",
+    "preparo": "Cozinhe os ovos, descasque e pique. Em uma tigela, misture bem o atum, o iogurte, a cebola e o tomate. Adicione os ovos picados e sirva por cima das folhas verdes.",
+    "calorias": 270.0,
+    "proteinas": 38.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 9,
+    "nome": "Pão de Queijo de Frigideira (Fit)",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "1 ovo inteiro\n1 colher de sopa de goma de tapioca\n1 colher de sopa de requeijão light ou iogurte natural\n1 colher de sopa de queijo ralado (parmesão ou minas padrão)",
+    "preparo": "Bata todos os ingredientes com um garfo até ficar liso. Despeje em uma frigideira pequena antiaderente em fogo baixo, tampe e deixe dourar. Vire para dourar o outro lado.",
+    "calorias": 220.0,
+    "proteinas": 12.0,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 10,
+    "nome": "Ovo \"Frito\" na Água",
+    "categoria": "Ovos e café da manhã",
+    "ingredientes": "1 ovo inteiro\n2 colheres de sopa de água\nSal e temperos a gosto",
+    "preparo": "Aqueça bem a frigideira antiaderente e quebre o ovo. Jogue a água nas bordas (sem cair em cima da gema) e tampe imediatamente para o vapor cozinhar o ovo. Tire quando a clara estiver branca.",
+    "calorias": 75.0,
+    "proteinas": 6.0,
+    "carboidratos": 0.5
+  },
+  {
+    "id": 11,
+    "nome": "Iscas de Frango Aceboladas",
+    "categoria": "Frango",
+    "ingredientes": "150g de peito de frango em tiras, 1/2 cebola em rodelas, 1 colher de\nchá de azeite, sal, alho e pimenta a gosto.",
+    "preparo": "Tempere o frango com alho, sal e pimenta. Grelhe no azeite em fogo alto até dourar. Adicione a cebola e mexa até que ela fique macia e dourada.",
+    "calorias": 205.0,
+    "proteinas": 35.0,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 12,
+    "nome": "Frango Cremoso com Ricota",
+    "categoria": "Frango",
+    "ingredientes": "150g de peito de frango cozido e desfiado, 2 colheres de sopa de\ncreme de ricota light, 1 colher de sopa de milho, salsinha picada a gosto.",
+    "preparo": "Em uma panela, misture o frango desfiado quente com o creme de ricota e o milho. Mexa bem até aquecer e finalize com a salsinha.",
+    "calorias": 230.0,
+    "proteinas": 37.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 13,
+    "nome": "Almôndegas de Frango Fit",
+    "categoria": "Frango",
+    "ingredientes": "200g de frango moído, 1/2 cebola picadinha, 1 dente de alho\namassado, aveia em flocos finos (o suficiente para dar liga, aprox. 2 colheres de\nsopa), sal e ervas a gosto.",
+    "preparo": "Misture todos os ingredientes com as mãos, molde em formato de bolinhas e asse na airfryer ou forno a 200°C por cerca de 15 a 20 minutos até dourar.",
+    "calorias": 270.0,
+    "proteinas": 46.0,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 14,
+    "nome": "Frango Grelhado com Crosta de Ervas",
+    "categoria": "Frango",
+    "ingredientes": "1 filé de peito de frango (aprox. 150g), 1 colher de chá de azeite, 1\ncolher de sopa de ervas secas (orégano, tomilho, alecrim), sal e limão a gosto.",
+    "preparo": "Tempere o frango com limão e sal. Passe o filé no prato com as ervas para grudar bem. Grelhe na frigideira com o azeite em fogo médio até cozinhar por dentro e dourar por fora.",
+    "calorias": 205.0,
+    "proteinas": 35.0,
+    "carboidratos": 1.0
+  },
+  {
+    "id": 15,
+    "nome": "Escondidinho de Frango com Batata Doce",
+    "categoria": "Frango",
+    "ingredientes": "100g de frango desfiado e temperado, 1 batata-doce média cozida e\namassada, 2 colheres de sopa de leite desnatado, 1 colher de sopa de queijo minas\npadrão ralado.",
+    "preparo": "Misture a batata-doce com o leite até virar um purê. Em um refratário pequeno, coloque o frango no fundo, cubra com o purê de batata-doce, salpique o queijo por cima e leve ao forno para gratinar.",
+    "calorias": 275.0,
+    "proteinas": 27.0,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 16,
+    "nome": "Cubos de Frango com Brócolis (Estilo Chinês)",
+    "categoria": "Frango",
+    "ingredientes": "150g de peito de frango em cubos, 1 xícara de brócolis em floretes, 1\ncolher de sopa de molho shoyu de coco ou shoyu com menos sódio, 1 colher de chá\nde óleo de gergelim.",
+    "preparo": "Grelhe o frango no óleo de gergelim até dourar. Adicione o brócolis e o shoyu, tampe a frigideira por 3 minutos para o brócolis cozinhar no vapor e sirva.",
+    "calorias": 200.0,
+    "proteinas": 36.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 17,
+    "nome": "Salpicão Fit de Frango",
+    "categoria": "Frango",
+    "ingredientes": "150g de frango desfiado, 1/2 cenoura ralada, 1/2 maçã picada, 2\ncolheres de sopa de iogurte natural desnatado, sal e cheiro-verde a gosto.",
+    "preparo": "Misture todos os ingredientes em uma tigela, ajuste o sal e leve à geladeira por 15 minutos antes de servir bem fresco.",
+    "calorias": 225.0,
+    "proteinas": 36.0,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 18,
+    "nome": "Wrap de Frango na Folha de Couve",
+    "categoria": "Frango",
+    "ingredientes": "1 folha grande de couve (sem o talo central grosso), 100g de frango\ndesfiado, 1/2 tomate picado, 1 colher de sopa de cottage.",
+    "preparo": "Misture o frango, o tomate e o cottage. Coloque o recheio no centro da folha de couve e enrole firme como se fosse um burrito. Se quiser, sele rapidamente na frigideira quente.",
+    "calorias": 145.0,
+    "proteinas": 26.0,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 19,
+    "nome": "Hambúrguer de Frango Caseiro",
+    "categoria": "Frango",
+    "ingredientes": "200g de frango moído, 1 colher de sopa de farelo de aveia, tempero\nbaiano, sal e cebolinha a gosto.",
+    "preparo": "Misture bem todos os ingredientes, molde no formato de hambúrguer e grelhe em uma frigideira antiaderente (ou na airfryer) virando na metade do tempo.",
+    "calorias": 255.0,
+    "proteinas": 45.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 20,
+    "nome": "Estrogonofe Fit de Frango",
+    "categoria": "Frango",
+    "ingredientes": "120g de frango em cubos, 3 colheres de sopa de molho de tomate\ncaseiro, 2 colheres de sopa de iogurte natural desnatado (ou creme de ricota), 1/4\nde xícara de cogumelos fatiados, sal e páprica a gosto, 150 g de arroz(de\npreferência integral).",
+    "preparo": "",
+    "calorias": 380.0,
+    "proteinas": 34.0,
+    "carboidratos": 38.0
+  },
+  {
+    "id": 21,
+    "nome": "Patinho em Cubos Acebolado",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de patinho cortado em cubos, 1/2 cebola cortada em pétalas, 1\ncolher de chá de azeite, sal, alho e pimenta-do-reino a gosto.",
+    "preparo": "Tempere a carne com alho, sal e pimenta. Aqueça o azeite em uma frigideira bem quente e doure os cubos de carne rapidamente para não ressecar. Adicione a cebola, mexa até que ela fique macia e sirva.",
+    "calorias": 280.0,
+    "proteinas": 42.0,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 22,
+    "nome": "Carne Moída com Vagem e Cenoura",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de patinho moído, 1/2 xícara de vagem picada, 1/2 cenoura\nralada, 1/4 de cebola picada, sal e colorau a gosto.",
+    "preparo": "Refogue a cebola em uma panela antiaderente, adicione a carne moída e os temperos e mexa até cozinhar. Acrescente a vagem e a cenoura, tampe a panela em fogo baixo por alguns minutos até os legumes ficarem al dente, pode adicionar arroz caso ache necessário.",
+    "calorias": 250.0,
+    "proteinas": 43.0,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 23,
+    "nome": "Almôndegas de Carne com Aveia",
+    "categoria": "Carne bovina",
+    "ingredientes": "200g de patinho moído, 2 colheres de sopa de farelo de aveia, 1\ndente de alho amassado, hortelã picada, sal e pimenta a gosto.",
+    "preparo": "Misture todos os ingredientes em uma tigela com as mãos até formar uma massa homogênea. Modele em formato de bolinhas e asse na airfryer ou forno a 200°C por cerca de 15 minutos.",
+    "calorias": 330.0,
+    "proteinas": 44.0,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 24,
+    "nome": "Carne Louca Fit (Desfiada)",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de acém ou músculo cozido na pressão e desfiado, 1/4 de\npimentão picado, 1/2 tomate picado, 1/4 de cebola picada, 3 colheres de sopa de\nmolho de tomate natural.",
+    "preparo": "Em uma panela, refogue a cebola, o pimentão e o tomate. Adicione a carne desfiada e o molho de tomate. Deixe apurar em fogo baixo por 5 minutos para pegar o sabor.",
+    "calorias": 280.0,
+    "proteinas": 40.0,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 25,
+    "nome": "Hambúrguer Caseiro de Patinho",
+    "categoria": "Carne bovina",
+    "ingredientes": "180g de patinho moído, 1 pitada de alho em pó, 1 pitada de cebola\nem pó, sal e pimenta-do-reino a gosto.",
+    "preparo": "Misture bem os temperos na carne e molde o formato de um hambúrguer grosso usando as mãos. Grelhe em uma frigideira antiaderente bem quente por cerca de 3 a 4 minutos de cada lado.",
+    "calorias": 325.0,
+    "proteinas": 50.0,
+    "carboidratos": 1.0
+  },
+  {
+    "id": 26,
+    "nome": "Charuto de Couve com Carne Moída",
+    "categoria": "Carne bovina",
+    "ingredientes": "2 folhas grandes de couve (sem o talo grosso), 120g de carne moída\njá refogada e temperada, 2 colheres de sopa de arroz integral cozido.",
+    "preparo": "Mergulhe as folhas de couve em água fervendo por 30 segundos para amolecer. Misture a carne moída com o arroz integral. Coloque o recheio no centro de cada folha, enrole bem fechando as pontas e aqueça antes de servir.",
+    "calorias": 260.0,
+    "proteinas": 33.0,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 27,
+    "nome": "Rolinho de Carne com Legumes",
+    "categoria": "Carne bovina",
+    "ingredientes": "2 bifes finos de patinho ou coxão mole (aprox. 140g no total), 1/2\ncenoura cortada em tiras finas, 1/2 pimentão cortado em tiras finas, sal e palitos de\ndente.",
+    "preparo": "Tempere os bifes com sal. Coloque algumas tiras de cenoura e pimentão no centro de cada bife, enrole a carne prendendo com palitos de dente. Grelhe os rolinhos na frigideira, virando de todos os lados até dourar.",
+    "calorias": 240.0,
+    "proteinas": 39.0,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 28,
+    "nome": "Carne Moída Cremosa com Abóbora",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de carne moída cozida e temperada, 1 xícara de abóbora\ncabotiá cozida e amassada (estilo purê), sal e tempero verde a gosto.",
+    "preparo": "Misture a carne moída quente diretamente com o purê de abóbora até incorporar bem. Finalize com tempero verde picado por cima.",
+    "calorias": 310.0,
+    "proteinas": 42.0,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 29,
+    "nome": "Picadinho de Carne com Quiabo (Sem Babar)",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de carne bovina em cubos pequenos, 1 xícara de quiabo\ncortado em rodelas, 1 colher de chá de vinagre, sal e alho a gosto.",
+    "preparo": "Grelhe a carne com alho e sal até dourar e reserve. Na mesma frigideira, coloque o quiabo com o vinagre (ajuda a tirar a baba) e refogue bem até dourar. Junte a carne guardada, misture e sirva.",
+    "calorias": 270.0,
+    "proteinas": 39.0,
+    "carboidratos": 7.0
+  },
+  {
+    "id": 30,
+    "nome": "Estrogonofe Fit de Carne",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de patinho em tiras, 3 colheres de sopa de molho de tomate\nnatural, 2 colheres de sopa de creme de ricota light, sal e páprica defumada a gosto.",
+    "preparo": "Sele as tiras de carne em uma frigideira bem quente. Adicione o molho de tomate e a páprica. Desligue o fogo, misture o creme de ricota light até ficar homogêneo e cremoso.",
+    "calorias": 275.0,
+    "proteinas": 40.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 31,
+    "nome": "Receita de Shawarma Saudável de Frango",
+    "categoria": "Diversos",
+    "ingredientes": "1 pão sírio/pita integral ou Rap10\n120g de filé de frango cortado em tiras (temperado com páprica, cominho,\nalho e limão)\nSal a gosto\nSalada fresca: alface picada, rodelas de tomate e cebola roxa\nMolho cremoso: 3 colheres de sopa de iogurte natural desnatado, 1 colher de\nchá de azeite, limão, alho ralado e hortelã picada\nReceita de Shawarma Saudável de Frango\n1 pão sírio/pita integral ou Rap10\n120g de filé de frango cortado em tiras (temperado com páprica, cominho,\nalho e limão)\nSal a gosto\nSalada fresca: alface picada, rodelas de tomate e cebola roxa\nMolho cremoso: 3 colheres de sopa de iogurte natural desnatado, 1 colher de\nchá de azeite, limão, alho ralado e hortelã picada",
+    "preparo": "",
+    "calorias": 330.0,
+    "proteinas": 33.0,
+    "carboidratos": 30.0
+  },
+  {
+    "id": 32,
+    "nome": "Fruit Bowl",
+    "categoria": "Diversos",
+    "ingredientes": "Banana, amora, maçã, kiwi, tangerina, abacate, mirtilo, pode\nadicionar outras frutas do seu desejo.",
+    "preparo": "Corte as frutas, após limpá-las, em pedaços pequenos, rodelas ou cubos, organize elas em um bowl se for do seu desejo ou apenas coloque-as em um pote. É uma receita simples e natural, riquíssima em vitaminas e fibras. Por que escolhemos essas receitas? São receitas fáceis de serem feitas, usando poucos ingredientes, geralmente baratos, e que tem alguma qualidade para quem quer continuar saudável, seja rico em fibras, fácil de comer ou gostoso e saudável.",
+    "calorias": 210.0,
+    "proteinas": 3.0,
+    "carboidratos": 45.0
+  },
+  {
+    "id": 33,
+    "nome": "Missoshiro Saudável (Sopa de Missô)",
+    "categoria": "Diversos",
+    "ingredientes": "2 colheres de sopa de pasta de missô (pasta de soja fermentada),\n500ml de água, 1/2 bloco de tofu firme cortado em cubos pequenos, 2 colheres de\nsopa de cebolinha picada, 1 pedaço pequeno de alga wakame desidratada\n(opcional).",
+    "preparo": "Em uma panela, aqueça a água e hidrate a alga wakame por alguns minutos. Adicione os cubos de tofu e deixe cozinhar em fogo baixo por 2 minutos. Desligue o fogo, retire uma concha da água quente para dissolver a pasta de missô em uma tigela separada e depois despeje de volta na panela (não ferva o missô para não perder as propriedades benéficas). Finalize com a cebolinha por cima e sirva quente.",
+    "calorias": 120.0,
+    "proteinas": 8.0,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 34,
+    "nome": "Sushi Fit de Salmão",
+    "categoria": "Diversos",
+    "ingredientes": "1 folha de alga nori, 1 xícara de arroz , 80g de salmão cru em tiras, 1\ncolher de sopa de creme de ricota light (opcional, para dar liga no arroz), 1/2 colher\nde chá de vinagre de arroz, sal a gosto.",
+    "preparo": "Misture o arroz já frio com o vinagre de arroz, uma pitada de sal e o creme de ricota para dar consistência. Coloque a folha de nori sobre uma esteira de sushi (sudare) com o lado brilhante para baixo. Espalhe o arroz sobre a alga, deixando uma borda de 2 cm livre no topo. Disponha as tiras de salmão no centro, enrole firmemente com a ajuda da esteira e use um pouco de água para selar a borda da alga. Corte em fatias com uma faca bem afiada e úmida",
+    "calorias": 380.0,
+    "proteinas": 20.0,
+    "carboidratos": 45.0
+  },
+  {
+    "id": 35,
+    "nome": "Gyudon",
+    "categoria": "Diversos",
+    "ingredientes": "150g de patinho cortado em fatias bem finas, 1/2 cebola cortada em\nfatias finas, 100ml de água, 2 colheres de sopa de molho shoyu com menos sódio, 1\ncolher de chá de adoçante culinário (ou mel), 1/2 colher de chá de gengibre ralado,\n1/2 xícara de arroz integral cozido, cebolinha picada a gosto.",
+    "preparo": "Em uma panela, coloque a água, o shoyu, o adoçante e o gengibre. Deixe ferver. Adicione a cebola e cozinhe em fogo médio até que fique macia. Junte as fatias de carne e cozinhe por apenas 2 a 3 minutos para que continuem macias. Monte o prato colocando o arroz integral no fundo de uma tigela, cubra com a carne, a cebola e o caldo da panela. Finalize com bastante cebolinha por cima.",
+    "calorias": 380.0,
+    "proteinas": 35.0,
+    "carboidratos": 32.0
+  },
+  {
+    "id": 36,
+    "nome": "Shake de Iogurte com Morango",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "1 banana congelada, 3 morangos, 120 g de iogurte natural\ndesnatado, 1 colher de sopa de semente de girassol.",
+    "preparo": "Bata tudo no liquidificador até virar um creme.",
+    "calorias": 200.0,
+    "proteinas": 8.0,
+    "carboidratos": 32.0
+  },
+  {
+    "id": 37,
+    "nome": "Shake de Frutas e Aveia",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "200 ml de leite desnatado ou vegetal, 1/2 xícara de aveia em flocos\nfinos, 8 morangos (ou meia banana), 1 pitada de canela, 1 colher de sobremesa de\nmel orgânico.",
+    "preparo": "Bata bem por 3 minutos até ficar cremoso.",
+    "calorias": 230.0,
+    "proteinas": 8.0,
+    "carboidratos": 42.0
+  },
+  {
+    "id": 38,
+    "nome": "Suco verde",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "1 folha de couve-manteiga, suco de 1 limão, 1 rodela fina de\ngengibre e 300 ml de água gelada.",
+    "preparo": "Bata tudo no liquidificador por 2 minutos e beba em seguida (sem coar e sem adoçar).",
+    "calorias": 25.0,
+    "proteinas": 1.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 39,
+    "nome": "Suco de melancia",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "3 xícaras de melancia picada em cubos (de preferência gelada e sem\nsementes)\nSuco de 1/2 limão (opcional, para realçar o sabor)\nFolhas de hortelã a gosto (opcional)\nPedras de gelo a gosto",
+    "preparo": "Bata tudo no liquidificador por 2 minutos e beba em seguida (sem coar e sem adoçar).",
+    "calorias": 140.0,
+    "proteinas": 2.0,
+    "carboidratos": 32.0
+  },
+  {
+    "id": 40,
+    "nome": "Mingau de Aveia Proteico",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "3 colheres (sopa) de aveia em flocos, 150ml de leite\ndesnatado, 1 scoop de whey protein.",
+    "preparo": "Cozinhe a aveia no leite até engrossar. Desligue o fogo e misture o whey protein.",
+    "calorias": 260.0,
+    "proteinas": 30.0,
+    "carboidratos": 25.0
+  },
+  {
+    "id": 41,
+    "nome": "Bolinho de caneca de maçã",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "1 ovo, 2 colheres (sopa) de farinha de aveia, meia maçã\npicada, 1 pitada de canela, 1 colher (café) de fermento.",
+    "preparo": "Misture tudo em uma caneca e leve ao micro-ondas por 2 minutos..",
+    "calorias": 170.0,
+    "proteinas": 8.0,
+    "carboidratos": 22.0
+  },
+  {
+    "id": 42,
+    "nome": "Shake de banana e pasta de amendoim",
+    "categoria": "Bebidas e café da manhã",
+    "ingredientes": "200ml de leite desnatado, 1 banana, 1 colher (sopa) de pasta\nde amendoim.",
+    "preparo": "Bata tudo no liquidificador VEGANOS:",
+    "calorias": 290.0,
+    "proteinas": 11.0,
+    "carboidratos": 37.0
+  },
+  {
+    "id": 43,
+    "nome": "Salada de Grão-de-Bico com Pimentão",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de grão-de-bico cozido, 1/2 pimentão vermelho em\ncubos, 1/2 cebola roxa picada, azeite, limão e sal.",
+    "preparo": "Misture todos os ingredientes em uma tigela e sirva frio.",
+    "calorias": 210.0,
+    "proteinas": null,
+    "carboidratos": 30.0
+  },
+  {
+    "id": 44,
+    "nome": "Hambúrguer de Lentilha",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de lentilha cozida e escorrida, 2 colheres (sopa) de\nfarinha de aveia, alho em pó, sal e pimenta.",
+    "preparo": "Amasse a lentilha com um garfo, misture a aveia e temperos, molde os hambúrgueres e grelhe na frigideira antiaderente.",
+    "calorias": 180.0,
+    "proteinas": null,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 45,
+    "nome": "Tofu Grelhado com Molho Shoyu",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "120g de tofu firme fatiado, 1 colher (sopa) de shoyu, 1 colher\n(café) de óleo de gergelim.",
+    "preparo": "Grelhe o tofu até dourar os dois lados e finalize regando com o shoyu e o óleo de gergelim.",
+    "calorias": 140.0,
+    "proteinas": null,
+    "carboidratos": 3.0
+  },
+  {
+    "id": 46,
+    "nome": "Curry de Grão-de-Bico com Leite de Coco",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de grão-de-bico cozido, 100ml de leite de coco light, 1\ncolher (chá) de curry em pó, tomate picado.",
+    "preparo": "Refogue o tomate com o curry, adicione o grão-de-bico e o leite de coco. Cozinhe em fogo baixo por 10 minutos.",
+    "calorias": 250.0,
+    "proteinas": null,
+    "carboidratos": 32.0
+  },
+  {
+    "id": 47,
+    "nome": "Macarrão de Abobrinha com Molho de Tomate",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 abobrinha grande fatiada em tiras finas, 1 xícara de molho de\ntomate caseiro, manjericão fresco.",
+    "preparo": "Refogue a abobrinha rapidamente por 2 minutos, cubra com o molho aquecido e finalize com manjericão.",
+    "calorias": 80.0,
+    "proteinas": null,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 48,
+    "nome": "Sopa de Ervilha Seca",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de ervilha seca, 1/2 cebola picada, 1 dente de alho, azeite\ne sal.",
+    "preparo": "Cozinhe a ervilha na panela de pressão com água por 15 minutos após pegar pressão. Bata tudo até virar um creme.",
+    "calorias": 180.0,
+    "proteinas": null,
+    "carboidratos": 30.0
+  },
+  {
+    "id": 49,
+    "nome": "Moqueca de Banana da Terra",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 banana da terra cortada em rodelas, 1/2 pimentão em tiras,\n100ml de leite de coco, azeite de dendê e coentro.",
+    "preparo": "Faça camadas com a banana e pimentão, regue com o leite de coco e dendê, e cozinhe com a panela tampada por 15 minutos.",
+    "calorias": 220.0,
+    "proteinas": null,
+    "carboidratos": 36.0
+  },
+  {
+    "id": 50,
+    "nome": "Quinoa Assada com Legumes",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1/2 xícara de quinoa cozida, 1/2 xícara de legumes em cubos\n(cenoura, abobrinha), azeite e ervas finas.",
+    "preparo": "Misture a quinoa com os legumes temperados e asse por 20 minutos a 180°C.",
+    "calorias": 190.0,
+    "proteinas": null,
+    "carboidratos": 30.0
+  },
+  {
+    "id": 51,
+    "nome": "Pasta de Grão-de-Bico (Homus)",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de grão-de-bico cozido, 1 colher (sopa) de tahine, suco\nde 1/2 limão, alho e azeite.",
+    "preparo": "Bata tudo no processador ou liquidificador até formar uma pasta homogênea.",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 52,
+    "nome": "Shimeji Salteado",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "150g de cogumelos shimeji, 1 colher (sopa) de shoyu de coco,\ncebolinha fatiada.",
+    "preparo": "Separe os cogumelos e salteie em frigideira quente por 5 minutos. Adicione o shoyu e finalize com cebolinha.",
+    "calorias": 65.0,
+    "proteinas": null,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 53,
+    "nome": "Tabule de Quinoa",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "4 colheres (sopa) de quinoa cozida, 1 tomate picado, 1/2 pepino\npicado, hortelã e limão.",
+    "preparo": "Misture os ingredientes frios e tempere com suco de limão, azeite e sal.",
+    "calorias": 130.0,
+    "proteinas": null,
+    "carboidratos": 20.0
+  },
+  {
+    "id": 54,
+    "nome": "Crepioca Vegana de Grão-de-Bico",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "2 colheres (sopa) de farinha de grão-de-bico (besan), 2 colheres\n(sopa) de água, pitada de sal e açafrão.",
+    "preparo": "Misture bem a farinha com a água e temperos. Despeje na frigideira antiaderente e doure dos dois lados.",
+    "calorias": 110.0,
+    "proteinas": null,
+    "carboidratos": 16.0
+  },
+  {
+    "id": 55,
+    "nome": "Edamame Cozido com Sal Grosso",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de vagem de edamame, sal grosso a gosto.",
+    "preparo": "Ferva a vagem em água salgada por 5 minutos. Drene e salpique sal grosso por cima antes de consumir.",
+    "calorias": 120.0,
+    "proteinas": null,
+    "carboidratos": 9.0
+  },
+  {
+    "id": 56,
+    "nome": "Purê de Mandioquinha com Leite Vegetal",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 mandioquinha grande cozida, 2 colheres (sopa) de leite de\namêndoas sem açúcar, sal e noz-moscada.",
+    "preparo": "Amasse a mandioquinha e leve ao fogo misturando com o leite vegetal e os temperos até ficar cremoso.",
+    "calorias": 130.0,
+    "proteinas": null,
+    "carboidratos": 25.0
+  },
+  {
+    "id": 57,
+    "nome": "Smoothie de Banana com Proteína de Ervilha",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "isolada de ervilha.",
+    "preparo": "Bata tudo no liquidificador até obter uma consistência cremosa.",
+    "calorias": 220.0,
+    "proteinas": null,
+    "carboidratos": 27.0
+  },
+  {
+    "id": 58,
+    "nome": "Mingau de Aveia com Leite de Amêndoas",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "3 colheres (sopa) de aveia em flocos, 150ml de leite de\namêndoas, 1 pitada de canela.",
+    "preparo": "Cozinhe a aveia com o leite em fogo baixo até engrossar. Sirva polvilhado com canela.",
+    "calorias": 150.0,
+    "proteinas": null,
+    "carboidratos": 24.0
+  },
+  {
+    "id": 59,
+    "nome": "Ceviche de Caju",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "2 cajus firmes cortados em cubos, cebola roxa fatiada, coentro,\npimenta dedo-de-moça e suco de limão.",
+    "preparo": "Misture o caju com a cebola e o coentro. Regue com bastante limão e deixe marinar por 15 minutos.",
+    "calorias": 70.0,
+    "proteinas": null,
+    "carboidratos": 14.0
+  },
+  {
+    "id": 60,
+    "nome": "Chips de Couve (Kale)",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "2 xícaras de folhas de couve sem o talo, 1 colher (café) de azeite\ne sal.",
+    "preparo": "Misture as folhas com o azeite e sal. Espalhe em uma assadeira e asse a 160°C por 10 minutos até ficarem crocantes.",
+    "calorias": 50.0,
+    "proteinas": null,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 61,
+    "nome": "Sopa de Abóbora com Gengibre",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "200g de abóbora cabotiá cozida, 1 pedaço pequeno de gengibre,\nágua e sal.",
+    "preparo": "Bata a abóbora cozida com o gengibre e a água do cozimento no liquidificador. Aqueça antes de servir.",
+    "calorias": 80.0,
+    "proteinas": null,
+    "carboidratos": 14.0
+  },
+  {
+    "id": 62,
+    "nome": "Pudim de Chia com Leite de Coco",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "2 colheres (sopa) de sementes de chia, 150ml de leite de coco",
+    "preparo": "leve, 1 colher (chá) de adoçante ou xarope de bordo. Misture a chia no leite de coco com o adoçante e deixe descansar na geladeira por pelo menos 4 horas. SEM GLÚTEN",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 63,
+    "nome": "Pão de Frigideira de Farinha de Amêndoas",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 ovo, 2 colheres (sopa) de farinha de\namêndoas, 1 colher (chá) de fermento, pitada de sal.",
+    "preparo": "Misture tudo com um garfo e despeje em frigideira pequena untada. Doure dos dois lados em fogo baixo.",
+    "calorias": 180.0,
+    "proteinas": null,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 64,
+    "nome": "Risoto de Quinoa com Cogumelos",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1/2 xícara de quinoa em grãos, 1/2 xícara de\ncogumelos fatiados, 1/2 cebola, caldo de legumes\ncaseiro.",
+    "preparo": "Refogue a cebola e os cogumelos. Adicione a quinoa e o caldo aos poucos até cozinhar e ficar cremoso.",
+    "calorias": 210.0,
+    "proteinas": null,
+    "carboidratos": 30.0
+  },
+  {
+    "id": 65,
+    "nome": "Escondidinho de Mandioquinha com Carne",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1 mandioquinha grande cozida e amassada,\n80g de carne moída refogada.",
+    "preparo": "Em um ramequim, monte uma camada de carne moída e cubra com o purê de mandioquinha. Gratine no forno.",
+    "calorias": 230.0,
+    "proteinas": null,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 66,
+    "nome": "Panqueca de Grão-de-Bico (Besan Chilla)",
+    "categoria": "Pratos diversos",
+    "ingredientes": "3 colheres (sopa) de farinha de\ngrão-de-bico, água para dar ponto, sal e orégano.",
+    "preparo": "Misture a farinha com água até formar uma massa líquida. Espalhe na frigideira quente e doure os dois lados.",
+    "calorias": 120.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 67,
+    "nome": "Nhoque de Batata-Doce com Molho ao Sugo",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1 batata-doce média cozida e amassada, 2\ncolheres (sopa) de amido de milho, 1/2 xícara de molho\nde tomate.",
+    "preparo": "Misture a batata com o amido, molde rolinhos, corte e ferva em água até subirem. Sirva com o molho quente.",
+    "calorias": 190.0,
+    "proteinas": null,
+    "carboidratos": 40.0
+  },
+  {
+    "id": 68,
+    "nome": "Coxinha Fit com Massa de Macaxeira (Mandioca)",
+    "categoria": "Pratos diversos",
+    "ingredientes": "100g de mandioca cozida e amassada, 50g\nde frango desfiado temperado.",
+    "preparo": "Moldar a massa de mandioca ao redor do recheio de frango em formato de coxinha e assar na Airfryer por 15 min.",
+    "calorias": 180.0,
+    "proteinas": null,
+    "carboidratos": 24.0
+  },
+  {
+    "id": 69,
+    "nome": "Bolo de Caneca de Farinha de Arroz e Cacau",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1 ovo, 2 colheres (sopa) de farinha de arroz,\n1 colher (chá) de cacau em pó, 1 colher (chá) de mel,\nfermento.",
+    "preparo": "Misture tudo em uma caneca e leve ao micro-ondas por 1 minuto e 30 segundos.",
+    "calorias": 170.0,
+    "proteinas": null,
+    "carboidratos": 26.0
+  },
+  {
+    "id": 70,
+    "nome": "Soufflé de Milho Verde",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1/2 lata de milho verde drenado, 1 ovo (clara\nem neve), 1 colher (sopa) de queijo ralado.",
+    "preparo": "Bata o milho com a gema no liquidificador, incorpore a clara em neve e o queijo, e asse por 20 minutos.",
+    "calorias": 150.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 71,
+    "nome": "Salada de Sarraceno (Trigo Mourisco)",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1/2 xícara de trigo sarraceno cozido, tomate\nem cubos, pepino, azeite e limão.",
+    "preparo": "Misture o trigo sarraceno frio com os vegetais picados e tempere a gosto.",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 72,
+    "nome": "Tortinha de Frigideira de Farinha de Linhaça",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1 ovo, 2 colheres (sopa) de farinha de\nlinhaça, 2 colheres (sopa) de atum em lata ao natural.",
+    "preparo": "Misture o ovo e a linhaça, adicione o atum e doure a massa de ambos os lados na frigideira.",
+    "calorias": 210.0,
+    "proteinas": null,
+    "carboidratos": 3.0
+  },
+  {
+    "id": 73,
+    "nome": "Sopa de Inhame com Couve",
+    "categoria": "Pratos diversos",
+    "ingredientes": "2 inhames médios descascados e cozidos,\n1 folha de couve fatiada fina, alho e sal.",
+    "preparo": "Bata o inhame com a água do cozimento. Refogue a couve no alho e junte o creme de inhame quente.",
+    "calorias": 120.0,
+    "proteinas": null,
+    "carboidratos": 24.0
+  },
+  {
+    "id": 74,
+    "nome": "Bolinho de Chuva de Tapioca Assado",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1 ovo, 3 colheres (sopa) de tapioca, 1 colher\n(chá) de adoçante culinário, canela em pó.",
+    "preparo": "Misture os ingredientes e asse em forminhas de silicone a 180°C por 15 minutos. Polvilhe canela por cima.",
+    "calorias": 140.0,
+    "proteinas": null,
+    "carboidratos": 20.0
+  },
+  {
+    "id": 75,
+    "nome": "Macarrão de Arroz Integral com Legumes",
+    "categoria": "Pratos diversos",
+    "ingredientes": "50g de macarrão de arroz (bifum ou\nintegral), 1/2 xícara de legumes salteados (cenoura,\npimentão, brócolis), shoyu.",
+    "preparo": "Cozinhe o macarrão conforme a embalagem e misture com os legumes quentes salteados no shoyu.",
+    "calorias": 200.0,
+    "proteinas": null,
+    "carboidratos": 42.0
+  },
+  {
+    "id": 76,
+    "nome": "Waffle de Mandioca (Pão de Queijo Waffle)",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1/2 xícara de purê de mandioca, 1 colher\n(sopa) de polvilho doce, 1 colher (sopa) de queijo ralado.",
+    "preparo": "Misture bem até formar uma massa maleável e asse na máquina de waffle untada até dourar.",
+    "calorias": 180.0,
+    "proteinas": null,
+    "carboidratos": 32.0
+  },
+  {
+    "id": 77,
+    "nome": "Purê de Batata com Carne Seca Desfiada",
+    "categoria": "Pratos diversos",
+    "ingredientes": "1 batata inglesa média cozida, 2 colheres\n(sopa) de leite, 50g de carne seca dessalgada e desfiada.",
+    "preparo": "Amasse a batata com o leite para fazer o purê e sirva com a carne seca acebolada por cima.",
+    "calorias": 240.0,
+    "proteinas": null,
+    "carboidratos": 26.0
+  },
+  {
+    "id": 78,
+    "nome": "Mingau de Amaranto com Morango",
+    "categoria": "Pratos diversos",
+    "ingredientes": "2 colheres (sopa) de amaranto em flocos,\n150ml de leite vegetal, 3 morangos picados.",
+    "preparo": "Cozinhe o amaranto no leite vegetal em fogo baixo mexendo sempre até engrossar. Sirva com morangos.",
+    "calorias": 140.0,
+    "proteinas": null,
+    "carboidratos": 22.0
+  },
+  {
+    "id": 79,
+    "nome": "Sorbet de Banana congelada",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 banana madura congelada.",
+    "preparo": "Processar no liquidificador ou processador até virar um creme cremoso.",
+    "calorias": 90.0,
+    "proteinas": null,
+    "carboidratos": 23.0
+  },
+  {
+    "id": 80,
+    "nome": "Maçã Assada com Canela",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 maçã média, 1 colher (chá) de canela.",
+    "preparo": "Retirar o miolo, polvilhar canela e assar por 3 minutos no micro-ondas.",
+    "calorias": 80.0,
+    "proteinas": null,
+    "carboidratos": 20.0
+  },
+  {
+    "id": 81,
+    "nome": "Creme de Abacate com Cacau",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1/2 abacate maduro, 1 colher (sopa) de cacau em\npó 100%, 1 colher (chá) de adoçante natural (eritritol ou\nestévia).",
+    "preparo": "Amassar bem o abacate e misturar o cacau e o adoçante até homogeneizar.",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 82,
+    "nome": "Pera Cozida no Chá de Hibisco",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 pera sem casca, 200ml de chá de hibisco\nconcentrado.",
+    "preparo": "Cozinhar a pera no chá até que fique macia.",
+    "calorias": 80.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 83,
+    "nome": "Morango com Chocolate 70% (ou sem açúcar)",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "5 morangos grandes, 15g de chocolate 70%\ncacau ou chocolate zero açúcar derretido.",
+    "preparo": "Banhar os morangos no chocolate derretido e resfriar.",
+    "calorias": 95.0,
+    "proteinas": null,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 84,
+    "nome": "Figo Fresco Grelhado com Canela",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "2 figos frescos cortados ao meio, canela a gosto.",
+    "preparo": "Grelhar na frigideira antiaderente por 1 minuto de cada lado e polvilhar canela.",
+    "calorias": 70.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 85,
+    "nome": "Raspadinha de Melancia",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1.5 xícara de melancia congelada em cubos,\nsuco de 1/2 limão.",
+    "preparo": "Pulsar no liquidificador até obter consistência de raspadinha. 🥜 Bombons e Trufas (8 a 12)",
+    "calorias": 60.0,
+    "proteinas": null,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 86,
+    "nome": "Trufa de Tâmara com Cacau",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "2 tâmaras secas sem caroço, 1 colher (café) de\ncacau em pó 100%.",
+    "preparo": "Amassar as tâmaras até formar uma massa, moldar em bolinha e passar no cacau.",
+    "calorias": 75.0,
+    "proteinas": null,
+    "carboidratos": 17.0
+  },
+  {
+    "id": 87,
+    "nome": "Damasco Seco Recheado com Cottage",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "3 damascos secos, 1 colher (sopa) de queijo\ncottage.",
+    "preparo": "Abrir as metades dos damascos e rechear com o cottage.",
+    "calorias": 80.0,
+    "proteinas": null,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 88,
+    "nome": "Bombom de Pasta de Amendoim e Cacau",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 colher (sopa) de pasta de amendoim integral, 1\ncolher (chá) de cacau em pó, 1 colher (chá) de adoçante\nnatural.",
+    "preparo": "Misturar os ingredientes, moldar no formato de bombom e congelar por 20 minutos.",
+    "calorias": 110.0,
+    "proteinas": null,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 89,
+    "nome": "\"Brigadeiro\" de Biomassa de Banana Verde",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "2 colheres (sopa) de biomassa de banana verde,\n1 colher (sopa) de cacau em pó 100%, adoçante a gosto.",
+    "preparo": "Cozinhar em fogo baixo mexendo sempre até soltar do fundo da panela.",
+    "calorias": 65.0,
+    "proteinas": null,
+    "carboidratos": 11.0
+  },
+  {
+    "id": 90,
+    "nome": "Ovos cozidos com páprica",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "2 ovos cozidos, 1 pitada de páprica defumada, sal a gosto.",
+    "preparo": "Corte os ovos ao meio e salpique a páprica. 🍮 Puddings, Bolos e Mousses (13 a 20)",
+    "calorias": 290.0,
+    "proteinas": 12.0,
+    "carboidratos": 1.0
+  },
+  {
+    "id": 91,
+    "nome": "Doce de Abóbora com Cravo (Sem Açúcar)",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "100g de abóbora cozida, adoçante culinário\n(como xilitol), 2 cravos-da-índia.",
+    "preparo": "Amassar a abóbora e apurar na panela com os cravos e o adoçante até secar o líquido.",
+    "calorias": 50.0,
+    "proteinas": null,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 92,
+    "nome": "Mousse Fit de Gelatina sem Açúcar e Iogurte",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 pacote de gelatina zero açúcar (sabor morango\nou uva), 1 pote (170g) de iogurte natural desnatado.",
+    "preparo": "Preparar a gelatina com metade da água recomendada, bater no liquidificador com o iogurte e levar para gelar.",
+    "calorias": 70.0,
+    "proteinas": null,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 93,
+    "nome": "Panqueca Doce de Banana e Cacau",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 banana madura, 1 ovo, 1 colher (chá) de cacau\nem pó 100%.",
+    "preparo": "Amassar a banana, misturar o ovo e o cacau. Dourar pequenas porções na frigideira antiaderente.",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 26.0
+  },
+  {
+    "id": 94,
+    "nome": "Gelatina Natural de Suco de Uva Integral (Agar-Agar)",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "200ml de suco de uva integral 100% (sem adição\nde açúcar), 1 colher (chá) de agar-agar em pó.",
+    "preparo": "Ferver o suco com o agar-agar por 2 minutos, colocar em um recipiente e levar à geladeira.",
+    "calorias": 130.0,
+    "proteinas": null,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 95,
+    "nome": "Waffle de Aveia e Cacau sem Açúcar",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 ovo, 2 colheres (sopa) de farinha de aveia, 1\ncolher (chá) de cacau 100%, 2 colheres (sopa) de água.",
+    "preparo": "Misturar tudo e asse na máquina de waffle ou em frigideira pequena.",
+    "calorias": 165.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 96,
+    "nome": "Mousse de Limão Rápida",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1/2 xícara de ricota, suco de 1/2 limão, 1 colher\n(sopa) de adoçante natural, raspas de limão.",
+    "preparo": "Bater a ricota, o suco de limão e o adoçante até virar um creme homogêneo. Finalizar com as raspas.",
+    "calorias": 110.0,
+    "proteinas": null,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 97,
+    "nome": "Torta de Maçã com Massa de Aveia",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1/2 xícara de farinha de aveia, 1 ovo, 2\nmaçãs fatiadas, canela, adoçante culinário a gosto.",
+    "preparo": "Misture a aveia, o ovo e o adoçante para fazer a base. Cubra com as maçãs fatiadas, polvilhe canela e asse por 25 min a 180°C.",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 26.0
+  },
+  {
+    "id": 98,
+    "nome": "Torta Gelada de Limão e Ricota",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 xícara de ricota, suco de 2 limões, 1/2\npacote de gelatina sem sabor, adoçante culinário, base de\nbiscoito zero açúcar moído com óleo de coco.",
+    "preparo": "Pressione o biscoito no fundo da fôrma. Bata a ricota, limão, adoçante e gelatina dissolvida. Despeje sobre a base e gele por 3h.",
+    "calorias": 140.0,
+    "proteinas": null,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 99,
+    "nome": "Torta Mousse de Cacau e Avocada",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 abacate maduro, 3 colheres (sopa) de\ncacau em pó 100%, adoçante culinário, base de tâmaras e\nnozes trituradas.",
+    "preparo": "Forre a fôrma com a mistura de nozes e tâmaras. Bata o abacate com cacau e adoçante até virar um creme homogêneo, coloque sobre a base e gele.",
+    "calorias": 210.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 100,
+    "nome": "Torta de Banoffee Adaptada",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "Base de aveia e manteiga derretida, 2\nbananas maduras fatiadas, 1/2 xícara de doce de leite\nzero açúcar, chantilly zero açúcar.",
+    "preparo": "Asse a base por 10 min. Faça camadas com o doce de leite zero, as bananas e finalize com o chantilly zero por cima.",
+    "calorias": 190.0,
+    "proteinas": null,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 101,
+    "nome": "Cheesecake de Morango Fit",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 xícara de queijo cottage ou cream cheese\nlight, 1 ovo, adoçante, 1 xícara de morangos cozidos com\nadoçante (geleia rápida).",
+    "preparo": "Bata o queijo, o ovo e o adoçante. Asse em forno médio por 30 min. Espere esfriar e cubra com a geleia de morango caseira.",
+    "calorias": 130.0,
+    "proteinas": null,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 102,
+    "nome": "Torta de Coco e Amêndoas",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 xícara de coco ralado sem açúcar, 1/2\nxícara de farinha de amêndoas, 2 ovos, 100ml de leite de\ncoco, adoçante culinário.",
+    "preparo": "Misture todos os ingredientes até formar uma massa cremosa. Despeje em fôrma untada e asse por 30 min a 180°C.",
+    "calorias": 220.0,
+    "proteinas": null,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 103,
+    "nome": "Torta de Pera e Castanhas",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "2 peras fatiadas finas, 1/2 xícara de\ncastanhas de caju trituradas, 2 ovos, 1/2 xícara de leite\nvegetal, adoçante.",
+    "preparo": "Bata os ovos, o leite, o adoçante e a castanha. Despeje em uma fôrma, distribua as fatias de pera por cima e asse a 180°C por 35 min. 🥦 Tortas Salgadas (Naturalmente Sem Açúcar)",
+    "calorias": 175.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 104,
+    "nome": "Torta de Liquidificador de Frango",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "3 ovos, 1 xícara de leite desnatado, 3\ncolheres (sopa) de amido de milho ou farinha de aveia, 1\ncolher (sopa) de fermento, 1 xícara de frango desfiado.",
+    "preparo": "Bata a massa líquida no liquidificador. Em uma assadeira, coloque metade da massa, o recheio de frango e o restante da massa. Asse por 35 min.",
+    "calorias": 180.0,
+    "proteinas": null,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 105,
+    "nome": "Torta de Legumes sem Farinha",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "4 ovos, 1/2 xícara de cenoura ralada, 1/2\nxícara de abobrinha em cubos, 1/2 xícara de brócolis\ncozido, 2 colheres de queijo ralado.",
+    "preparo": "Bata os ovos com sal e pimenta. Misture os legumes e o queijo, despeje em fôrma untada e asse a 180°C por 25 min.",
+    "calorias": 140.0,
+    "proteinas": null,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 106,
+    "nome": "Torta de Atum com Massa de Grão-de-Bico",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 xícara de grão-de-bico cozido, 1 lata de\natum ao natural, 1 tomate picado, 1 colher (sopa) de\nazeite.",
+    "preparo": "Bata o grão-de-bico com o azeite e um pouco de água até virar uma massa. Forre uma fôrma, adicione o atum com tomate e asse por 30 min.",
+    "calorias": 210.0,
+    "proteinas": null,
+    "carboidratos": 22.0
+  },
+  {
+    "id": 107,
+    "nome": "Torta de Palmito com Massa Podre de Grão-de-Bico",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 xícara de farinha de grão-de-bico, 2\ncolheres (sopa) de azeite, água para dar ponto, 1 xícara\nde palmito picado refogado.",
+    "preparo": "Misture a farinha, o azeite e a água até moldar na fôrma. Coloque o recheio de palmito temperado e asse por 30 min.",
+    "calorias": 170.0,
+    "proteinas": null,
+    "carboidratos": 20.0
+  },
+  {
+    "id": 108,
+    "nome": "Torta de Espinafre e Ricota",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1 xícara de espinafre refogado, 1 xícara de\nricota amassada, 3 ovos, 2 colheres (sopa) de parmesão.",
+    "preparo": "Misture o espinafre, a ricota, os ovos batidos e o queijo. Despeje numa fôrma de silicone e asse por 30 min a 180°C.",
+    "calorias": 150.0,
+    "proteinas": null,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 109,
+    "nome": "Torta de Carne Moída com Massa de Couve-Flor",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "2 xícaras de couve-flor triturada e cozida, 1\novo, 150g de carne moída refogada.",
+    "preparo": "Misture a couve-flor com o ovo para fazer a massa. Monte em camadas com a carne moída no meio e asse por 30 min.",
+    "calorias": 190.0,
+    "proteinas": null,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 110,
+    "nome": "Torta Aberta de Cogumelos (Galette)",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "1/2 xícara de farinha de amêndoas, 1 colher\n(sopa) de manteiga, 1 xícara de cogumelos paris/shimeji\nsalteados.",
+    "preparo": "Misture a farinha e manteiga com água até formar uma massa. Abra em disco, coloque os cogumelos no centro, dobre as bordas e asse por 20 min.",
+    "calorias": 220.0,
+    "proteinas": null,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 111,
+    "nome": "Quiche de Queijo Minas e Alho-Poró",
+    "categoria": "Tortas e quiches",
+    "ingredientes": "Base de aveia em flocos e ovo; Recheio: 1/2\nxícara de alho-poró refogado, 1/2 xícara de queijo minas\nem cubos, 2 ovos batidos com 50ml de leite.",
+    "preparo": "Pré-asse a base por 10 min. Adicione o alho-poró, o queijo e a mistura de ovos e leite. Asse por mais 25 min até dourar.",
+    "calorias": 185.0,
+    "proteinas": null,
+    "carboidratos": 14.0
+  },
+  {
+    "id": 112,
+    "nome": "Torta Mousse de Maracujá com Base de Castanhas",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "Base: 1/2 xícara de castanhas-do-pará, 4\ntâmaras sem caroço. Recheio: 1/2 xícara de polpa de\nmaracujá, 1/2 xícara de castanha-de-caju hidratada, 2\ncolheres (sopa) de óleo de coco, adoçante natural\n(eritritol ou xilitol).",
+    "preparo": "Triture as castanhas e tâmaras no processador e forre o fundo de uma fôrma. Bate a polpa, as castanhas-de-caju hidratadas, o óleo de coco e o adoçante até virar um creme liso. Despeje sobre a base e leve ao congelador por 2 horas.",
+    "calorias": 190.0,
+    "proteinas": null,
+    "carboidratos": 16.0
+  },
+  {
+    "id": 113,
+    "nome": "Torta de Abobrinha e Tomate Seco (Massa de Grão-de-Bico)",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 xícara de farinha de grão-de-bico, 3\ncolheres (sopa) de azeite, água para dar ponto, 1/2\nabobrinha fatiada, 4 tomates secos picados, temperos\nverdes.",
+    "preparo": "Misture a farinha, o azeite, o sal e a água até formar uma massa modelável. Forre a fôrma, distribua a abobrinha e os tomates secos temperados por cima e asse a 180°C por 30 minutos.",
+    "calorias": 160.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 114,
+    "nome": "Torta Gelada de Cacau e Pasta de Amendoim",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "Base: 1/2 xícara de farinha de amêndoas, 1\ncolher (sopa) de cacau em pó. Recheio: 1/2 xícara de\npasta de amendoim integral, 100ml de leite de coco leve,\nadoçante a gosto.",
+    "preparo": "Misture a farinha de amêndoas, o cacau e um fio de água para formar a base e pressione na fôrma. Bate a pasta de amendoim com o leite de coco e adoçante. Cubra a base e leve ao congelador por 1 hora.",
+    "calorias": 220.0,
+    "proteinas": null,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 115,
+    "nome": "Quiche Vegana de Cogumelos e Tofu",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "Base: 1 xícara de farinha de arroz integral, 2\ncolheres (sopa) de azeite, água. Recheio: 150g de tofu\nfirme, 1/2 xícara de cogumelos salteados, 1 colher (sopa)\nde azeite, sal preto e temperos.",
+    "preparo": "Faça a massa com a farinha, azeite e água e forre a fôrma. Bata o tofu com o azeite e temperos no processador até ficar cremoso, misture os cogumelos, coloque sobre a massa e asse por 30 minutos.",
+    "calorias": 175.0,
+    "proteinas": null,
+    "carboidratos": 15.0
+  },
+  {
+    "id": 116,
+    "nome": "Torta de Maçã e Canela com Crosta de Coco",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "Base: 1/2 xícara de coco ralado sem açúcar,\n2 colheres (sopa) de farinha de linhaça, 2 colheres de\nágua. Recheio: 2 maçãs picadas cozidas com canela e\nadoçante.",
+    "preparo": "Misture o coco, a linhaça e a água para formar a crosta e asse por 10 minutos. Cubra com as maçãs cozidas na canela e leve ao forno por mais 15 minutos.",
+    "calorias": 145.0,
+    "proteinas": null,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 117,
+    "nome": "Pão de abobrinha com nozes",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 xícara de abobrinha ralada e espremida\n1 ovo grande\n1 xícara de farinha de amêndoas\n¼ xícara de nozes picadas\n¼ colher de chá de sal\n½ colher de chá de bicarbonato de sódio\nModo de preparo\nCombine a abobrinha, ovo, farinha de amêndoas,\nnozes, sal e bicarbonato de sódio em uma tigela.\nTransfira para uma forma pequena de pão que caiba\nna AirFryer.",
+    "preparo": "Cozinhe na AirFryer a 160°C por cerca de 20 minutos ou até que um palito inserido saia limpo. Deixe esfriar antes de cortar",
+    "calorias": 720.0,
+    "proteinas": null,
+    "carboidratos": null
+  },
+  {
+    "id": 118,
+    "nome": "Bolinhos de ricota e limão",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 xícara de ricota\n1 ovo grande\nraspas de 1 limão\n1 colher de sopa de adoçantes (apropriado para\ndiabéticos)\n½ xícara de farinha de amêndoas",
+    "preparo": "Misture a ricota, ovo, raspas de limão, adoçante e farinha de amêndoas até formar uma massa homogênea. Coloque colheradas da massa em formas de muffin untadas. Cozinhe na AirFryer a 180°C por cerca de 12 minutos ou até que estejam dourados. Deixe esfriar um pouco antes de servir.",
+    "calorias": 720.0,
+    "proteinas": null,
+    "carboidratos": null
+  },
+  {
+    "id": 119,
+    "nome": "Chips de Maçã e Canela",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "2 maçãs grandes, fatiadas bem finas\n½ colher de chá de canela em pó\nSpray de óleo ou um pouco de óleo de coco para\nuntar",
+    "preparo": "Misture as fatias de maçã com canela Unte levemente a cesta da AirFryer. Distribua as fatias de maçã na cesta, sem sobrepor Cozinhe na AirFryer a 160°C por 8-10 minutos, até ficarem crocantes. Deixe esfriar antes de servir Valor nutricional",
+    "calorias": 240.0,
+    "proteinas": null,
+    "carboidratos": null
+  },
+  {
+    "id": 120,
+    "nome": "Bolinhos de Aveia e mirtilo.",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 xícara de aveia em flocos\n½ xícara de mirtilos frescos\n1 banana madura amassada\n1 ovo\n¼ xícara de leite de amêndoas\n1 colher de chá de extrato de baunilha\n½ colher de chá de fermento em pó\nModo de preparo",
+    "preparo": "Misture todos os ingredientes até formar uma massa homogênea Coloque colheradas da massa em formas de muffin untadas. Cozinhe na AirFryer a 180°C por cerca de 15 minutos deixe esfriar antes de servir",
+    "calorias": null,
+    "proteinas": null,
+    "carboidratos": null
+  },
+  {
+    "id": 121,
+    "nome": "Tacos de Frango Desfiados",
+    "categoria": "Frango",
+    "ingredientes": "2 peitos de frango\n½ xícara de molho de churrasco\n4 tortilhas de milho(sem glúten)\n½ xícara de repolho roxo ralado\n¼ xícara de coentro fresco picado\n¼ xícara de cebola roxa picada\nLimão para servir",
+    "preparo": "Cozinhe o frango na AirFryer a 180°C por cerca de 12 minutos ou até estar totalmente cozido Desfie o frango e misture com o molho de churrasco Aqueça as tortilhas na AirFryer por 2 minutos. Monte os tacos com frango, repolho, coentro e cebola Sirva com limão",
+    "calorias": 780.0,
+    "proteinas": null,
+    "carboidratos": null
+  },
+  {
+    "id": 122,
+    "nome": "Crepioca de Frango e Espinafre",
+    "categoria": "Frango",
+    "ingredientes": "1 ovo inteiro\n1 colher de sopa de goma de tapioca\n50g de frango desfiado\n1 punhado de espinafre picado\nSal a gosto",
+    "preparo": "Misture o ovo com a tapioca, despeje na frigideira quente, adicione o frango e o espinafre, dobre ao meio e doure dos dois lados.",
+    "calorias": 210.0,
+    "proteinas": 22.0,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 123,
+    "nome": "Omelete de Claras com Cogumelos",
+    "categoria": "Frango",
+    "ingredientes": "3 claras de ovo\n1/2 xícara de cogumelos fatiados\n1 colher de sopa de queijo cottage\nSal e ervas finas a gosto",
+    "preparo": "Refogue os cogumelos, despeje as claras batidas, adicione o cottage e cozinhe até firmar.",
+    "calorias": 140.0,
+    "proteinas": 18.0,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 124,
+    "nome": "Muffins de Ovo com Queijo Minas e Tomate",
+    "categoria": "Frango",
+    "ingredientes": "3 ovos\n40g de queijo minas em cubos\n1 tomate picado\nSal e orégano a gosto",
+    "preparo": "Distribua o queijo e o tomate em forminhas, despeje os ovos batidos e asse a 180°C por 15 minutos.",
+    "calorias": 280.0,
+    "proteinas": 24.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 125,
+    "nome": "Panqueca de Aveia com Pasta de Amendoim",
+    "categoria": "Frango",
+    "ingredientes": "1 ovo\n2 colheres de sopa de aveia em flocos\n1 colher de chá de pasta de amendoim integral\n1 pitada de canela",
+    "preparo": "Misture tudo, despeje na frigideira antiaderente e doure dos dois lados.",
+    "calorias": 220.0,
+    "proteinas": 12.0,
+    "carboidratos": 20.0
+  },
+  {
+    "id": 126,
+    "nome": "Torrada Integral com Ovo Mexido e Abacate",
+    "categoria": "Frango",
+    "ingredientes": "1 fatia de pão integral\n1 ovo\n1/4 de abacate amassado\nSal e limão a gosto\nFaça o ovo mexido, passe o abacate no pão torrado e finalize\ncom o ovo por cima.",
+    "preparo": "",
+    "calorias": 240.0,
+    "proteinas": 12.0,
+    "carboidratos": 18.0
+  },
+  {
+    "id": 127,
+    "nome": "Frango Desfiado com Molho de Iogurte e Hortelã",
+    "categoria": "Frango",
+    "ingredientes": "150g de frango desfiado\n2 colheres de sopa de iogurte natural desnatado\nHortelã picada, limão e alho a gosto",
+    "preparo": "Misture o frango quente com o iogurte temperado e a hortelã.",
+    "calorias": 195.0,
+    "proteinas": 36.0,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 128,
+    "nome": "Almôndegas de Frango com Abobrinha",
+    "categoria": "Frango",
+    "ingredientes": "180g de frango moído\n1/2 abobrinha ralada e espremida\n1 colher de sopa de farelo de aveia\nSal e alho a gosto",
+    "preparo": "Misture tudo, modele as bolinhas e asse na airfryer a 200°C por 15 minutos.",
+    "calorias": 240.0,
+    "proteinas": 40.0,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 129,
+    "nome": "Frango Grelhado com Limão e Alecrim",
+    "categoria": "Frango",
+    "ingredientes": "150g de filé de frango\nSuco de 1/2 limão\n1 colher de chá de azeite\nAlecrim e sal a gosto",
+    "preparo": "Tempere o frango, grelhe na frigideira até dourar dos dois lados.",
+    "calorias": 200.0,
+    "proteinas": 35.0,
+    "carboidratos": 2.0
+  },
+  {
+    "id": 130,
+    "nome": "Escondidinho de Frango com Inhame",
+    "categoria": "Frango",
+    "ingredientes": "100g de frango desfiado\n1 inhame médio cozido e amassado\n1 colher de sopa de queijo ralado light",
+    "preparo": "Monte o frango no fundo, cubra com o purê de inhame, salpique o queijo e gratinar.",
+    "calorias": 250.0,
+    "proteinas": 28.0,
+    "carboidratos": 22.0
+  },
+  {
+    "id": 131,
+    "nome": "Cubos de Frango com Pimentão e Cebola",
+    "categoria": "Frango",
+    "ingredientes": "150g de frango em cubos\n1/2 pimentão em tiras\n1/2 cebola em pétalas\n1 colher de chá de azeite e temperos",
+    "preparo": "Grelhe o frango, adicione os legumes e refogue até ficarem macios.",
+    "calorias": 210.0,
+    "proteinas": 35.0,
+    "carboidratos": 7.0
+  },
+  {
+    "id": 132,
+    "nome": "Wrap de Frango com Alface Americana",
+    "categoria": "Frango",
+    "ingredientes": "2 folhas grandes de alface americana\n100g de frango desfiado\n1 colher de sopa de cottage\nTomate picado\nRecheie as folhas, enrole e sirva.",
+    "preparo": "",
+    "calorias": 160.0,
+    "proteinas": 28.0,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 133,
+    "nome": "Hambúrguer de Frango com Aveia e Cenoura",
+    "categoria": "Frango",
+    "ingredientes": "180g de frango moído\n2 colheres de sopa de farelo de aveia\n1/2 cenoura ralada\nSal e temperos a gosto",
+    "preparo": "Misture, modele e grelhe ou asse na airfryer.",
+    "calorias": 250.0,
+    "proteinas": 42.0,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 134,
+    "nome": "Estrogonofe Fit de Frango com Cogumelos",
+    "categoria": "Frango",
+    "ingredientes": "120g de frango em tiras\n1/2 xícara de cogumelos\n2 colheres de sopa de creme de ricota light\n2 colheres de sopa de molho de tomate",
+    "preparo": "Sele o frango, adicione os cogumelos e o molho, desligue o fogo e misture a ricota.",
+    "calorias": 230.0,
+    "proteinas": 32.0,
+    "carboidratos": 6.0
+  },
+  {
+    "id": 135,
+    "nome": "Patinho Acebolado com Alho",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de patinho em tiras\n1/2 cebola em rodelas\n1 dente de alho\n1 colher de chá de azeite",
+    "preparo": "Grelhe a carne em fogo alto, adicione a cebola e o alho até dourar.",
+    "calorias": 270.0,
+    "proteinas": 40.0,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 136,
+    "nome": "Carne Moída com Abobrinha e Tomate",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de patinho moído\n1 abobrinha em cubos\n1 tomate picado\nSal e colorau a gosto",
+    "preparo": "Refogue a carne, adicione os legumes e cozinhe até ficarem macios.",
+    "calorias": 240.0,
+    "proteinas": 40.0,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 137,
+    "nome": "Almôndegas de Carne com Espinafre",
+    "categoria": "Carne bovina",
+    "ingredientes": "180g de carne moída\n1 punhado de espinafre picado\n1 colher de sopa de farelo de aveia\nAlho e sal",
+    "preparo": "Misture, modele e asse a 200°C por 15-18 minutos.",
+    "calorias": 290.0,
+    "proteinas": 42.0,
+    "carboidratos": 7.0
+  },
+  {
+    "id": 138,
+    "nome": "Carne Louca com Pimentão",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de carne desfiada\n1/2 pimentão picado\n1/4 de cebola\n3 colheres de sopa de molho de tomate",
+    "preparo": "Refogue os legumes, junte a carne e o molho e deixe apurar.",
+    "calorias": 260.0,
+    "proteinas": 38.0,
+    "carboidratos": 7.0
+  },
+  {
+    "id": 139,
+    "nome": "Hambúrguer de Patinho com Ervas",
+    "categoria": "Carne bovina",
+    "ingredientes": "160g de patinho moído\nErvas finas, alho em pó e sal",
+    "preparo": "Modele e grelhe 3-4 minutos de cada lado.",
+    "calorias": 300.0,
+    "proteinas": 45.0,
+    "carboidratos": 1.0
+  },
+  {
+    "id": 140,
+    "nome": "Charuto de Couve com Carne e Arroz Integral",
+    "categoria": "Carne bovina",
+    "ingredientes": "2 folhas de couve\n100g de carne moída refogada\n2 colheres de sopa de arroz integral cozido",
+    "preparo": "Aqueça as folhas, recheie, enrole e aqueça na frigideira.",
+    "calorias": 240.0,
+    "proteinas": 30.0,
+    "carboidratos": 14.0
+  },
+  {
+    "id": 141,
+    "nome": "Picadinho de Carne com Abóbora",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de carne em cubos\n1 xícara de abóbora em cubos\nAlho, sal e colorau",
+    "preparo": "Grelhe a carne, adicione a abóbora e cozinhe até amaciar.",
+    "calorias": 280.0,
+    "proteinas": 38.0,
+    "carboidratos": 12.0
+  },
+  {
+    "id": 142,
+    "nome": "Estrogonofe Fit de Carne com Iogurte",
+    "categoria": "Carne bovina",
+    "ingredientes": "150g de patinho em tiras\n2 colheres de sopa de iogurte natural desnatado\n2 colheres de sopa de molho de tomate\nPáprica a gosto",
+    "preparo": "Sele a carne, adicione o molho, desligue o fogo e misture o iogurte.",
+    "calorias": 260.0,
+    "proteinas": 40.0,
+    "carboidratos": 5.0
+  },
+  {
+    "id": 143,
+    "nome": "Salmão Grelhado com Limão e Ervas",
+    "categoria": "Peixes e frutos do mar",
+    "ingredientes": "120g de filé de salmão\nSuco de 1/2 limão\nErvas e sal",
+    "preparo": "Grelhe o salmão 3-4 minutos de cada lado.",
+    "calorias": 220.0,
+    "proteinas": 25.0,
+    "carboidratos": 1.0
+  },
+  {
+    "id": 144,
+    "nome": "Atum com Ovo e Iogurte",
+    "categoria": "Peixes e frutos do mar",
+    "ingredientes": "1 lata de atum em água\n1 ovo cozido picado\n2 colheres de sopa de iogurte desnatado\nCebola e temperos",
+    "preparo": "Misture tudo e sirva frio.",
+    "calorias": 230.0,
+    "proteinas": 35.0,
+    "carboidratos": 4.0
+  },
+  {
+    "id": 145,
+    "nome": "Tofu Grelhado com Brócolis",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "120g de tofu firme\n1 xícara de brócolis\n1 colher de sopa de shoyu light\n1 colher de chá de óleo de gergelim",
+    "preparo": "Grelhe o tofu, adicione o brócolis e o shoyu.",
+    "calorias": 160.0,
+    "proteinas": 16.0,
+    "carboidratos": 8.0
+  },
+  {
+    "id": 146,
+    "nome": "Hambúrguer de Grão-de-Bico e Aveia",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de grão-de-bico cozido\n2 colheres de sopa de farelo de aveia\nAlho, sal e cominho",
+    "preparo": "Amasse, modele e grelhe.",
+    "calorias": 190.0,
+    "proteinas": 10.0,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 147,
+    "nome": "Curry de Lentilha com Leite de Coco Light",
+    "categoria": "Veganas/vegetarianas",
+    "ingredientes": "1 xícara de lentilha cozida\n80ml de leite de coco light\n1 colher de chá de curry\nTomate picado",
+    "preparo": "Refogue o tomate com o curry, adicione a lentilha e o leite de coco.",
+    "calorias": 230.0,
+    "proteinas": 12.0,
+    "carboidratos": 30.0
+  },
+  {
+    "id": 148,
+    "nome": "Macarrão de Abobrinha com Frango Desfiado",
+    "categoria": "Diversos",
+    "ingredientes": "1 abobrinha em tiras\n100g de frango desfiado\n3 colheres de sopa de molho de tomate",
+    "preparo": "Refogue a abobrinha rapidamente, misture o frango e o molho.",
+    "calorias": 180.0,
+    "proteinas": 28.0,
+    "carboidratos": 10.0
+  },
+  {
+    "id": 149,
+    "nome": "Sopa de Abóbora com Frango",
+    "categoria": "Diversos",
+    "ingredientes": "200g de abóbora cozida\n80g de frango desfiado\nAlho, sal e gengibre",
+    "preparo": "Bata a abóbora, aqueça com o frango e temperos.",
+    "calorias": 180.0,
+    "proteinas": 20.0,
+    "carboidratos": 16.0
+  },
+  {
+    "id": 150,
+    "nome": "Mingau de Aveia com Whey e Morango",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "3 colheres de sopa de aveia\n150ml de leite desnatado\n1 scoop de whey\n4 morangos picados",
+    "preparo": "Cozinhe a aveia no leite, desligue e misture o whey e os morangos.",
+    "calorias": 280.0,
+    "proteinas": 32.0,
+    "carboidratos": 28.0
+  },
+  {
+    "id": 151,
+    "nome": "Bolinho de Caneca de Banana e Cacau",
+    "categoria": "Doces, sobremesas e lanches",
+    "ingredientes": "1 ovo\n1 banana amassada\n1 colher de sopa de cacau 100%\n1 colher de sopa de farinha de aveia",
+    "preparo": "Misture tudo na caneca e leve ao micro-ondas por 2 minutos.",
+    "calorias": 190.0,
+    "proteinas": 10.0,
+    "carboidratos": 26.0
+  }
+]

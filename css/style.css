@@ -1,0 +1,367 @@
+/*=== header ===*/
+header,
+main {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #9AB17A;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    text-align: center;
+}
+
+header img {
+    width: 360px;
+    margin-top: -35px;
+}
+
+header ul li {
+    color: white;
+    display: block;
+    margin-bottom: 4vw;
+    font-size: 1.3rem;
+}
+
+header ul {
+    padding: 0 0 4vw 0;
+    width: 100%;
+}
+
+header a.atual {
+    display: inline-block;
+    background-color: white;
+    border-radius: 1rem;
+    color: #9AB17A;
+    padding: 1vw 5vw 1vw 5vw;
+}
+
+/*=== home ===*/
+.banner {
+    background-image: url("../Imagens/Background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 1px;
+    text-align: center;
+}
+
+.banner div.ideia p.mini {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1vw;
+    margin: 4vw 27vw 2vw;
+}
+
+.banner div.ideia h1 {
+    font-size: 3rem;
+    font-weight: 550;
+    color: #41592C;
+}
+
+.banner div.ideia h1 span {
+    color: #142506;
+}
+
+.banner div.ideia p.mini span {
+    color: #9AB17A;
+}
+
+.banner div.ideia p.mini {
+    color: #AEAA86;
+    font-size: 1.2rem;
+}
+
+
+/*=== sobre nós ===*/
+
+.sobre {
+    background-color: #E4DFB5;
+    text-align: center;
+    padding: 10vw;
+}
+
+.sobre h1 {
+    font-size: 1rem;
+    color: #9AB17A;
+}
+
+.sobre h2 {
+    font-size: 1.6rem;
+    color: #2C3E1C;
+}
+
+.sobre li {
+    margin: 4vw 2vw 4vw 2vw;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 30px;
+
+}
+
+.sobre ul li h1 {
+    color: #2C3E1C;
+}
+
+.sobre h3 {
+    background-color: #9AB17A;
+    color: #2C3E1C;
+    padding: 3vw;
+    border-radius: 30px;
+}
+
+
+
+/*=== dicas ===*/
+
+
+/*=== equilíbrio ===*/
+
+.equilibrio {
+    background: #FFE4BE;
+    padding: 2vw;
+    text-align: center;
+
+}
+
+.equilibrio h2 {
+    color: #9AB17A;
+    padding: 2vw;
+    font-size: 1.1rem;
+
+}
+
+.equilibrio h1 {
+    color: #2C3E1C;
+    padding: 2vw 0 2vw 0;
+    font-size: 2rem;
+}
+
+.equilibrio p.titulo {
+    padding: 2vw;
+    color: #2C3E1C;
+
+}
+
+
+.equilibrio ul li {
+    padding: 2vw 0 3vw 0;
+    color: #395224;
+}
+
+.equilibrio ul li div {
+    display: flex;
+    margin: 2vw 5vw;
+}
+
+.equilibrio span p {
+    padding: 0 0 0 25vw;
+    text-align: end;
+}
+
+.equilibrio h3 {
+    padding: 0 16vw;
+}
+
+.equilibrio progress {
+    width: 500px;
+}
+
+.equilibrio progress::-webkit-progress-bar {
+    background-color: #a5a5a5;
+}
+
+.equilibrio progress::-webkit-progress-value {
+    background-color: #9AB17A;
+}
+
+
+.equilibrio progress::-moz-progress-bar {
+    background-color: #9AB17A;
+}
+
+
+
+
+/*=== receitas ===*/
+
+
+/*=== videos ===*/
+
+
+/*=== cardápio ===*/
+section.cardapio {
+    background-color: #FFE6C3;
+    text-align: center;
+    font-family: "Rozha One", serif;
+}
+
+section.cardapio h1 {
+    font-size: 2rem;
+    color: #2C3E1C;
+
+    font-weight: 600;
+    font-style: normal;
+    padding: 32px 20px 40px 20px;
+
+}
+
+.planejarrefeicoes {
+    color: #2C3E1C;
+    font-size: 1rem;
+
+    font-weight: 530;
+    font-style: normal;
+    padding: 0 20px 40px 20px;
+
+}
+
+.btncardapio {
+    padding: 32px 60px 32px 60px;
+    background-color: #2C3E1CCC;
+    ;
+    color: white;
+    border-radius: 47px;
+    margin: 0 0 40px 0;
+}
+
+.selected {
+
+    margin: 0 40px 0 40px;
+    padding: 25px;
+    background-color: #9AB17A;
+    color: white;
+    border-radius: 47px;
+}
+
+.cal {
+    padding: 5px;
+}
+
+.dia {
+    padding: 5px;
+    font-weight: 850;
+}
+
+.unselected {
+    margin: 40px 40px 40px 40px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 47px;
+}
+
+
+.Dica {
+    background-color: #9AB17A;
+    border-radius: 47px;
+    padding: 50px;
+    gap: 20px;
+
+}
+
+.Dica p {
+    color: #2C3E1C;
+}
+
+.Dica span {
+    font-weight: 800;
+}
+
+
+/*=== footer ===*/
+
+footer {
+
+    background: #395224;
+}
+
+footer ul.contato li {
+    padding: 5vw;
+    color: #fff;
+
+
+
+}
+
+footer nav h3 {
+    color: #fff;
+    padding: 5vw;
+}
+
+footer nav a {
+    color: #fff;
+    padding: 5vw;
+
+}
+
+/* MEDIA QUERY - DESKTOP */
+
+@media screen and (min-width: 600px) {
+
+
+    /*=== header ===*/
+
+
+
+    /*=== home ===*/
+
+
+
+
+    /*=== sobre nós ===*/
+
+
+    .sobre ul {
+        display: flex;
+    }
+
+    .sobre div {
+        display: flex;
+    }
+
+
+    /*=== dicas ===*/
+
+
+    /*=== equilíbrio ===*/
+
+
+
+    /*=== receitas ===*/
+
+
+    /*=== videos ===*/
+
+
+    /*=== cardápio ===*/
+
+
+    /*=== footer ===*/
+
+    footer {
+
+        background: #395224;
+    }
+
+    footer ul.contato li {
+        padding: 5vw;
+        color: #fff;
+
+
+
+    }
+
+    footer nav h3 {
+        color: #fff;
+        padding: 5vw;
+    }
+
+    footer nav a {
+        color: #fff;
+        padding: 5vw;
+
+    }
+
+}
