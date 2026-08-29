@@ -1,34 +1,33 @@
 /*=== header ===*/
-header,
-main {
+header, main {
     margin: 0;
     padding: 0;
 }
-
 header {
     background-color: #9AB17A;
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
     text-align: center;
 }
-
-header img {
-    width: 360px;
-    margin-top: -35px;
+header img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    left: 0;
+    padding-top:  5vw;
+    padding-left: 9vw;
 }
-
-header ul li {
+header ul li{
     color: white;
     display: block;
     margin-bottom: 4vw;
     font-size: 1.3rem;
 }
-
 header ul {
-    padding: 0 0 4vw 0;
+    padding-bottom: 4vw;
     width: 100%;
 }
-
 header a.atual {
     display: inline-block;
     background-color: white;
@@ -37,43 +36,103 @@ header a.atual {
     padding: 1vw 5vw 1vw 5vw;
 }
 
+
 /*=== home ===*/
 .banner {
-    background-image: url("../Imagens/Background.png");
-
+    background-image: 
+        linear-gradient(to bottom, 
+            #9AB17A 0%,
+            #9AB17A 4%,
+            rgba(154, 177, 122, 0.5) 10%,
+            transparent 20%
+        ),
+        url("../Imagens/Background.png");
+    
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
-    padding-top: 1px;
+    padding-top: 0;
+    margin-top: -13vw;          /* ← aumentei aqui */
     text-align: center;
 }
-
-.banner div.ideia p.mini {
+.banner div.ideia p.mini{
     background-color: white;
     border-radius: 1rem;
-    padding: 1vw;
-    margin: 4vw 27vw 2vw;
+    padding: 3vw;
+    margin: 10vw 10vw 5vw;
+    opacity: 0.80;
 }
-
-.banner div.ideia h1 {
+.banner div.ideia h1{
     font-size: 3rem;
     font-weight: 550;
     color: #41592C;
 }
-
-.banner div.ideia h1 span {
+.banner div.ideia h1 span{
     color: #142506;
 }
-
-.banner div.ideia p.mini span {
+.banner div.ideia p.mini span{
     color: #9AB17A;
 }
-
-.banner div.ideia p.mini {
+.banner div.ideia p.mini{
     color: #AEAA86;
     font-size: 1.2rem;
 }
-
+.banner div.ideia h2{
+    font-size: 4rem;
+    font-weight: 550;
+    padding: 0 4vw;
+    color: #2C3E1C;
+}
+.banner div.ideia h2 span {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  color: #41592C;
+  padding: 0 0 0 1vw;
+}
+.banner div.ideia p{
+    font-size: 1.2rem;
+    padding: 4vw 8vw;
+    color: #2C3E1C;
+}
+.banner div.aidento{
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw 3vw;
+}
+.banner div.aidento a{
+    background-color: #41592C;
+    color: white;
+    padding: 3vw 5vw;
+    border-radius: 1rem;
+    opacity: 0.80;
+}
+.banner div.aidento a.branco{
+    background-color: white;
+    color: #41592C;
+}
+.banner div.quadros {
+  display: flex;
+  justify-content: center;
+}
+.banner div.quadros ul li {
+  background-color: white;
+  border-radius: 0.8rem;
+  margin: 2vw 1vw;     
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5vw 7vw;
+  opacity: 0.80;
+}
+.banner div.quadros h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2C3E1C;
+}
+.banner div.quadros p{
+    font-size: 3rem;
+}
 
 /*=== sobre nós ===*/
 
