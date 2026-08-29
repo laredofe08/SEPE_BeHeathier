@@ -1,34 +1,34 @@
 /*=== header ===*/
 header,
-main {
+header, main {
     margin: 0;
     padding: 0;
 }
-
 header {
     background-color: #9AB17A;
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
     text-align: center;
 }
-
-header img {
-    width: 360px;
-    margin-top: -35px;
+header img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    left: 0;
+    padding-top:  5vw;
+    padding-left: 9vw;
 }
-
-header ul li {
+header ul li{
     color: white;
     display: block;
     margin-bottom: 4vw;
     font-size: 1.3rem;
 }
-
 header ul {
-    padding: 0 0 4vw 0;
+    padding-bottom: 4vw;
     width: 100%;
 }
-
 header a.atual {
     display: inline-block;
     background-color: white;
@@ -36,7 +36,6 @@ header a.atual {
     color: #9AB17A;
     padding: 1vw 5vw 1vw 5vw;
 }
-
 /*=== home ===*/
 .banner {
     background-image: url("../Imagens/Background.png");
@@ -97,7 +96,7 @@ header a.atual {
     margin: 4vw 2vw 4vw 2vw;
     background-color: white;
     padding: 2vw;
-    border-radius: 30px;
+    border-radius: 20px;
 
 }
 
@@ -111,6 +110,14 @@ header a.atual {
     padding: 3vw;
     border-radius: 30px;
 }
+  .sobre img{
+    width: 270px;
+    height: 270px;
+    border-radius: 5%;
+    object-fit: cover;
+    padding: vw 0 0 0 ;
+   }
+
 
 
 
@@ -313,13 +320,39 @@ footer nav a {
     /*=== sobre nós ===*/
 
 
-    .sobre ul {
-        display: flex;
-    }
 
-    .sobre div {
-        display: flex;
-    }
+   .sobre li{
+    display: flex;
+    padding: 2vw 2vw 2vw 2vw;
+    justify-content: left;
+    margin: 1vw 8vw 1vw 8vw;
+   }
+   .sobre img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    object-fit: cover;
+    
+   }
+   .sobre h1{
+    font-size: 2.6rem;
+   }
+      .sobre h2{
+    font-size: 2.8rem;
+   }
+   .sobre ul li h1{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1vw 0 0 2vw;
+   }  
+ .sobre ul li h1{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1vw 0 0 2vw;
+   }
+   .sobre p{
+
+   }
 
 
     /*=== dicas ===*/
