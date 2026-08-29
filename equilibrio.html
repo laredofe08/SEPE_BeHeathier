@@ -10,24 +10,44 @@
 </head>
 
 <body>
-    <header>
+<header>
+        <img src="Imagens/esquilo-logo.svg" alt="Logo BeHealthier" class="logo">
         <nav id="navbar">
-            <img src="Imagens/esquilo-logo.png" alt="Logo BeHealthier" class="logo" />
-            <a href="#" class="nav-tittle"> BeHealthier </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="atual">Início</a></li>
-                <li><a href="#receitas">Receitas</a></li>
-                <li><a href="cardapio.html">Cardápio</a></li>
-                <li><a href="#dieta">Dieta personalizada</a></li>
-                <li><a href="#dicas">Dicas</a></li>
-                <li><a href="equilibrio.html">Equilíbrio</a></li>
-                <li><a href="#videos">Vídeos</a></li>
-            </ul>
+        <ul class="nav-links" id="navLinks">
+            <li>
+                <a href="index.html" class="atual">Início</a>
+            </li>
+            <li>
+                <a href="receitas.html">Receitas</a>
+            </li>
+            <li>
+                <a href="cardapio.html">Cardápio</a>
+            </li>
+            <li>
+                <a href="dieta.html">Dieta personalizada</a>
+            </li>
+            <li>
+                <a href="dicas.html">Dicas</a>
+            </li>
+            <li>
+                <a href="equilibrio.html">Equilíbrio</a>
+            </li>
+            <li>
+                <a href="localizacao.html">Lozalização</a>
+            </li>
+            <li>
+                <a href="videos.html">Vídeos</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre Nós</a>
+            </li>
+        </ul>
+
         </nav>
     </header>
     <main>
         <section class="equilibrio">
-            <div>
+            <div class="equilibrio-texto">
                 <h2>Equilíbrio Nutricional</h2>
                 <h1>Como Ter uma Dieta Verdadeiramente Equilibrada</h1>
                 <p class="titulo">
@@ -40,7 +60,7 @@
                     <li>
                         <div>
                             <h3>Carboidratos</h3>
-                            <p>55%</p>
+                            <p class="porcentagem" >55%</p>
                         </div>
                         <progress value="55" max="100"></progress>
                         <p>Base energética do organismo</p>
@@ -48,7 +68,7 @@
                     <li>
                         <div>
                             <h3>Proteínas</h3>
-                            <p>20%</p>
+                            <p class="porcentagem" >20%</p>
                         </div>
                         <progress value="20" max="100"></progress>
                         <p>Construção e reparo muscular</p>
@@ -56,7 +76,7 @@
                     <li class="claro">
                         <div>
                             <h3>Gorduras Boas</h3>
-                            <p>25%</p>
+                            <p class="porcentagem" >25%</p>
                         </div>
                         <progress value="25" max="100"></progress>
                         <p>Saúde hormonal e cerebral</p>
@@ -68,8 +88,8 @@
                 <p class="verde">Proteína magra no almoço e jantar</p>
                 <p class="branco">Gorduras boas: azeite, abacate, oleaginosas</p>
             </div>
-            <div>
-                <img src="equilibrio.png" alt="Foto de varios ingredientes" />
+            <div class="equilibrio-foto">
+                <img src="Imagens/equilibrio.png" alt="Foto de varios ingredientes" />
 
                 <ul>
                     <li>
