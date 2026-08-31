@@ -1,43 +1,222 @@
 html{
     font-size: clamp;
 }
-/*=== header ===*/
-header,
-main {
-    margin: 0;
-    padding: 0;
-}
 
+/*=== header ===*/
 header {
+    position: relative;
+    margin: 0;
+    padding: 1rem 1.5rem;
     background-color: #9AB17A;
     border-bottom-left-radius: 2vw;
     border-bottom-right-radius: 2vw;
-    text-align: center;
+    overflow: hidden;
 }
 
-header img {
-    width: 360px;
-    margin-top: -35px;
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header ul li {
-    color: white;
+.logo {
+    width: 220px;
+    max-width: 45vw;
+    height: auto;
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
     display: block;
-    margin-bottom: 4vw;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animação para "X" quando o botão está ativo */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* Nav escondida, desliza da direita, em todas as telas */
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(75vw, 320px);
+    background-color: #9AB17A;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#navbar.open {
+    transform: translateX(0);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
     font-size: 1.3rem;
 }
 
-header ul {
-    padding: 0 0 4vw 0;
-    width: 100%;
+.nav-links a.atual {
+    display: inline-block;
+    background-color: #fff;
+    color: #9AB17A;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+.nav-links .nav-login {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-header a.atual {
-    display: inline-block;
-    background-color: white;
+.btn-login {
+    display: block;
+    text-align: center;
+    background-color: #fefefe;
     border-radius: 1rem;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+}
+
+.nav-links .btn-login {
     color: #9AB17A;
-    padding: 1vw 5vw 1vw 5vw;
+}
+
+/*=== login ===*/
+.login-page {
+    background: #FFE4BE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw 4vw;
+}
+
+.login-card-container {
+    width: 100%;
+    max-width: 400px;
+    perspective: 1500px;
+}
+
+.login-card {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.login-card.flipped {
+    transform: rotateY(180deg);
+    padding: 5vw;
+}
+
+.login-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    background: #fff;
+    border-radius: 30px;
+    padding: 8vw 6vw;
+    backface-visibility: hidden;
+}
+
+.login-front {
+    position: relative;
+}
+
+.login-back {
+    transform: rotateY(180deg);
+}
+
+.login-face h1 {
+    color: #2C3E1C;
+    margin-bottom: 4vw;
+}
+
+.login-face label {
+    color: #395224;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.login-face input {
+    border: 1px solid #d8d3ad;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    margin-bottom: 3vw;
+    font-size: 1rem;
+}
+
+.btn-login-submit {
+    background: #9AB17A;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 3vw;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2vw 0;
+}
+
+.link-secundario {
+    color: #9AB17A;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2vw;
+}
+
+.texto-troca {
+    text-align: center;
+    color: #2C3E1C;
+    margin-top: 2vw;
+}
+
+.link-primario {
+    color: #9AB17A;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 /*=== home ===*/
