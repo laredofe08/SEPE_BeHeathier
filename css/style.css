@@ -1,3 +1,8 @@
+html{
+    font-size: clamp;
+}
+
+/*=== header ===*/
 header {
     position: relative;
     margin: 0;
@@ -294,71 +299,147 @@ header {
 /*=== dicas ===*/
 
 
+
 /*=== equilíbrio ===*/
 
 .equilibrio {
     background: #FFE4BE;
-    padding: 2vw;
+    padding: 6vw 4vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
     text-align: center;
-
 }
 
 .equilibrio h2 {
     color: #9AB17A;
-    padding: 2vw;
     font-size: 1.1rem;
-
 }
 
 .equilibrio h1 {
     color: #2C3E1C;
-    padding: 2vw 0 2vw 0;
     font-size: 2rem;
 }
 
 .equilibrio p.titulo {
-    padding: 2vw;
     color: #2C3E1C;
-
+    padding: 2vw 0 2vw 0;
 }
 
-
-.equilibrio ul li {
-    padding: 2vw 0 3vw 0;
+.equilibrio-texto ul li {
     color: #395224;
+    padding: 0 0 4vw 0;
 }
 
-.equilibrio ul li div {
+.equilibrio-texto ul li div {
     display: flex;
-    margin: 2vw 5vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 2vw 0;
 }
 
-.equilibrio span p {
-    padding: 0 0 0 25vw;
-    text-align: end;
+ .equilibrio-foto ul {
+        gap: 5vw;
 }
 
-.equilibrio h3 {
-    padding: 0 16vw;
+.equilibrio-texto ul li div h3 {
+    color: #2C3E1C;
+    font-size: 1rem;
+}
+
+.equilibrio ul li p.porcentagem {
+    color: #2C3E1C;
+    font-weight: 700;
 }
 
 .equilibrio progress {
-    width: 500px;
+    display: block;
+    width: 100%;
+    height: 10px;
+    margin: 0 0 1vw 0;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .equilibrio progress::-webkit-progress-bar {
-    background-color: #a5a5a5;
+    background-color: #d8d3ad;
+    border-radius: 20px;
 }
 
 .equilibrio progress::-webkit-progress-value {
     background-color: #9AB17A;
+    border-radius: 20px;
 }
-
 
 .equilibrio progress::-moz-progress-bar {
     background-color: #9AB17A;
+    border-radius: 20px;
 }
 
+.equilibrio-texto ul li p:last-child {
+    font-size: 0.85rem;
+    color: #7c8a6a;
+}
+
+.equilibrio-texto p.branco,
+.equilibrio-texto p.verde {
+    border-radius: 30px;
+    padding: 4vw;
+    font-weight: 600;
+    margin: 0 0 3vw 0;
+}
+
+.equilibrio-texto p.branco {
+    background: #fff;
+    color: #2C3E1C;
+}
+
+.equilibrio-texto p.verde {
+    background: #9AB17A;
+    color: #fff;
+}
+
+.equilibrio-foto {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+.equilibrio-foto img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+ 
+}
+
+.equilibrio-foto ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+.equilibrio-foto ul li {
+    background: #fff;
+    border-radius: 30px;
+    padding: 4vw;
+    color: #2C3E1C;
+}
+
+.equilibrio-foto ul li:first-child {
+    background: #9AB17A;
+    color: #fff;
+}
+
+.equilibrio-foto ul li h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.equilibrio-foto ul li p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
 
 /*=== receitas ===*/
@@ -613,7 +694,6 @@ header {
 section.cardapio {
     background-color: #FFE6C3;
     text-align: center;
-    font-family: "Rozha One", serif;
 }
 
 section.cardapio h1 {
@@ -721,6 +801,32 @@ footer nav a {
 
     /*=== header ===*/
 
+    /*=== login ===*/
+
+    .login-page {
+        padding: 4rem 2rem;
+    }
+
+    .login-card-container {
+        max-width: 380px;
+    }
+
+    .login-face {
+        padding: 2.5rem 2rem;
+        gap: 0.5rem;
+    }
+
+    .login-face input {
+        padding: 0.8rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-login-submit {
+        padding: 0.8rem;
+        margin: 0.8rem 0;
+    }
+
+
 
 
     /*=== home ===*/
@@ -745,6 +851,25 @@ footer nav a {
 
     /*=== equilíbrio ===*/
 
+    /*=== equilíbrio ===*/
+
+     .equilibrio {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 4vw;
+    }
+
+    .equilibrio-texto {
+        flex: 1;
+        text-align: left;
+    }
+
+    .equilibrio-foto {
+        flex: 1;
+        max-width: 500px;
+        margin-top: 8vw;
+    }
 
 
     /*=== receitas ===*/
@@ -779,7 +904,5 @@ footer nav a {
     footer nav a {
         color: #fff;
         padding: 5vw;
-
     }
-
 }
