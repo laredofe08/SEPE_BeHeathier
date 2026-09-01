@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BeHealthier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+    <script src="index.json"></script>
+    <link rel="icon" type="image/png" href="Imagens/esquilo-logo.png" />
+</head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+<header>
+    <div class="header-top">
+        <img src="Imagens/esquilo-logo.svg" alt="Logo BeHealthier" class="logo">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <!-- Nao remova os span-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav id="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="receitas.html" class="atual">Receitas</a></li>
+
+    <nav id="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="atual">Início</a></li>
+            <li><a href="receitas.html">Receitas</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="dieta.html">Dieta personalizada</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="equilibrio.html">Equilíbrio</a></li>
+            <li><a href="localizacao.html">Localização</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-login"><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <section class="banner" id="inicio">
+            <div class="ideia">        
+                <p class="mini"> 🌟<span>Pequenas mudanças,</span> grandes transformações</p>
+                <h1><span>Be</span>Healthier</h1>
+                <h2>Comer bem nunca foi <span>tão fácil</span></h2>      
+                <p>
+                    Receitas nutritivas, cardápios equilibrados e dicas de saúde para  transformar a mesa da sua família em um espaço de bem-estar e alegria.
+                </p>
+                <div class="aidento">
+                    <p>
+                        <a href="#">Ver Cardápio 🍽️</a>
+                    </p>
+                    <p>
+                        <a href="#" class="branco">Dicas de saúde</a>
+                    </p>
+                </div>
+            </div>
+            <div class="quadros">
+                <ul>
+                    <li>
+                        <p>
+                            🥦
+                        </p>
+                        <h3>
+                            +de 150 receitas 
+                        </h3>
+                    </li>
+                    <li>
+                        <p>
+                            🫀
+                        </p>
+                        <h3>
+                            Aumentando sua 
+                        </h3>
+                    </li>
+                </ul>
+                <ul>
+                     <li>
+                        <p>
+                            ⚙️
+                        </p>
+                        <h3>
+                            Assistência 
+                        </h3>
+                    </li>
+                    <li>
+                        <p>
+                            🥘️
+                        </p>
+                        <h3>
+                            Monte sua dieta 
+                        </h3>
+                    </li>
+                </ul>
+                   
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
