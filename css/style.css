@@ -221,41 +221,100 @@ header {
 
 /*=== home ===*/
 .banner {
-    background-image: url("../Imagens/Background.png");
-
+    background-image: 
+        linear-gradient(to bottom, 
+            #9AB17A 0%,
+            #9AB17A 4%,
+            rgba(154, 177, 122, 0.5) 10%,
+            transparent 20%
+        ),
+        url("../Imagens/Background.png");
+    
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
-    padding-top: 1px;
+    padding-top: 0;
+    margin-top: -13vw;          /* ← aumentei aqui */
     text-align: center;
 }
-
-.banner div.ideia p.mini {
+.banner div.ideia p.mini{
     background-color: white;
     border-radius: 1rem;
-    padding: 1vw;
-    margin: 4vw 27vw 2vw;
+    padding: 3vw;
+    margin: 10vw 10vw 5vw;
+    opacity: 0.80;
 }
-
-.banner div.ideia h1 {
+.banner div.ideia h1{
     font-size: 3rem;
     font-weight: 550;
     color: #41592C;
 }
-
-.banner div.ideia h1 span {
+.banner div.ideia h1 span{
     color: #142506;
 }
-
-.banner div.ideia p.mini span {
+.banner div.ideia p.mini span{
     color: #9AB17A;
 }
-
-.banner div.ideia p.mini {
+.banner div.ideia p.mini{
     color: #AEAA86;
     font-size: 1.2rem;
 }
-
+.banner div.ideia h2{
+    font-size: 4rem;
+    font-weight: 550;
+    padding: 0 4vw;
+    color: #2C3E1C;
+}
+.banner div.ideia h2 span {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  color: #41592C;
+  padding: 0 0 0 1vw;
+}
+.banner div.ideia p{
+    font-size: 1.2rem;
+    padding: 4vw 8vw;
+    color: #2C3E1C;
+}
+.banner div.aidento{
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw 3vw;
+}
+.banner div.aidento a{
+    background-color: #41592C;
+    color: white;
+    padding: 3vw 5vw;
+    border-radius: 1rem;
+    opacity: 0.80;
+}
+.banner div.aidento a.branco{
+    background-color: white;
+    color: #41592C;
+}
+.banner div.quadros {
+  display: flex;
+  justify-content: center;
+}
+.banner div.quadros ul li {
+  background-color: white;
+  border-radius: 0.8rem;
+  margin: 2vw 1vw;     
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5vw 7vw;
+  opacity: 0.80;
+}
+.banner div.quadros h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2C3E1C;
+}
+.banner div.quadros p{
+    font-size: 3rem;
+}
 
 /*=== sobre nós ===*/
 
