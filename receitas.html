@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BeHealthier - Receitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+    <script src="index.json"></script>
+    <link rel="icon" type="image/png" href="Imagens/esquilo-logo.png" />
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <img src="Imagens/esquilo-logo.svg" alt="Logo BeHealthier" class="logo">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav id="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="receitas.html" class="atual">Receitas</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="dieta.html">Dieta personalizada</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="equilibrio.html">Equilíbrio</a></li>
+            <li><a href="localizacao.html">Localização</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-login"><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="receitas">
+
+        <div class="receitas-titulo">
+            <h2>DESTAQUES</h2>
+            <h1>Receitas populares</h1>
+            <p>Explore nossas receitas saudáveis, filtre por categoria e encontre a próxima refeição para o seu cardápio.</p>
+        </div>
+
+        <div class="receitas-filtros" id="receitasFiltros">
+            <button type="button" class="filtro-btn ativo" data-categoria="Todas">Todas</button>
+            <!-- demais categorias inseridas via JS -->
+        </div>
+
+        <div class="receitas-grid" id="receitasGrid">
+            <!-- cards inseridos via JS -->
+        </div>
+
+        <button type="button" class="btn-ver-mais" id="btnVerMais">Ver mais receitas</button>
+
+    </section>
+</main>
+
+<!-- Modal de detalhes da receita -->
+<div class="receita-modal" id="receitaModal">
+    <div class="receita-modal__painel">
+        <button type="button" class="receita-modal__fechar" id="fecharModal" aria-label="Fechar">×</button>
+        <div id="receitaModalConteudo"></div>
+    </div>
+</div>
+
+</body>
+</html>
