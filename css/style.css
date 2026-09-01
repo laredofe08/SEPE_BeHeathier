@@ -1,41 +1,224 @@
+html{
+    font-size: clamp;
+}
+
 /*=== header ===*/
-header,
-main {
-    margin: 0;
-    padding: 0;
-}
-
 header {
+    position: relative;
+    margin: 0;
+    padding: 1rem 1.5rem;
     background-color: #9AB17A;
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
-    text-align: center;
+    overflow: hidden;
 }
 
-header img {
-    width: 360px;
-    margin-top: -35px;
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header ul li {
-    color: white;
+.logo {
+    width: 220px;
+    max-width: 45vw;
+    height: auto;
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
     display: block;
-    margin-bottom: 4vw;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animação para "X" quando o botão está ativo */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* Nav escondida, desliza da direita, em todas as telas */
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(75vw, 320px);
+    background-color: #9AB17A;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#navbar.open {
+    transform: translateX(0);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
     font-size: 1.3rem;
 }
 
-header ul {
-    padding: 0 0 4vw 0;
-    width: 100%;
+.nav-links a.atual {
+    display: inline-block;
+    background-color: #fff;
+    color: #9AB17A;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+.nav-links .nav-login {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-header a.atual {
-    display: inline-block;
-    background-color: white;
+.btn-login {
+    display: block;
+    text-align: center;
+    background-color: #fefefe;
     border-radius: 1rem;
-    color: #9AB17A;
-    padding: 1vw 5vw 1vw 5vw;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
 }
+
+.nav-links .btn-login {
+    color: #9AB17A;
+}
+
+/*=== login ===*/
+.login-page {
+    background: #FFE4BE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw 4vw;
+}
+
+.login-card-container {
+    width: 100%;
+    max-width: 400px;
+    perspective: 1500px;
+}
+
+.login-card {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.login-card.flipped {
+    transform: rotateY(180deg);
+    padding: 5vw;
+}
+
+.login-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    background: #fff;
+    border-radius: 30px;
+    padding: 8vw 6vw;
+    backface-visibility: hidden;
+}
+
+.login-front {
+    position: relative;
+}
+
+.login-back {
+    transform: rotateY(180deg);
+}
+
+.login-face h1 {
+    color: #2C3E1C;
+    margin-bottom: 4vw;
+}
+
+.login-face label {
+    color: #395224;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.login-face input {
+    border: 1px solid #d8d3ad;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    margin-bottom: 3vw;
+    font-size: 1rem;
+}
+
+.btn-login-submit {
+    background: #9AB17A;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 3vw;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2vw 0;
+}
+
+.link-secundario {
+    color: #9AB17A;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2vw;
+}
+
+.texto-troca {
+    text-align: center;
+    color: #2C3E1C;
+    margin-top: 2vw;
+}
+
+.link-primario {
+    color: #9AB17A;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
 
 /*=== home ===*/
 .banner {
@@ -192,83 +375,219 @@ header a.atual {
 
 
 /*=== cardápio ===*/
-section.cardapio {
-    background-color: #FFE6C3;
+.cardapio {
+    background: linear-gradient(160deg, #FFD9A0, #FFE4BE);
+    padding: 6vw 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+/* Botão Personalizar Cardápio */
+.btn-personalizar {
+    display: block;
     text-align: center;
-    font-family: "Rozha One", serif;
+    background: #2C3E1C;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 4vw;
+    margin-bottom: 4vw;
 }
 
-section.cardapio h1 {
-    font-size: 2rem;
-    color: #2C3E1C;
+/* Lista de dias */
+.dias-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    margin-bottom: 4vw;
+}
 
+.dia-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    color: #2C3E1C;
+    border: none;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dia-nome {
+    font-weight: 700;
+}
+
+.dia-kcal {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.dia-btn.ativo {
+    background: #9AB17A;
+    color: #fff;
+}
+
+/* Porções individuais */
+.porcoes-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 4vw;
+}
+
+.porcoes-card h3 {
+    color: #2C3E1C;
+    margin-bottom: 2vw;
+}
+
+.porcoes-card ul {
+    list-style: none;
+}
+
+.porcoes-card li {
+    display: flex;
+    justify-content: space-between;
+    color: #395224;
+    padding: 2vw 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.porcoes-card li:last-child {
+    border-bottom: none;
+}
+
+/* Título e subtítulo */
+.cardapio-titulo {
+    text-align: center;
+    margin-bottom: 4vw;
+}
+
+.cardapio-titulo h1 {
+    color: #2C3E1C;
+    font-size: 1.8rem;
+    margin-bottom: 2vw;
+}
+
+.cardapio-titulo p {
+    color: #395224;
+    font-size: 0.9rem;
+}
+
+/* Grid de refeições */
+.refeicoes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    margin-bottom: 4vw;
+}
+
+.refeicao-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 4vw;
+}
+
+.refeicao-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.refeicao-badge {
+    background: #9AB17A;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vw 3vw;
+    border-radius: 20px;
+}
+
+.refeicao-kcal {
+    color: #2C3E1C;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.refeicao-nome {
+    color: #2C3E1C;
     font-weight: 600;
-    font-style: normal;
-    padding: 32px 20px 40px 20px;
-
 }
 
-.planejarrefeicoes {
-    color: #2C3E1C;
-    font-size: 1rem;
-
-    font-weight: 530;
-    font-style: normal;
-    padding: 0 20px 40px 20px;
-
+/* Dica do dia */
+.dica-dia {
+    background: #9AB17A;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5vw 4vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
 }
 
-.btncardapio {
-    padding: 32px 60px 32px 60px;
-    background-color: #2C3E1CCC;
-    ;
-    color: white;
-    border-radius: 47px;
-    margin: 0 0 40px 0;
+.dica-icone {
+    font-size: 1.5rem;
 }
 
-.selected {
-
-    margin: 0 40px 0 40px;
-    padding: 25px;
-    background-color: #9AB17A;
-    color: white;
-    border-radius: 47px;
+.dica-dia p {
+    font-size: 0.9rem;
 }
 
-.cal {
-    padding: 5px;
+/* A partir daqui, layout em duas colunas */
+@media (min-width: 600px) {
+    .cardapio {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .cardapio-sidebar {
+        width: 280px;
+        flex-shrink: 0;
+    }
+
+    .cardapio-content {
+        flex: 1;
+    }
+
+    .refeicoes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-personalizar,
+    .dia-btn,
+    .porcoes-card,
+    .refeicao-card,
+    .dica-dia {
+        padding: 1rem 1.2rem;
+    }
+    .cardapio-content p{
+        font-size: 16px;
+    }
+    .cardapio-titulo h1 {
+        font-size: 2.2rem;
+    }
+    .cardapio{
+        font-size: 22px;
+    }
+    .refeicao-card span{
+        font-size: 14px;
+    }
+    .dica-dia p{
+        font-size: 18px;
+    }
+    .cardapio h1{
+        font-weight:650 ;
+    }
 }
-
-.dia {
-    padding: 5px;
-    font-weight: 850;
-}
-
-.unselected {
-    margin: 40px 40px 40px 40px;
-    padding: 25px;
-    background-color: white;
-    border-radius: 47px;
-}
-
-
-.Dica {
-    background-color: #9AB17A;
-    border-radius: 47px;
-    padding: 50px;
-    gap: 20px;
-
-}
-
-.Dica p {
-    color: #2C3E1C;
-}
-
-.Dica span {
-    font-weight: 800;
-}
-
 
 /*=== footer ===*/
 
