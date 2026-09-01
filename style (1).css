@@ -1,8 +1,18 @@
+/*==== variáveis de cor ====*/
+:root {
+    --color-primary: #9AB17A;
+    --color-primary-dark: #2C3E1C;
+    --color-text-green: #395224;
+    --color-secondary: #FFE4BE;
+    --color-white: #fff;
+    --color-gradient-end: #c8d7ad;
+}
+
 header {
     position: relative;
     margin: 0;
     padding: 1rem 1.5rem;
-    background-color: #9AB17A;
+    background-color: var(--color-primary);
     overflow: hidden;
 }
 
@@ -36,7 +46,7 @@ header {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -61,7 +71,7 @@ header {
     right: 0;
     height: 100vh;
     width: min(75vw, 320px);
-    background-color: #9AB17A;
+    background-color: var(--color-primary);
     transform: translateX(100%);
     transition: transform 0.3s ease;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
@@ -83,18 +93,19 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 1.3rem;
 }
 
 .nav-links a.atual {
     display: inline-block;
-    background-color: #fff;
-    color: #9AB17A;
+    background-color: var(--color-white);
+    color: var(--color-primary);
     border-radius: 1rem;
     padding: 0.5rem 1.5rem;
 }
+
 .nav-links .nav-login {
     margin-top: 1rem;
     padding-top: 1rem;
@@ -111,12 +122,12 @@ header {
 }
 
 .nav-links .btn-login {
-    color: #9AB17A;
+    color: var(--color-primary);
 }
 
 /*=== login ===*/
 .login-page {
-    background: #FFE4BE;
+    background: var(--color-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +159,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 30px;
     padding: 8vw 6vw;
     backface-visibility: hidden;
@@ -163,12 +174,12 @@ header {
 }
 
 .login-face h1 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     margin-bottom: 4vw;
 }
 
 .login-face label {
-    color: #395224;
+    color: var(--color-text-green);
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -182,8 +193,8 @@ header {
 }
 
 .btn-login-submit {
-    background: #9AB17A;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
     border: none;
     border-radius: 30px;
     padding: 3vw;
@@ -194,7 +205,7 @@ header {
 }
 
 .link-secundario {
-    color: #9AB17A;
+    color: var(--color-primary);
     text-align: center;
     text-decoration: none;
     margin-top: 2vw;
@@ -202,34 +213,24 @@ header {
 
 .texto-troca {
     text-align: center;
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     margin-top: 2vw;
 }
 
 .link-primario {
-    color: #9AB17A;
+    color: var(--color-primary);
     font-weight: 700;
     text-decoration: none;
 }
 
-
-
 /*=== home ===*/
 .banner {
     background-image: url("../Imagens/Background.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 1px;
     text-align: center;
-}
-
-.banner div.ideia p.mini {
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1vw;
-    margin: 4vw 27vw 2vw;
 }
 
 .banner div.ideia h1 {
@@ -242,25 +243,28 @@ header {
     color: #142506;
 }
 
-.banner div.ideia p.mini span {
-    color: #9AB17A;
-}
-
 .banner div.ideia p.mini {
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    padding: 1vw;
+    margin: 4vw 27vw 2vw;
     color: #AEAA86;
     font-size: 1.2rem;
 }
 
-/*=== Lista-receitas ===*/
+.banner div.ideia p.mini span {
+    color: var(--color-primary);
+}
+
 
 /*=== minha lista de receitas ===*/
 .minha-lista {
-    background: #9AB17A;
+    background: var(--color-primary);
     padding: 6vw 4vw;
 }
 
 .minha-lista h1 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1.8rem;
     margin-bottom: 4vw;
 }
@@ -272,13 +276,13 @@ header {
 }
 
 .minha-lista-painel-esquerdo {
-    background: #FFE4BE;
+    background: var(--color-secondary);
     border-radius: 20px;
     padding: 4vw;
 }
 
 .minha-lista-painel-esquerdo h2 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1.1rem;
     margin-bottom: 3vw;
 }
@@ -297,10 +301,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 12px;
     padding: 2.5vw 3vw;
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
@@ -308,7 +312,7 @@ header {
 }
 
 .minha-lista-item.selecionada {
-    border-color: #9AB17A;
+    border-color: var(--color-primary);
     background: #f2f8ec;
 }
 
@@ -330,8 +334,8 @@ header {
 .btn-procurar-mais {
     display: block;
     width: 100%;
-    background: #2C3E1C;
-    color: #fff;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
     border: none;
     border-radius: 999px;
     padding: 3vw;
@@ -350,8 +354,8 @@ header {
 
 .detalhe-badge {
     display: inline-block;
-    background: #FFE4BE;
-    color: #2C3E1C;
+    background: var(--color-secondary);
+    color: var(--color-primary-dark);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 1vw 3vw;
@@ -365,7 +369,7 @@ header {
     border-radius: 16px;
     margin-bottom: 3vw;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFE4BE, #c8d7ad);
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-gradient-end));
 }
 
 .detalhe-media img {
@@ -375,7 +379,7 @@ header {
 }
 
 .minha-lista-painel-direito h3 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1.3rem;
     margin-bottom: 3vw;
 }
@@ -387,12 +391,12 @@ header {
 }
 
 .detalhe-macro {
-    background: #fff;
+    background: var(--color-white);
     border-radius: 12px;
     padding: 2vw;
     text-align: center;
     font-size: 0.75rem;
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     flex: 1;
 }
 
@@ -402,7 +406,7 @@ header {
 }
 
 .minha-lista-painel-direito h4 {
-    color: #9AB17A;
+    color: var(--color-primary);
     font-size: 0.85rem;
     margin: 3vw 0 1.5vw;
 }
@@ -413,14 +417,14 @@ header {
 }
 
 .minha-lista-painel-direito ul li {
-    color: #395224;
+    color: var(--color-text-green);
     font-size: 0.85rem;
     padding: 1vw 0;
     border-bottom: 1px solid #e5e2d5;
 }
 
 .minha-lista-painel-direito p.detalhe-preparo {
-    color: #395224;
+    color: var(--color-text-green);
     font-size: 0.85rem;
     line-height: 1.5;
     margin-bottom: 4vw;
@@ -428,7 +432,7 @@ header {
 
 .btn-remover-lista {
     background: #7a3626;
-    color: #fff;
+    color: var(--color-white);
     border: none;
     border-radius: 999px;
     padding: 3vw 5vw;
@@ -437,9 +441,7 @@ header {
     cursor: pointer;
 }
 
-
 /*=== sobre nós ===*/
-
 .sobre {
     background-color: #E4DFB5;
     text-align: center;
@@ -448,70 +450,61 @@ header {
 
 .sobre h1 {
     font-size: 1rem;
-    color: #9AB17A;
+    color: var(--color-primary);
 }
 
 .sobre h2 {
     font-size: 1.6rem;
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
 }
 
 .sobre li {
     margin: 4vw 2vw 4vw 2vw;
-    background-color: white;
+    background-color: var(--color-white);
     padding: 2vw;
     border-radius: 30px;
-
 }
 
 .sobre ul li h1 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
 }
 
 .sobre h3 {
-    background-color: #9AB17A;
-    color: #2C3E1C;
+    background-color: var(--color-primary);
+    color: var(--color-primary-dark);
     padding: 3vw;
     border-radius: 30px;
 }
 
-
-
 /*=== dicas ===*/
 
-
 /*=== equilíbrio ===*/
-
 .equilibrio {
-    background: #FFE4BE;
+    background: var(--color-secondary);
     padding: 2vw;
     text-align: center;
-
 }
 
 .equilibrio h2 {
-    color: #9AB17A;
+    color: var(--color-primary);
     padding: 2vw;
     font-size: 1.1rem;
-
 }
 
 .equilibrio h1 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     padding: 2vw 0 2vw 0;
     font-size: 2rem;
 }
 
 .equilibrio p.titulo {
     padding: 2vw;
-    color: #2C3E1C;
-
+    color: var(--color-primary-dark);
 }
-
 
 .equilibrio ul li {
     padding: 2vw 0 3vw 0;
-    color: #395224;
+    color: var(--color-text-green);
 }
 
 .equilibrio ul li div {
@@ -537,20 +530,16 @@ header {
 }
 
 .equilibrio progress::-webkit-progress-value {
-    background-color: #9AB17A;
+    background-color: var(--color-primary);
 }
-
 
 .equilibrio progress::-moz-progress-bar {
-    background-color: #9AB17A;
+    background-color: var(--color-primary);
 }
 
-
-
 /*=== receitas ===*/
-
 .receitas {
-    background: #FFE4BE;
+    background: var(--color-secondary);
     padding: 6vw 4vw;
 }
 
@@ -560,26 +549,26 @@ header {
 }
 
 .receitas-titulo h2 {
-    color: #9AB17A;
+    color: var(--color-primary);
     font-size: 0.9rem;
     letter-spacing: 0.05em;
     font-weight: 700;
 }
 
 .receitas-titulo h1 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1.8rem;
     margin: 2vw 0;
 }
 
 .receitas-titulo p {
-    color: #395224;
+    color: var(--color-text-green);
     font-size: 0.9rem;
 }
 
 /* Filtros de categoria */
 .receitas-filtros {
-    background: #9AB17A;
+    background: var(--color-primary);
     padding: 2vw;
     margin: 2vw;
     border-radius: 20px;
@@ -592,15 +581,14 @@ header {
 
 .receitas-filtros::-webkit-scrollbar {
     display: none;
-    
 }
 
 .filtro-btn {
     align-items: center;
     margin: 3vw;
     flex: 0 0 auto;
-    background-color: #fff;
-    color: #2C3E1C;
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
     border: none;
     border-radius: 40px;
     padding: 2vw 4vw;
@@ -612,13 +600,12 @@ header {
 }
 
 .filtro-btn.ativo {
-    background: #2C3E1C;
-    color: #fff;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
 }
 
 /* Grid de receitas */
 .receitas-grid {
-    
     display: grid;
     grid-template-columns: 1fr;
     gap: 4vw;
@@ -626,7 +613,7 @@ header {
 }
 
 .receita-card {
-    background: #fff;
+    background: var(--color-white);
     border-radius: 20px;
     padding: 4vw;
     display: flex;
@@ -641,8 +628,8 @@ header {
 }
 
 .receita-card__badge {
-    background: #9AB17A;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-white);
     font-size: 0.65rem;
     font-weight: 700;
     padding: 1vw 3vw;
@@ -650,13 +637,13 @@ header {
 }
 
 .receita-card__kcal {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 0.8rem;
     font-weight: 700;
 }
 
 .receita-card h3 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1.05rem;
 }
 
@@ -670,7 +657,7 @@ header {
 .receita-card__acao {
     background: none;
     border: none;
-    color: #9AB17A;
+    color: var(--color-primary);
     font-weight: 700;
     font-size: 0.8rem;
     text-align: left;
@@ -682,8 +669,8 @@ header {
 .btn-ver-mais {
     display: block;
     margin: 0 auto;
-    background: #2C3E1C;
-    color: #fff;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
     border: none;
     border-radius: 999px;
     padding: 3vw 6vw;
@@ -703,7 +690,7 @@ header {
     aspect-ratio: 4 / 3;
     border-radius: 14px;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFE4BE, #c8d7ad);
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-gradient-end));
 }
 
 .receita-card__media img {
@@ -729,8 +716,8 @@ header {
 }
 
 .btn-salvar.salvo {
-    background: #9AB17A;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 /* Espaço de imagem + botão salvar no modal */
@@ -740,7 +727,7 @@ header {
     aspect-ratio: 4 / 3;
     border-radius: 16px;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFE4BE, #c8d7ad);
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-gradient-end));
     margin-bottom: 3vw;
 }
 
@@ -749,6 +736,7 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
 /* Modal de detalhes */
 .receita-modal {
     position: fixed;
@@ -767,7 +755,7 @@ header {
 
 .receita-modal__painel {
     position: relative;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 20px;
     padding: 8vw 5vw 6vw;
     max-width: 500px;
@@ -783,8 +771,8 @@ header {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #2C3E1C;
-    color: #fff;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
     border: none;
     font-size: 1.3rem;
     line-height: 1;
@@ -792,7 +780,7 @@ header {
 }
 
 .receita-modal h2 {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1.3rem;
     margin-bottom: 2vw;
     padding-right: 8vw;
@@ -805,8 +793,8 @@ header {
 }
 
 .receita-modal__macro {
-    background: #FFE4BE;
-    color: #2C3E1C;
+    background: var(--color-secondary);
+    color: var(--color-primary-dark);
     border-radius: 12px;
     padding: 2vw 3vw;
     text-align: center;
@@ -820,7 +808,7 @@ header {
 }
 
 .receita-modal h3 {
-    color: #9AB17A;
+    color: var(--color-primary);
     font-size: 0.9rem;
     margin: 4vw 0 2vw;
 }
@@ -830,23 +818,19 @@ header {
 }
 
 .receita-modal li {
-    color: #395224;
+    color: var(--color-text-green);
     font-size: 0.85rem;
     padding: 1vw 0;
     border-bottom: 1px solid #f0f0f0;
 }
 
 .receita-modal p {
-    color: #395224;
+    color: var(--color-text-green);
     font-size: 0.85rem;
     line-height: 1.5;
 }
 
-
-
-
 /*=== videos ===*/
-
 
 /*=== cardápio ===*/
 section.cardapio {
@@ -857,39 +841,33 @@ section.cardapio {
 
 section.cardapio h1 {
     font-size: 2rem;
-    color: #2C3E1C;
-
+    color: var(--color-primary-dark);
     font-weight: 600;
     font-style: normal;
     padding: 32px 20px 40px 20px;
-
 }
 
 .planejarrefeicoes {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
     font-size: 1rem;
-
     font-weight: 530;
     font-style: normal;
     padding: 0 20px 40px 20px;
-
 }
 
 .btncardapio {
     padding: 32px 60px 32px 60px;
     background-color: #2C3E1CCC;
-    ;
-    color: white;
+    color: var(--color-white);
     border-radius: 47px;
     margin: 0 0 40px 0;
 }
 
 .selected {
-
     margin: 0 40px 0 40px;
     padding: 25px;
-    background-color: #9AB17A;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border-radius: 47px;
 }
 
@@ -905,71 +883,53 @@ section.cardapio h1 {
 .unselected {
     margin: 40px 40px 40px 40px;
     padding: 25px;
-    background-color: white;
+    background-color: var(--color-white);
     border-radius: 47px;
 }
 
-
 .Dica {
-    background-color: #9AB17A;
+    background-color: var(--color-primary);
     border-radius: 47px;
     padding: 50px;
     gap: 20px;
-
 }
 
 .Dica p {
-    color: #2C3E1C;
+    color: var(--color-primary-dark);
 }
 
 .Dica span {
     font-weight: 800;
 }
 
-
 /*=== footer ===*/
-
 footer {
-
-    background: #395224;
+    background: var(--color-text-green);
 }
 
 footer ul.contato li {
     padding: 5vw;
-    color: #fff;
-
-
-
+    color: var(--color-white);
 }
 
 footer nav h3 {
-    color: #fff;
+    color: var(--color-white);
     padding: 5vw;
 }
 
 footer nav a {
-    color: #fff;
+    color: var(--color-white);
     padding: 5vw;
-
 }
 
 /* MEDIA QUERY - DESKTOP */
-
 @media screen and (min-width: 600px) {
-
 
     /*=== header ===*/
 
-
-
     /*=== home ===*/
 
-
-
-
     /*=== sobre nós ===*/
-
-
     .sobre ul {
         display: flex;
     }
@@ -978,17 +938,12 @@ footer nav a {
         display: flex;
     }
 
-
     /*=== dicas ===*/
-
 
     /*=== equilíbrio ===*/
 
-
-
     /*=== receitas ===*/
-
-        .minha-lista {
+    .minha-lista {
         padding: 3rem 2rem;
     }
 
@@ -1008,34 +963,6 @@ footer nav a {
 
     /*=== videos ===*/
 
-
     /*=== cardápio ===*/
-
-
-    /*=== footer ===*/
-
-    footer {
-
-        background: #395224;
-    }
-
-    footer ul.contato li {
-        padding: 5vw;
-        color: #fff;
-
-
-
-    }
-
-    footer nav h3 {
-        color: #fff;
-        padding: 5vw;
-    }
-
-    footer nav a {
-        color: #fff;
-        padding: 5vw;
-
-    }
 
 }

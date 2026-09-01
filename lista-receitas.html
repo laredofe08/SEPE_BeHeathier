@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BeHealthier - Receitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+    <script src="index.json"></script>
+    <link rel="icon" type="image/png" href="Imagens/esquilo-logo.png" />
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <img src="Imagens/esquilo-logo.svg" alt="Logo BeHealthier" class="logo">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav id="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="receitas.html" class="atual">Receitas</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="dieta.html">Dieta personalizada</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="equilibrio.html">Equilíbrio</a></li>
+            <li><a href="localizacao.html">Localização</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-login"><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="minha-lista">
+    <h1>Sua Lista de Receitas</h1>
+
+    <div class="minha-lista-conteudo">
+        <div class="minha-lista-painel-esquerdo">
+            <h2>Receitas Salvas:</h2>
+            <ul class="minha-lista-itens" id="minhaListaItens">
+                <li class="minha-lista-vazio">Você ainda não salvou nenhuma receita.</li>
+            </ul>
+            <button type="button" class="btn-procurar-mais" id="btnProcurarMais">Procurar mais receitas 🔍</button>
+        </div>
+
+        <div class="minha-lista-painel-direito" id="minhaListaDetalhe">
+            <p class="minha-lista-placeholder">Clique em uma receita salva na lista ao lado para ver os detalhes aqui.</p>
+        </div>
+    </div>
+</section>
