@@ -1,32 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>BeHealthier</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="Imagens/esquilo-logo.png">
-</head>    
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+    <script src="index.json"></script>
+    <link rel="icon" type="image/png" href="Imagens/esquilo-logo.png" />
+</head>
 <body>
-    <header>
-        <nav id="navbar">
-            <img src="Imagens/esquilo-logo.png" alt="Logo BeHealthier" class="logo">
-            <a href="#" class="nav-tittle">
-                BeHealthier
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio" class="atual">Início</a></li>
-                <li><a href="#receitas">Receitas</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#dieta">Dieta personalizada</a></li>
-                <li><a href="#dicas">Dicas</a></li>
-                <li><a href="#equilibrio">Equilíbrio</a></li>
-                <li><a href="#videos">Vídeos</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="header-top">
+        <img src="Imagens/esquilo-logo.svg" alt="Logo BeHealthier" class="logo">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav id="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="receitas.html" class="atual">Receitas</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="dieta.html">Dieta personalizada</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="equilibrio.html">Equilíbrio</a></li>
+            <li><a href="localizacao.html">Localização</a></li>
+            <li><a href="videos.html">Vídeos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-login"><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
         <section class="ideia" id="inicio">
             <div class="ideaia">             
