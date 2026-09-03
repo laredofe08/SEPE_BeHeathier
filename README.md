@@ -263,16 +263,16 @@ Coordenador: Murilo Antonio de Almeida
 
 Secretário: Felipe Laredo da Silva
 
-Assunto: continuação do HTML e css, criação de novas branchs no repositório para melhor organização do projeto.
+Assunto: continuação do HTML e css, criação de novas branchs no repositório para melhor organização do projeto, desenvolvimento de banco de dados.
 
 Enzo Melgarejo: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Sobre Nós;
 
-Felipe Laredo: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Dicas. E organização e entendimento de git e github. Desenvolvimento de 10 branchs para cada pagina do projeto, para cada integrante fazer suas paginas separadamente.
+Felipe Laredo: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Dicas. E organização e entendimento de git e github. Desenvolvimento de branchs para cada pagina do projeto, para cada integrante fazer suas paginas separadamente.
 
 Henrique Tironi: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Equilibrio;
 
 Igor Hayato: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Home/Inicio;
 
-Lucas de Amorin: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Receitas;
+Lucas de Amorin: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Receitas; Desenvolvimento de Banco de dados.
 
-Murilo Antonio: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Cardapio;
+Murilo Antonio: Desenvolvimento do HTML/CSS da pagina para Mobile/descktop: Cardapio. Desenvolvimento de Banco de dados.
