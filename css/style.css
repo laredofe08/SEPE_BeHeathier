@@ -1,34 +1,34 @@
 /*=== header ===*/
-header,
-main {
+header, main {
     margin: 0;
     padding: 0;
 }
-
 header {
     background-color: #9AB17A;
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
     text-align: center;
 }
-
-header img {
-    width: 360px;
-    margin-top: -35px;
+header img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    left: 0;
+    padding-top:  5vw;
+    padding-left: 9vw;
+    padding-bottom: 5cqw;
 }
-
-header ul li {
+header ul li{
     color: white;
     display: block;
     margin-bottom: 4vw;
     font-size: 1.3rem;
 }
-
 header ul {
-    padding: 0 0 4vw 0;
+    padding-bottom: 4vw;
     width: 100%;
 }
-
 header a.atual {
     display: inline-block;
     background-color: white;
@@ -115,6 +115,89 @@ header a.atual {
 
 
 /*=== dicas ===*/
+/*=== dicas ===*/
+section.dicas {
+    background-color: #FBE3B9;
+    text-align: center;
+    padding: 10vw 6vw 12vw;
+}
+
+section.dicas .subtitulo {
+    color: #9AB17A;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    margin-bottom: 3vw;
+}
+
+section.dicas h1 {
+    color: #2C3E1C;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8vw;
+}
+
+.grid-dicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+}
+
+.card-dica {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1.5rem;
+    padding: 9vw 7vw;
+    color: #fff;
+    text-align: center;
+}
+
+.card-dica h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 4vw;
+}
+
+.card-dica p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.card-dica.claro {
+    background-color: #9AB17A;
+}
+
+.card-dica.escuro {
+    background-color: #2C3E1C;
+}
+
+/* cartões brancos - vão junto no fluxo, centralizados */
+.card-flutuante {
+    width: 100%;
+    max-width: 360px;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 8vw 7vw;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    margin: 4vw auto 0;
+}
+
+.card-flutuante h4 {
+    color: #2C3E1C;
+    font-weight: 700;
+    margin-bottom: 3vw;
+    font-size: 1.15rem;
+}
+
+.card-flutuante p {
+    color: #2C3E1C;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 
 
 /*=== equilíbrio ===*/
