@@ -8,7 +8,9 @@
     "preparo": "Misture bem o ovo e a tapioca com um garfo. Despeje na frigideira quente, doure de um lado, vire, adicione o recheio se quiser e feche ao meio.",
     "calorias": 235.0,
     "proteinas": 18.0,
-    "carboidratos": 15.0
+    "carboidratos": 15.0,
+    "foto": 
+    
   },
   {
     "id": 2,
@@ -19,6 +21,7 @@
     "calorias": 192.0,
     "proteinas": 14.0,
     "carboidratos": 3.0
+
   },
   {
     "id": 3,
