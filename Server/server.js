@@ -1,484 +1,330 @@
 /* ==========================================================
-   BeHealthier - script.js
-   Cada bloco só roda na página que tem os elementos certos
-   (por isso os "if" no começo de cada bloco)
+   BeHealthier - server.js
+   API do site: cadastro/login com sessão, perfil de saúde,
+   receitas salvas e cardápio semanal por usuário.
    ========================================================== */
 
-   /*alterar quando trocar de maquina e baixar o node_modules*/
-const API_URL = 'http://localhost:3000/api';
+const path = require('path');
+const fs = require('fs');
+const express = require('express');
+const cors = require('cors');
+const session = require('express-session');
+const bcrypt = require('bcrypt');
 
-/* ---------- 1. Menu hambúrguer (todas as páginas) ---------- */
-const menuToggle = document.getElementById('menuToggle');
-const navbar = document.getElementById('navbar');
-const navLinksEls = document.querySelectorAll('#navLinks a');
+const PORTA = 3000;
+const SALT_ROUNDS = 10;
+const DIAS_SEMANA = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo'];
 
-if (menuToggle && navbar) {
-    function toggleMenu(forceState) {
-        const isOpen = navbar.classList.toggle('open', forceState);
-        menuToggle.classList.toggle('active', isOpen);
-        menuToggle.setAttribute('aria-expanded', isOpen);
+const CAMINHO_USUARIOS = path.join(__dirname, 'data', 'usuarios.json');
+const CAMINHO_RECEITAS = path.join(__dirname, '..', 'receitas.json');
+
+const app = express();
+
+app.use(cors({
+    origin: true,       // reflete a origem que fez a requisição (dev local, várias portas)
+    credentials: true   // necessário para o cookie de sessão ir junto
+}));
+app.use(express.json());
+app.use(session({
+    secret: 'behealthier-segredo-dev', // trocar por variável de ambiente em produção
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        secure: false,     // true somente quando o site rodar em https
+        sameSite: 'lax',
+        maxAge: 1000 * 60 * 60 * 24 // 1 dia
     }
+}));
 
-    menuToggle.addEventListener('click', () => toggleMenu());
+/* ---------- Utilidades de leitura/gravação ---------- */
 
-    navLinksEls.forEach(link => {
-        link.addEventListener('click', () => toggleMenu(false));
-    });
-
-    document.addEventListener('click', (e) => {
-        const clickedOutside = !navbar.contains(e.target) && !menuToggle.contains(e.target);
-        if (navbar.classList.contains('open') && clickedOutside) {
-            toggleMenu(false);
-        }
-    });
+function lerUsuarios() {
+    if (!fs.existsSync(CAMINHO_USUARIOS)) return [];
+    const conteudo = fs.readFileSync(CAMINHO_USUARIOS, 'utf-8').trim();
+    return conteudo === '' ? [] : JSON.parse(conteudo);
 }
 
-/* ---------- 2. Login / Cadastro (login.html) ---------- */
-const loginCard = document.getElementById('loginCard');
-
-if (loginCard) {
-    const toCadastro = document.getElementById('toCadastro');
-    const toLogin = document.getElementById('toLogin');
-    const formLogin = document.getElementById('formLogin');
-    const formCadastro = document.getElementById('formCadastro');
-
-    toCadastro.addEventListener('click', (e) => {
-        e.preventDefault();
-        loginCard.classList.add('flipped');
-    });
-
-    toLogin.addEventListener('click', (e) => {
-        e.preventDefault();
-        loginCard.classList.remove('flipped');
-    });
-
-    function mostrarMensagem(elemento, texto, tipo) {
-        elemento.textContent = texto;
-        elemento.className = `mensagem ${tipo}`;
-    }
-
-    formLogin.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const usuario = document.getElementById('usuario').value;
-        const senha = document.getElementById('senha').value;
-        const mensagemEl = document.getElementById('mensagemLogin');
-
-        try {
-            const resposta = await fetch(`${API_URL}/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ usuario, senha })
-            });
-            const dados = await resposta.json();
-
-            if (!resposta.ok) {
-                mostrarMensagem(mensagemEl, dados.erro, 'erro');
-                return;
-            }
-
-            mostrarMensagem(mensagemEl, dados.mensagem, 'sucesso');
-        } catch (err) {
-            mostrarMensagem(mensagemEl, 'Não foi possível conectar ao servidor.', 'erro');
-        }
-    });
-
-    formCadastro.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const senha = document.getElementById('senhaCadastro').value;
-        const confirmarSenha = document.getElementById('confirmarSenha').value;
-        const mensagemEl = document.getElementById('mensagemCadastro');
-
-        if (senha !== confirmarSenha) {
-            mostrarMensagem(mensagemEl, 'As senhas não coincidem.', 'erro');
-            return;
-        }
-
-        try {
-            const resposta = await fetch(`${API_URL}/cadastro`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nome, senha })
-            });
-            const dados = await resposta.json();
-
-            if (!resposta.ok) {
-                mostrarMensagem(mensagemEl, dados.erro, 'erro');
-                return;
-            }
-
-            mostrarMensagem(mensagemEl, dados.mensagem, 'sucesso');
-            formCadastro.reset();
-        } catch (err) {
-            mostrarMensagem(mensagemEl, 'Não foi possível conectar ao servidor.', 'erro');
-        }
-    });
+function salvarUsuarios(usuarios) {
+    fs.writeFileSync(CAMINHO_USUARIOS, JSON.stringify(usuarios, null, 2));
 }
 
-/* ---------- 3. Cardápio (cardapio.html) ---------- */
-const diasLista = document.getElementById('diasLista');
+function lerReceitas() {
+    const conteudo = fs.readFileSync(CAMINHO_RECEITAS, 'utf-8');
+    return JSON.parse(conteudo);
+}
 
-if (diasLista) {
-    const cardapioData = {
-        segunda: {
-            kcalTotal: 1300,
-            refeicoes: {
-                cafe:   { rotulo: 'Café',   kcal: 280, nome: 'Aveia com frutas e mel' },
-                almoco: { rotulo: 'Almoço', kcal: 520, nome: 'Arroz integral, feijão e salada' },
-                lanche: { rotulo: 'Lanche', kcal: 180, nome: 'Iogurte com granola caseira' },
-                jantar: { rotulo: 'Jantar', kcal: 320, nome: 'Sopa de legumes cremosa' }
-            },
-            porcoesAlmoco: [
-                { nome: 'Arroz integral', qtd: '4 col. sopa' },
-                { nome: 'Frango grelhado', qtd: '120g' },
-                { nome: 'Legumes cozidos', qtd: '1 xícara' },
-                { nome: 'Frutas secas', qtd: '4 col. sopa' }
-            ]
-        },
-        terca: {
-            kcalTotal: 1210,
-            refeicoes: {
-                cafe:   { rotulo: 'Café',   kcal: 250, nome: 'Pão integral com ovos' },
-                almoco: { rotulo: 'Almoço', kcal: 480, nome: 'Quinoa, frango e brócolis' },
-                lanche: { rotulo: 'Lanche', kcal: 150, nome: 'Mix de castanhas' },
-                jantar: { rotulo: 'Jantar', kcal: 330, nome: 'Omelete de legumes' }
-            },
-            porcoesAlmoco: [
-                { nome: 'Quinoa cozida', qtd: '4 col. sopa' },
-                { nome: 'Frango desfiado', qtd: '100g' },
-                { nome: 'Brócolis cozido', qtd: '1 xícara' },
-                { nome: 'Azeite', qtd: '1 col. chá' }
-            ]
-        },
-        quarta: {
-            kcalTotal: 1340,
-            refeicoes: {
-                cafe:   { rotulo: 'Café',   kcal: 300, nome: 'Vitamina de banana e aveia' },
-                almoco: { rotulo: 'Almoço', kcal: 540, nome: 'Batata doce, peixe e salada' },
-                lanche: { rotulo: 'Lanche', kcal: 170, nome: 'Iogurte com frutas vermelhas' },
-                jantar: { rotulo: 'Jantar', kcal: 330, nome: 'Sopa de abóbora' }
-            },
-            porcoesAlmoco: [
-                { nome: 'Batata doce', qtd: '1 unidade média' },
-                { nome: 'Peixe grelhado', qtd: '120g' },
-                { nome: 'Salada verde', qtd: '1 prato pequeno' },
-                { nome: 'Azeite', qtd: '1 col. chá' }
-            ]
-        }
+function cardapioVazio() {
+    const cardapio = {};
+    DIAS_SEMANA.forEach(dia => { cardapio[dia] = []; });
+    return cardapio;
+}
+
+// Garante que usuários criados antes de alguma mudança de estrutura
+// continuem funcionando (evita "undefined" em campos novos).
+function normalizarUsuario(usuario) {
+    if (!usuario.perfil) usuario.perfil = null;
+    if (!usuario.receitasSalvas) usuario.receitasSalvas = [];
+    if (!usuario.cardapio) usuario.cardapio = cardapioVazio();
+    DIAS_SEMANA.forEach(dia => {
+        if (!usuario.cardapio[dia]) usuario.cardapio[dia] = [];
+    });
+    return usuario;
+}
+
+function encontrarPorNome(usuarios, nome) {
+    return usuarios.find(u => u.nome.toLowerCase() === nome.toLowerCase());
+}
+
+function encontrarPorId(usuarios, id) {
+    return usuarios.find(u => u.id === id);
+}
+
+function usuarioPublico(usuario) {
+    return { id: usuario.id, nome: usuario.nome };
+}
+
+/* ---------- Middleware de autenticação ---------- */
+
+function exigirLogin(req, res, next) {
+    if (!req.session.userId) {
+        return res.status(401).json({ erro: 'É preciso estar logado.' });
+    }
+    next();
+}
+
+// Busca o usuário logado a partir da sessão e já normaliza a estrutura.
+function usuarioDaSessao(req) {
+    const usuarios = lerUsuarios();
+    const usuario = encontrarPorId(usuarios, req.session.userId);
+    if (!usuario) return { usuarios, usuario: null };
+    normalizarUsuario(usuario);
+    return { usuarios, usuario };
+}
+
+/* ---------- Recomendação de receitas por perfil ---------- */
+/* Regra simples baseada nas macros que o receitas.json já tem
+   (proteinas/carboidratos). Sem tags de dieta na base ainda,
+   então não dá pra filtrar por "vegetariano" etc. por enquanto. */
+
+function calcularPontuacao(receita, perfil) {
+    const proteinas = receita.proteinas || 0;
+    const carboidratos = receita.carboidratos || 0;
+    const ativoOuIntenso = ['moderado', 'intenso'].includes(perfil.nivelAtividade);
+
+    let pesoProteina = 1;
+    let pesoCarboidrato = 0.3;
+
+    if (perfil.objetivo === 'emagrecer') {
+        pesoProteina = 1.5;
+        pesoCarboidrato = -1;
+    } else if (perfil.objetivo === 'ganhar_massa' || ativoOuIntenso) {
+        pesoProteina = 1.5;
+        pesoCarboidrato = 1;
+    }
+
+    return proteinas * pesoProteina + carboidratos * pesoCarboidrato;
+}
+
+function marcarRecomendadas(receitas, perfil) {
+    if (!perfil) {
+        return receitas.map(r => ({ ...r, recomendada: false }));
+    }
+
+    const comPontuacao = receitas.map(r => ({ receita: r, pontuacao: calcularPontuacao(r, perfil) }));
+    const ordenadas = [...comPontuacao].sort((a, b) => b.pontuacao - a.pontuacao);
+    const limite = Math.max(6, Math.ceil(receitas.length * 0.15));
+    const idsRecomendados = new Set(ordenadas.slice(0, limite).map(item => item.receita.id));
+
+    return receitas.map(r => ({ ...r, recomendada: idsRecomendados.has(r.id) }));
+}
+
+/* ---------- Autenticação ---------- */
+
+app.post('/api/cadastro', (req, res) => {
+    const { nome, senha } = req.body;
+
+    if (!nome || !nome.trim() || !senha) {
+        return res.status(400).json({ erro: 'Preencha nome e senha.' });
+    }
+    if (senha.length < 6) {
+        return res.status(400).json({ erro: 'A senha precisa ter pelo menos 6 caracteres.' });
+    }
+
+    const usuarios = lerUsuarios();
+    if (encontrarPorNome(usuarios, nome.trim())) {
+        return res.status(409).json({ erro: 'Esse nome de usuário já está em uso.' });
+    }
+
+    const senhaHash = bcrypt.hashSync(senha, SALT_ROUNDS);
+    const novoUsuario = {
+        id: Date.now(),
+        nome: nome.trim(),
+        senhaHash,
+        perfil: null,
+        receitasSalvas: [],
+        cardapio: cardapioVazio()
     };
 
-    const botoesDia = diasLista.querySelectorAll('.dia-btn');
-    const refeicoesGrid = document.getElementById('refeicoesGrid');
-    const porcoesLista = document.getElementById('porcoesLista');
+    usuarios.push(novoUsuario);
+    salvarUsuarios(usuarios);
 
-    function renderizarDia(dia) {
-        const dados = cardapioData[dia];
+    req.session.userId = novoUsuario.id;
+    res.status(201).json({ mensagem: 'Cadastro realizado com sucesso!', usuario: usuarioPublico(novoUsuario) });
+});
 
-        botoesDia.forEach(btn => {
-            const diaBtn = btn.dataset.dia;
-            btn.querySelector('.dia-kcal').textContent = `${cardapioData[diaBtn].kcalTotal} kcal totais`;
-            btn.classList.toggle('ativo', diaBtn === dia);
-        });
+app.post('/api/login', (req, res) => {
+    const { usuario, senha } = req.body;
 
-        refeicoesGrid.innerHTML = '';
-        Object.values(dados.refeicoes).forEach(refeicao => {
-            const card = document.createElement('div');
-            card.className = 'refeicao-card';
-            card.innerHTML = `
-                <div class="refeicao-topo">
-                    <span class="refeicao-badge">${refeicao.rotulo}</span>
-                    <span class="refeicao-kcal">${refeicao.kcal} kcal</span>
-                </div>
-                <p class="refeicao-nome">${refeicao.nome}</p>
-            `;
-            refeicoesGrid.appendChild(card);
-        });
-
-        porcoesLista.innerHTML = '';
-        dados.porcoesAlmoco.forEach(item => {
-            const li = document.createElement('li');
-            li.innerHTML = `<span>${item.nome}</span><span>${item.qtd}</span>`;
-            porcoesLista.appendChild(li);
-        });
+    if (!usuario || !senha) {
+        return res.status(400).json({ erro: 'Preencha usuário e senha.' });
     }
 
-    botoesDia.forEach(btn => {
-        btn.addEventListener('click', () => renderizarDia(btn.dataset.dia));
+    const usuarios = lerUsuarios();
+    const encontrado = encontrarPorNome(usuarios, usuario.trim());
+
+    // Mensagem genérica de propósito: não revela se o erro foi o nome ou a senha.
+    if (!encontrado || !bcrypt.compareSync(senha, encontrado.senhaHash)) {
+        return res.status(401).json({ erro: 'Usuário ou senha inválidos.' });
+    }
+
+    req.session.userId = encontrado.id;
+    res.json({ mensagem: 'Login realizado com sucesso!', usuario: usuarioPublico(encontrado) });
+});
+
+app.post('/api/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.clearCookie('connect.sid');
+        res.json({ mensagem: 'Sessão encerrada.' });
     });
+});
 
-    renderizarDia('segunda');
-}
+app.get('/api/me', (req, res) => {
+    if (!req.session.userId) return res.json({ logado: false });
 
-/* ---------- 4. Receitas (receitas.html) ---------- */
-const receitasGrid = document.getElementById('receitasGrid');
+    const usuarios = lerUsuarios();
+    const usuario = encontrarPorId(usuarios, req.session.userId);
+    if (!usuario) return res.json({ logado: false });
 
-if (receitasGrid) {
-    const filtrosContainer = document.getElementById('receitasFiltros');
-    const btnVerMais = document.getElementById('btnVerMais');
-    const modal = document.getElementById('receitaModal');
-    const modalConteudo = document.getElementById('receitaModalConteudo');
-    const fecharModalBtn = document.getElementById('fecharModal');
-    const minhaListaItens = document.getElementById('minhaListaItens');
-    const minhaListaDetalhe = document.getElementById('minhaListaDetalhe');
-    const btnProcurarMais = document.getElementById('btnProcurarMais');
+    res.json({ logado: true, usuario: usuarioPublico(usuario) });
+});
 
-    const CHAVE_LISTA = 'behealthier_lista_receitas';
-    const TAMANHO_PAGINA = 9;
-    let todasReceitas = [];
-    let categoriaAtual = 'Todas';
-    let quantidadeVisivel = TAMANHO_PAGINA;
+/* ---------- Perfil de saúde ---------- */
 
-    function obterListaSalva() {
-        try {
-            return JSON.parse(localStorage.getItem(CHAVE_LISTA)) || [];
-        } catch {
-            return [];
-        }
+const NIVEIS_ATIVIDADE = ['sedentario', 'leve', 'moderado', 'intenso'];
+const OBJETIVOS = ['emagrecer', 'manter', 'ganhar_massa'];
+
+app.get('/api/perfil', exigirLogin, (req, res) => {
+    const { usuario } = usuarioDaSessao(req);
+    res.json(usuario.perfil);
+});
+
+app.post('/api/perfil', exigirLogin, (req, res) => {
+    const { altura, peso, idade, sexo, nivelAtividade, objetivo, preferenciasAlimentares, restricoes } = req.body;
+
+    if (!altura || !peso || !idade) {
+        return res.status(400).json({ erro: 'Preencha altura, peso e idade.' });
+    }
+    if (!NIVEIS_ATIVIDADE.includes(nivelAtividade)) {
+        return res.status(400).json({ erro: 'Nível de atividade inválido.' });
+    }
+    if (!OBJETIVOS.includes(objetivo)) {
+        return res.status(400).json({ erro: 'Objetivo inválido.' });
     }
 
-    function salvarLista(ids) {
-        localStorage.setItem(CHAVE_LISTA, JSON.stringify(ids));
+    const { usuarios, usuario } = usuarioDaSessao(req);
+    usuario.perfil = {
+        altura: Number(altura),
+        peso: Number(peso),
+        idade: Number(idade),
+        sexo: sexo || null,
+        nivelAtividade,
+        objetivo,
+        preferenciasAlimentares: Array.isArray(preferenciasAlimentares) ? preferenciasAlimentares : [],
+        restricoes: restricoes || ''
+    };
+
+    salvarUsuarios(usuarios);
+    res.json({ mensagem: 'Perfil salvo com sucesso!', perfil: usuario.perfil });
+});
+
+/* ---------- Receitas (com marcação de recomendadas) ---------- */
+
+app.get('/api/receitas', (req, res) => {
+    const receitas = lerReceitas();
+
+    if (!req.session.userId) {
+        return res.json(marcarRecomendadas(receitas, null));
     }
 
-    function estaSalva(id) {
-        return obterListaSalva().includes(id);
+    const { usuario } = usuarioDaSessao(req);
+    res.json(marcarRecomendadas(receitas, usuario ? usuario.perfil : null));
+});
+
+/* ---------- Receitas salvas ("minha lista") ---------- */
+
+app.get('/api/minha-lista', exigirLogin, (req, res) => {
+    const { usuario } = usuarioDaSessao(req);
+    res.json(usuario.receitasSalvas);
+});
+
+app.post('/api/minha-lista/:id', exigirLogin, (req, res) => {
+    const id = Number(req.params.id);
+    const { usuarios, usuario } = usuarioDaSessao(req);
+
+    const indice = usuario.receitasSalvas.indexOf(id);
+    if (indice === -1) {
+        usuario.receitasSalvas.push(id);
+    } else {
+        usuario.receitasSalvas.splice(indice, 1);
     }
 
-    function alternarSalvo(id) {
-        const lista = obterListaSalva();
-        const indice = lista.indexOf(id);
+    salvarUsuarios(usuarios);
+    res.json({ receitasSalvas: usuario.receitasSalvas });
+});
 
-        if (indice === -1) {
-            lista.push(id);
-        } else {
-            lista.splice(indice, 1);
-        }
+/* ---------- Cardápio semanal ---------- */
 
-        salvarLista(lista);
-        renderizarMinhaLista();
-        renderizarReceitas();
+app.get('/api/cardapio', exigirLogin, (req, res) => {
+    const { usuario } = usuarioDaSessao(req);
+    res.json(usuario.cardapio);
+});
+
+app.post('/api/cardapio/:dia', exigirLogin, (req, res) => {
+    const { dia } = req.params;
+    const idReceita = Number(req.body.idReceita);
+
+    if (!DIAS_SEMANA.includes(dia)) {
+        return res.status(400).json({ erro: 'Dia da semana inválido.' });
+    }
+    if (!idReceita) {
+        return res.status(400).json({ erro: 'idReceita é obrigatório.' });
     }
 
-    function formatarValor(valor, unidade) {
-        return valor === null || valor === undefined ? '—' : `${valor}${unidade}`;
+    const { usuarios, usuario } = usuarioDaSessao(req);
+    if (!usuario.cardapio[dia].includes(idReceita)) {
+        usuario.cardapio[dia].push(idReceita);
     }
 
-    function renderizarMinhaLista() {
-        const ids = obterListaSalva();
+    salvarUsuarios(usuarios);
+    res.json({ dia, receitas: usuario.cardapio[dia] });
+});
 
-        if (ids.length === 0) {
-            minhaListaItens.innerHTML = '<li class="minha-lista-vazio">Você ainda não salvou nenhuma receita.</li>';
-            return;
-        }
+app.delete('/api/cardapio/:dia/:idReceita', exigirLogin, (req, res) => {
+    const { dia } = req.params;
+    const idReceita = Number(req.params.idReceita);
 
-        minhaListaItens.innerHTML = '';
-        ids.forEach(id => {
-            const receita = todasReceitas.find(r => r.id === id);
-            if (!receita) return;
-
-            const li = document.createElement('li');
-            li.className = 'minha-lista-item';
-            li.dataset.id = id;
-            li.innerHTML = `
-                <span>${receita.nome}</span>
-                <button type="button" data-id="${id}" aria-label="Remover">×</button>
-            `;
-            minhaListaItens.appendChild(li);
-        });
+    if (!DIAS_SEMANA.includes(dia)) {
+        return res.status(400).json({ erro: 'Dia da semana inválido.' });
     }
 
-    function mostrarDetalheNaLista(id) {
-        const receita = todasReceitas.find(r => r.id === id);
-        if (!receita) return;
+    const { usuarios, usuario } = usuarioDaSessao(req);
+    usuario.cardapio[dia] = usuario.cardapio[dia].filter(id => id !== idReceita);
 
-        document.querySelectorAll('.minha-lista-item').forEach(item => {
-            item.classList.toggle('selecionada', Number(item.dataset.id) === id);
-        });
+    salvarUsuarios(usuarios);
+    res.json({ dia, receitas: usuario.cardapio[dia] });
+});
 
-        const listaIngredientes = (receita.ingredientes || '')
-            .split('\n')
-            .filter(item => item.trim() !== '')
-            .map(item => `<li>${item.trim()}</li>`)
-            .join('');
-
-        const imagemHtml = receita.imagem ? `<img src="${receita.imagem}" alt="${receita.nome}">` : '';
-
-        minhaListaDetalhe.innerHTML = `
-            <span class="detalhe-badge">${receita.categoria}</span>
-            <div class="detalhe-media">${imagemHtml}</div>
-            <h3>${receita.nome}</h3>
-            <div class="detalhe-macros">
-                <div class="detalhe-macro"><strong>${formatarValor(receita.calorias, '')}</strong>kcal</div>
-                <div class="detalhe-macro"><strong>${formatarValor(receita.proteinas, '')}</strong>g proteína</div>
-                <div class="detalhe-macro"><strong>${formatarValor(receita.carboidratos, '')}</strong>g carbo</div>
-            </div>
-            <h4>Ingredientes</h4>
-            <ul>${listaIngredientes}</ul>
-            <h4>Modo de preparo</h4>
-            <p class="detalhe-preparo">${receita.preparo && receita.preparo.trim() !== '' ? receita.preparo : 'Modo de preparo não informado.'}</p>
-            <button type="button" class="btn-remover-lista" data-id="${receita.id}">Remover da lista 🗑</button>
-        `;
-    }
-
-    minhaListaItens.addEventListener('click', (e) => {
-        const botaoRemover = e.target.closest('button[aria-label="Remover"]');
-        if (botaoRemover) {
-            alternarSalvo(Number(botaoRemover.dataset.id));
-            minhaListaDetalhe.innerHTML = '<p class="minha-lista-placeholder">Clique em uma receita salva na lista ao lado para ver os detalhes aqui.</p>';
-            return;
-        }
-
-        const item = e.target.closest('.minha-lista-item');
-        if (item) mostrarDetalheNaLista(Number(item.dataset.id));
-    });
-
-    minhaListaDetalhe.addEventListener('click', (e) => {
-        const botaoRemover = e.target.closest('.btn-remover-lista');
-        if (!botaoRemover) return;
-
-        alternarSalvo(Number(botaoRemover.dataset.id));
-        minhaListaDetalhe.innerHTML = '<p class="minha-lista-placeholder">Clique em uma receita salva na lista ao lado para ver os detalhes aqui.</p>';
-    });
-
-    btnProcurarMais.addEventListener('click', () => {
-        filtrosContainer.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    fetch('receitas.json')
-        .then(resposta => resposta.json())
-        .then(dados => {
-            todasReceitas = dados;
-            montarFiltros(dados);
-            renderizarReceitas();
-            renderizarMinhaLista();
-        })
-        .catch(() => {
-            receitasGrid.innerHTML = '<p>Não foi possível carregar as receitas no momento.</p>';
-        });
-
-    function montarFiltros(dados) {
-        const categorias = [...new Set(dados.map(r => r.categoria))];
-
-        categorias.forEach(categoria => {
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'filtro-btn';
-            btn.dataset.categoria = categoria;
-            btn.textContent = categoria;
-            filtrosContainer.appendChild(btn);
-        });
-
-        filtrosContainer.addEventListener('click', (e) => {
-            const btn = e.target.closest('.filtro-btn');
-            if (!btn) return;
-
-            filtrosContainer.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
-            btn.classList.add('ativo');
-
-            categoriaAtual = btn.dataset.categoria;
-            quantidadeVisivel = TAMANHO_PAGINA;
-            renderizarReceitas();
-        });
-    }
-
-    function renderizarReceitas() {
-        const filtradas = categoriaAtual === 'Todas'
-            ? todasReceitas
-            : todasReceitas.filter(r => r.categoria === categoriaAtual);
-
-        const visiveis = filtradas.slice(0, quantidadeVisivel);
-
-        receitasGrid.innerHTML = '';
-        visiveis.forEach(receita => {
-            const salva = estaSalva(receita.id);
-            const imagemHtml = receita.imagem ? `<img src="${receita.imagem}" alt="${receita.nome}">` : '';
-
-            const card = document.createElement('article');
-            card.className = 'receita-card';
-            card.innerHTML = `
-                <div class="receita-card__media">
-                    ${imagemHtml}
-                    <button type="button" class="btn-salvar ${salva ? 'salvo' : ''}" data-id="${receita.id}" aria-label="Salvar receita">${salva ? '♥' : '♡'}</button>
-                </div>
-                <div class="receita-card__topo">
-                    <span class="receita-card__badge">${receita.categoria}</span>
-                    <span class="receita-card__kcal">${formatarValor(receita.calorias, 'kcal')}</span>
-                </div>
-                <h3>${receita.nome}</h3>
-                <div class="receita-card__macros">
-                    <span>Proteínas: ${formatarValor(receita.proteinas, 'g')}</span>
-                    <span>Carboidratos: ${formatarValor(receita.carboidratos, 'g')}</span>
-                </div>
-                <button type="button" class="receita-card__acao" data-id="${receita.id}">Ver receita +</button>
-            `;
-            receitasGrid.appendChild(card);
-        });
-
-        btnVerMais.classList.toggle('escondido', quantidadeVisivel >= filtradas.length);
-    }
-
-    btnVerMais.addEventListener('click', () => {
-        quantidadeVisivel += TAMANHO_PAGINA;
-        renderizarReceitas();
-    });
-
-    receitasGrid.addEventListener('click', (e) => {
-        const botaoSalvar = e.target.closest('.btn-salvar');
-        if (botaoSalvar) {
-            alternarSalvo(Number(botaoSalvar.dataset.id));
-            return;
-        }
-
-        const botaoVer = e.target.closest('.receita-card__acao');
-        if (!botaoVer) return;
-
-        const receita = todasReceitas.find(r => r.id === Number(botaoVer.dataset.id));
-        if (!receita) return;
-
-        const salva = estaSalva(receita.id);
-        const listaIngredientes = (receita.ingredientes || '')
-            .split('\n')
-            .filter(item => item.trim() !== '')
-            .map(item => `<li>${item.trim()}</li>`)
-            .join('');
-
-        const imagemHtml = receita.imagem ? `<img src="${receita.imagem}" alt="${receita.nome}">` : '';
-
-        modalConteudo.innerHTML = `
-            <div class="receita-modal__media">
-                ${imagemHtml}
-                <button type="button" class="btn-salvar ${salva ? 'salvo' : ''}" data-id="${receita.id}" aria-label="Salvar receita">${salva ? '♥' : '♡'}</button>
-            </div>
-            <h2>${receita.nome}</h2>
-            <div class="receita-modal__macros">
-                <div class="receita-modal__macro"><strong>${formatarValor(receita.calorias, '')}</strong>kcal</div>
-                <div class="receita-modal__macro"><strong>${formatarValor(receita.proteinas, '')}</strong>g proteína</div>
-                <div class="receita-modal__macro"><strong>${formatarValor(receita.carboidratos, '')}</strong>g carbo</div>
-            </div>
-            <h3>Ingredientes</h3>
-            <ul>${listaIngredientes}</ul>
-            <h3>Modo de preparo</h3>
-            <p>${receita.preparo && receita.preparo.trim() !== '' ? receita.preparo : 'Modo de preparo não informado.'}</p>
-        `;
-
-        modal.classList.add('aberto');
-    });
-
-    modalConteudo.addEventListener('click', (e) => {
-        const botaoSalvar = e.target.closest('.btn-salvar');
-        if (!botaoSalvar) return;
-        alternarSalvo(Number(botaoSalvar.dataset.id));
-
-        const salva = estaSalva(Number(botaoSalvar.dataset.id));
-        botaoSalvar.classList.toggle('salvo', salva);
-        botaoSalvar.textContent = salva ? '♥' : '♡';
-    });
-
-    function fecharModal() {
-        modal.classList.remove('aberto');
-    }
-
-    fecharModalBtn.addEventListener('click', fecharModal);
-    modal.addEventListener('click', (e) => { if (e.target === modal) fecharModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharModal(); });
-}
+app.listen(PORTA, () => {
+    console.log(`Servidor BeHealthier rodando em http://localhost:${PORTA}`);
+});

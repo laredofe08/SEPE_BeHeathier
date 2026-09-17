@@ -216,11 +216,105 @@ header {
     color: var(--color-primary-dark);
     margin-top: 2vw;
 }
+.mensagem {
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 1.1em;
+    margin: -1vw 0 1vw;
+}
+
+.mensagem.sucesso { color: #395224; }
+.mensagem.erro { color: #b23a3a; }
 
 .link-primario {
     color: var(--color-primary);
     font-weight: 700;
     text-decoration: none;
+}
+/*=== perfil (dieta.html) ===*/
+.perfil-page {
+    background: #FFE4BE;
+    display: flex;
+    justify-content: center;
+    padding: 10vw 4vw;
+}
+
+.perfil-card {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 8vw 6vw;
+}
+
+.perfil-card h1 {
+    color: #2C3E1C;
+}
+
+.perfil-descricao {
+    color: #395224;
+    margin-bottom: 4vw;
+}
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3vw;
+}
+
+@media (min-width: 600px) {
+    .perfil-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4vw;
+    }
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+}
+
+.campo label {
+    color: #395224;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1vw;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    border: 1px solid #d8d3ad;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.campo textarea {
+    border-radius: 16px;
+    resize: vertical;
+}
+
+.campo-preferencias {
+    border: 1px solid #d8d3ad;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    margin-bottom: 3vw;
+}
+
+.campo-preferencias legend {
+    color: #395224;
+    font-weight: 600;
+    padding: 0 0.5vw;
+}
+
+.campo-preferencias label {
+    display: block;
+    color: #2C3E1C;
+    margin-top: 2vw;
+    font-weight: normal;
 }
 
 /*=== home ===*/
@@ -833,75 +927,76 @@ header {
 /*=== videos ===*/
 
 /*=== cardápio ===*/
-section.cardapio {
-    background-color: #FFE6C3;
+.cardapio-page {
+    padding: 6vw 4vw;
+}
+
+.cardapio-page h1 {
+    color: #2C3E1C;
+    margin-bottom: 4vw;
+}
+
+.dias-lista {
+    display: flex;
+    gap: 2vw;
+    overflow-x: auto;
+    padding-bottom: 2vw;
+    margin-bottom: 5vw;
+    scrollbar-width: none;
+}
+
+.dias-lista::-webkit-scrollbar {
+    display: none;
+}
+
+.dia-btn {
+    flex: 0 0 auto;
+    background: #fff;
+    color: #2C3E1C;
+    border: 1px solid #9AB17A;
+    border-radius: 999px;
+    padding: 2vw 4vw;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dia-btn.ativo {
+    background: #2C3E1C;
+    border-color: #2C3E1C;
+    color: #fff;
+}
+
+.refeicoes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4vw;
+}
+
+.cardapio-vazio {
+    color: #395224;
     text-align: center;
-    font-family: "Rozha One", serif;
+    padding: 6vw 4vw;
 }
 
-section.cardapio h1 {
-    font-size: 2rem;
-    color: var(--color-primary-dark);
-    font-weight: 600;
-    font-style: normal;
-    padding: 32px 20px 40px 20px;
-}
-
-.planejarrefeicoes {
-    color: var(--color-primary-dark);
+.btn-remover-cardapio {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #b23a3a;
+    border: none;
     font-size: 1rem;
-    font-weight: 530;
-    font-style: normal;
-    padding: 0 20px 40px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.btncardapio {
-    padding: 32px 60px 32px 60px;
-    background-color: #2C3E1CCC;
-    color: var(--color-white);
-    border-radius: 47px;
-    margin: 0 0 40px 0;
-}
-
-.selected {
-    margin: 0 40px 0 40px;
-    padding: 25px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 47px;
-}
-
-.cal {
-    padding: 5px;
-}
-
-.dia {
-    padding: 5px;
-    font-weight: 850;
-}
-
-.unselected {
-    margin: 40px 40px 40px 40px;
-    padding: 25px;
-    background-color: var(--color-white);
-    border-radius: 47px;
-}
-
-.Dica {
-    background-color: var(--color-primary);
-    border-radius: 47px;
-    padding: 50px;
-    gap: 20px;
-}
-
-.Dica p {
-    color: var(--color-primary-dark);
-}
-
-.Dica span {
-    font-weight: 800;
-}
-
 /*=== footer ===*/
 footer {
     background: var(--color-text-green);
