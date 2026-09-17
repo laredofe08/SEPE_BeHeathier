@@ -27,7 +27,6 @@
             <li><a href="index.html">Início</a></li>
             <li><a href="receitas.html">Receitas</a></li>
             <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="dieta.html">Dieta personalizada</a></li>
             <li><a href="dicas.html">Dicas</a></li>
             <li><a href="equilibrio.html">Equilíbrio</a></li>
             <li><a href="localizacao.html">Localização</a></li>
@@ -58,7 +57,7 @@
                     <p class="texto-troca">Não possui conta? <a href="#" id="toCadastro" class="link-primario">Cadastre-se</a></p>
                 </form>
 
-                <!-- Verso: Cadastro -->
+                <!-- Verso: Cadastro (já inclui o perfil de saúde, tudo em um envio só) -->
                 <form class="login-face login-back" id="formCadastro">
                     <h1>Cadastrar</h1>
 
@@ -70,6 +69,52 @@
 
                     <label for="confirmarSenha">confirmar senha</label>
                     <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita a senha" required>
+
+                    <label for="altura">altura (cm)</label>
+                    <input type="number" id="altura" name="altura" min="50" max="250" placeholder="Ex: 170" required>
+
+                    <label for="peso">peso (kg)</label>
+                    <input type="number" id="peso" name="peso" min="20" max="300" step="0.1" placeholder="Ex: 68" required>
+
+                    <label for="idade">idade</label>
+                    <input type="number" id="idade" name="idade" min="5" max="120" placeholder="Ex: 22" required>
+
+                    <label for="sexo">sexo</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label for="nivelAtividade">nível de atividade física</label>
+                    <select id="nivelAtividade" name="nivelAtividade" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="sedentario">Sedentário (pouco ou nenhum exercício)</option>
+                        <option value="leve">Leve (1 a 2x por semana)</option>
+                        <option value="moderado">Moderado (3 a 4x por semana)</option>
+                        <option value="intenso">Intenso (5x ou mais por semana)</option>
+                    </select>
+
+                    <label for="objetivo">objetivo</label>
+                    <select id="objetivo" name="objetivo" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="emagrecer">Emagrecer</option>
+                        <option value="manter">Manter o peso</option>
+                        <option value="ganhar_massa">Ganhar massa muscular</option>
+                    </select>
+
+                    <fieldset>
+                        <legend>preferências alimentares</legend>
+                        <label><input type="checkbox" name="preferenciasAlimentares" value="vegetariano"> Vegetariano</label>
+                        <label><input type="checkbox" name="preferenciasAlimentares" value="vegano"> Vegano</label>
+                        <label><input type="checkbox" name="preferenciasAlimentares" value="sem_lactose"> Sem lactose</label>
+                        <label><input type="checkbox" name="preferenciasAlimentares" value="sem_gluten"> Sem glúten</label>
+                        <label><input type="checkbox" name="preferenciasAlimentares" value="low_carb"> Low carb</label>
+                    </fieldset>
+
+                    <label for="restricoes">restrições / alergias (opcional)</label>
+                    <textarea id="restricoes" name="restricoes" rows="2" placeholder="Ex: alergia a amendoim..."></textarea>
 
                     <button type="submit" class="btn-login-submit">Cadastrar</button>
                     <p class="mensagem" id="mensagemCadastro"></p>

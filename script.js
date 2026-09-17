@@ -64,19 +64,37 @@ const toCadastro = document.getElementById('toCadastro');
 const toLogin = document.getElementById('toLogin');
 
 if (loginCard) {
+    // O card usa position:absolute nas duas faces pra empilhar uma sobre
+    // a outra (necessário pro efeito de flip). Isso faz com que a altura
+    // do card não acompanhe sozinha o conteúdo da face visível — sem isso,
+    // o fundo bege da seção termina antes do formulário de cadastro (mais
+    // alto) e aparece um vão branco embaixo dele.
+    function ajustarAlturaCard() {
+        const faceAtiva = loginCard.classList.contains('flipped') ? formCadastro : formLogin;
+        loginCard.style.height = `${faceAtiva.offsetHeight}px`;
+    }
+
     toCadastro.addEventListener('click', (e) => {
         e.preventDefault();
         loginCard.classList.add('flipped');
+        ajustarAlturaCard();
     });
 
     toLogin.addEventListener('click', (e) => {
         e.preventDefault();
         loginCard.classList.remove('flipped');
+        ajustarAlturaCard();
     });
+
+    // Refaz o cálculo se a tela for redimensionada (os campos usam vw,
+    // então a altura de cada face muda conforme a largura da janela)
+    window.addEventListener('resize', ajustarAlturaCard);
 
     // Envio dos formulários pro servidor
     const formLogin = document.getElementById('formLogin');
     const formCadastro = document.getElementById('formCadastro');
+
+    ajustarAlturaCard();
 
     formLogin.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -95,90 +113,36 @@ if (loginCard) {
 
             if (!resposta.ok) {
                 mostrarMensagem(mensagemEl, dados.erro, 'erro');
+                ajustarAlturaCard();
                 return;
             }
 
             mostrarMensagem(mensagemEl, dados.mensagem, 'sucesso');
+            ajustarAlturaCard();
             setTimeout(() => { window.location.href = 'index.html'; }, 800);
         } catch (err) {
             mostrarMensagem(mensagemEl, 'Não foi possível conectar ao servidor.', 'erro');
+            ajustarAlturaCard();
         }
     });
 
     formCadastro.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const senha = document.getElementById('senhaCadastro').value;
-        const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+        const dadosForm = new FormData(formCadastro);
+        const senha = dadosForm.get('senhaCadastro');
+        const confirmarSenha = dadosForm.get('confirmarSenha');
         const mensagemEl = document.getElementById('mensagemCadastro');
 
         if (senha !== confirmarSenha) {
             mostrarMensagem(mensagemEl, 'As senhas não coincidem.', 'erro');
+            ajustarAlturaCard();
             return;
         }
 
-        try {
-            const resposta = await fetch(`${API_URL}/cadastro`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                credentials: 'include',
-                body: JSON.stringify({ nome, senha })
-            });
-            const dados = await resposta.json();
-
-            if (!resposta.ok) {
-                mostrarMensagem(mensagemEl, dados.erro, 'erro');
-                return;
-            }
-
-            mostrarMensagem(mensagemEl, dados.mensagem, 'sucesso');
-            setTimeout(() => { window.location.href = 'dieta.html'; }, 800);
-        } catch (err) {
-            mostrarMensagem(mensagemEl, 'Não foi possível conectar ao servidor.', 'erro');
-        }
-    });
-}
-
-/*==== perfil (dieta.html) ====*/
-const formPerfil = document.getElementById('formPerfil');
-
-if (formPerfil) {
-    const mensagemPerfilEl = document.getElementById('mensagemPerfil');
-
-    function preencherFormulario(perfil) {
-        formPerfil.altura.value = perfil.altura;
-        formPerfil.peso.value = perfil.peso;
-        formPerfil.idade.value = perfil.idade;
-        formPerfil.sexo.value = perfil.sexo || '';
-        formPerfil.nivelAtividade.value = perfil.nivelAtividade;
-        formPerfil.objetivo.value = perfil.objetivo;
-        formPerfil.restricoes.value = perfil.restricoes || '';
-
-        formPerfil.querySelectorAll('input[name="preferenciasAlimentares"]').forEach(checkbox => {
-            checkbox.checked = perfil.preferenciasAlimentares.includes(checkbox.value);
-        });
-    }
-
-    // Só faz sentido preencher perfil estando logado
-    fetch(`${API_URL}/me`, { credentials: 'include' })
-        .then(resposta => resposta.json())
-        .then(dados => {
-            if (!dados.logado) {
-                window.location.href = 'login.html';
-                return null;
-            }
-            return fetch(`${API_URL}/perfil`, { credentials: 'include' }).then(r => r.json());
-        })
-        .then(perfil => {
-            if (perfil) preencherFormulario(perfil);
-        })
-        .catch(() => {});
-
-    formPerfil.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const dadosForm = new FormData(formPerfil);
         const corpo = {
+            nome: dadosForm.get('nome'),
+            senha,
             altura: dadosForm.get('altura'),
             peso: dadosForm.get('peso'),
             idade: dadosForm.get('idade'),
@@ -190,23 +154,26 @@ if (formPerfil) {
         };
 
         try {
-            const resposta = await fetch(`${API_URL}/perfil`, {
+            const resposta = await fetch(`${API_URL}/cadastro`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
                 body: JSON.stringify(corpo)
             });
-            const resultado = await resposta.json();
+            const dados = await resposta.json();
 
             if (!resposta.ok) {
-                mostrarMensagem(mensagemPerfilEl, resultado.erro, 'erro');
+                mostrarMensagem(mensagemEl, dados.erro, 'erro');
+                ajustarAlturaCard();
                 return;
             }
 
-            mostrarMensagem(mensagemPerfilEl, resultado.mensagem, 'sucesso');
+            mostrarMensagem(mensagemEl, dados.mensagem, 'sucesso');
+            ajustarAlturaCard();
             setTimeout(() => { window.location.href = 'receitas.html'; }, 800);
         } catch (err) {
-            mostrarMensagem(mensagemPerfilEl, 'Não foi possível conectar ao servidor.', 'erro');
+            mostrarMensagem(mensagemEl, 'Não foi possível conectar ao servidor.', 'erro');
+            ajustarAlturaCard();
         }
     });
 }
@@ -748,4 +715,138 @@ if (progressoCarboidratos) {
     }
 
     iniciarEquilibrio();
+}
+
+/*==== minha lista (lista-receitas.html) ====*/
+const minhaListaItens = document.getElementById('minhaListaItens');
+
+if (minhaListaItens) {
+    const minhaListaDetalhe = document.getElementById('minhaListaDetalhe');
+    const btnProcurarMais = document.getElementById('btnProcurarMais');
+
+    let receitasSalvasCompletas = [];
+    let idSelecionado = null;
+
+    btnProcurarMais.addEventListener('click', () => {
+        window.location.href = 'receitas.html';
+    });
+
+    function formatarValor(valor, unidade) {
+        return valor === null || valor === undefined ? '—' : `${valor}${unidade}`;
+    }
+
+    async function iniciarMinhaLista() {
+        try {
+            const respostaMe = await fetch(`${API_URL}/me`, { credentials: 'include' });
+            const dadosMe = await respostaMe.json();
+
+            if (!dadosMe.logado) {
+                minhaListaItens.innerHTML = '<li class="minha-lista-vazio">Faça login para ver suas receitas salvas.</li>';
+                return;
+            }
+
+            const [respostaLista, respostaReceitas] = await Promise.all([
+                fetch(`${API_URL}/minha-lista`, { credentials: 'include' }),
+                fetch(`${API_URL}/receitas`, { credentials: 'include' })
+            ]);
+
+            const idsSalvos = await respostaLista.json();
+            const receitas = await respostaReceitas.json();
+            const receitasPorId = new Map(receitas.map(r => [r.id, r]));
+
+            receitasSalvasCompletas = idsSalvos.map(id => receitasPorId.get(id)).filter(Boolean);
+            renderizarLista();
+        } catch (err) {
+            minhaListaItens.innerHTML = '<li class="minha-lista-vazio">Não foi possível carregar sua lista agora.</li>';
+        }
+    }
+
+    function renderizarLista() {
+        if (receitasSalvasCompletas.length === 0) {
+            minhaListaItens.innerHTML = '<li class="minha-lista-vazio">Você ainda não salvou nenhuma receita.</li>';
+            minhaListaDetalhe.innerHTML = '<p class="minha-lista-placeholder">Clique em uma receita salva na lista ao lado para ver os detalhes aqui.</p>';
+            return;
+        }
+
+        minhaListaItens.innerHTML = '';
+        receitasSalvasCompletas.forEach(receita => {
+            const li = document.createElement('li');
+            li.className = 'minha-lista-item';
+            if (receita.id === idSelecionado) li.classList.add('selecionada');
+            li.dataset.id = receita.id;
+            li.innerHTML = `
+                <span>${receita.nome}</span>
+                <button type="button" class="btn-remover-item" data-id="${receita.id}" aria-label="Remover da lista">✕</button>
+            `;
+            minhaListaItens.appendChild(li);
+        });
+
+        if (idSelecionado && receitasSalvasCompletas.some(r => r.id === idSelecionado)) {
+            renderizarDetalhe(idSelecionado);
+        }
+    }
+
+    function renderizarDetalhe(id) {
+        const receita = receitasSalvasCompletas.find(r => r.id === id);
+        if (!receita) return;
+
+        const imagemHtml = receita.imagem ? `<img src="${receita.imagem}" alt="${receita.nome}">` : '';
+        const listaIngredientes = (receita.ingredientes || '')
+            .split('\n')
+            .filter(item => item.trim() !== '')
+            .map(item => `<li>${item.trim()}</li>`)
+            .join('');
+
+        minhaListaDetalhe.innerHTML = `
+            <span class="detalhe-badge">${receita.categoria}</span>
+            <div class="detalhe-media">${imagemHtml}</div>
+            <h3>${receita.nome}</h3>
+            <div class="detalhe-macros">
+                <div class="detalhe-macro"><strong>${formatarValor(receita.calorias, '')}</strong>kcal</div>
+                <div class="detalhe-macro"><strong>${formatarValor(receita.proteinas, '')}</strong>g proteína</div>
+                <div class="detalhe-macro"><strong>${formatarValor(receita.carboidratos, '')}</strong>g carbo</div>
+            </div>
+            <h4>Ingredientes</h4>
+            <ul>${listaIngredientes}</ul>
+            <h4>Modo de preparo</h4>
+            <p class="detalhe-preparo">${receita.preparo && receita.preparo.trim() !== '' ? receita.preparo : 'Modo de preparo não informado.'}</p>
+            <button type="button" class="btn-remover-lista" data-id="${receita.id}">Remover da lista</button>
+        `;
+    }
+
+    async function removerDaLista(id) {
+        try {
+            const resposta = await fetch(`${API_URL}/minha-lista/${id}`, { method: 'POST', credentials: 'include' });
+            const resultado = await resposta.json();
+            const idsSalvos = new Set(resultado.receitasSalvas);
+            receitasSalvasCompletas = receitasSalvasCompletas.filter(r => idsSalvos.has(r.id));
+
+            if (idSelecionado === id) idSelecionado = null;
+            renderizarLista();
+        } catch (err) {
+            alert('Não foi possível remover a receita da lista.');
+        }
+    }
+
+    minhaListaItens.addEventListener('click', (e) => {
+        const btnRemover = e.target.closest('.btn-remover-item');
+        if (btnRemover) {
+            removerDaLista(Number(btnRemover.dataset.id));
+            return;
+        }
+
+        const item = e.target.closest('.minha-lista-item');
+        if (!item) return;
+
+        idSelecionado = Number(item.dataset.id);
+        renderizarLista();
+    });
+
+    minhaListaDetalhe.addEventListener('click', (e) => {
+        const btnRemover = e.target.closest('.btn-remover-lista');
+        if (!btnRemover) return;
+        removerDaLista(Number(btnRemover.dataset.id));
+    });
+
+    iniciarMinhaLista();
 }

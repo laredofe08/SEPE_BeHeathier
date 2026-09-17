@@ -139,16 +139,32 @@ function marcarRecomendadas(receitas, perfil) {
     return receitas.map(r => ({ ...r, recomendada: idsRecomendados.has(r.id) }));
 }
 
-/* ---------- Autenticação ---------- */
+/* ---------- Autenticação (cadastro já inclui o perfil de saúde) ---------- */
+
+const NIVEIS_ATIVIDADE = ['sedentario', 'leve', 'moderado', 'intenso'];
+const OBJETIVOS = ['emagrecer', 'manter', 'ganhar_massa'];
 
 app.post('/api/cadastro', (req, res) => {
-    const { nome, senha } = req.body;
+    const {
+        nome, senha,
+        altura, peso, idade, sexo, nivelAtividade, objetivo,
+        preferenciasAlimentares, restricoes
+    } = req.body;
 
     if (!nome || !nome.trim() || !senha) {
         return res.status(400).json({ erro: 'Preencha nome e senha.' });
     }
     if (senha.length < 6) {
         return res.status(400).json({ erro: 'A senha precisa ter pelo menos 6 caracteres.' });
+    }
+    if (!altura || !peso || !idade) {
+        return res.status(400).json({ erro: 'Preencha altura, peso e idade.' });
+    }
+    if (!NIVEIS_ATIVIDADE.includes(nivelAtividade)) {
+        return res.status(400).json({ erro: 'Nível de atividade inválido.' });
+    }
+    if (!OBJETIVOS.includes(objetivo)) {
+        return res.status(400).json({ erro: 'Objetivo inválido.' });
     }
 
     const usuarios = lerUsuarios();
@@ -161,7 +177,16 @@ app.post('/api/cadastro', (req, res) => {
         id: Date.now(),
         nome: nome.trim(),
         senhaHash,
-        perfil: null,
+        perfil: {
+            altura: Number(altura),
+            peso: Number(peso),
+            idade: Number(idade),
+            sexo: sexo || null,
+            nivelAtividade,
+            objetivo,
+            preferenciasAlimentares: Array.isArray(preferenciasAlimentares) ? preferenciasAlimentares : [],
+            restricoes: restricoes || ''
+        },
         receitasSalvas: [],
         cardapio: cardapioVazio()
     };
@@ -209,10 +234,7 @@ app.get('/api/me', (req, res) => {
     res.json({ logado: true, usuario: usuarioPublico(usuario) });
 });
 
-/* ---------- Perfil de saúde ---------- */
-
-const NIVEIS_ATIVIDADE = ['sedentario', 'leve', 'moderado', 'intenso'];
-const OBJETIVOS = ['emagrecer', 'manter', 'ganhar_massa'];
+/* ---------- Perfil de saúde (editar depois do cadastro) ---------- */
 
 app.get('/api/perfil', exigirLogin, (req, res) => {
     const { usuario } = usuarioDaSessao(req);
