@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": 1789674627774,
+    "nome": "Adm",
+    "senhaHash": "$2b$10$51GwNaYOV8XegaCht6R17OMraWuZy2H25SWkCkYxBJH1exKN7ULmi",
+    "perfil": {
+      "altura": 170,
+      "peso": 68,
+      "idade": 17,
+      "sexo": "masculino",
+      "nivelAtividade": "moderado",
+      "objetivo": "manter",
+      "preferenciasAlimentares": [],
+      "restricoes": ""
+    },
+    "receitasSalvas": [],
+    "cardapio": {
+      "segunda": [],
+      "terca": [],
+      "quarta": [],
+      "quinta": [],
+      "sexta": [],
+      "sabado": [],
+      "domingo": []
+    }
+  }
+]
