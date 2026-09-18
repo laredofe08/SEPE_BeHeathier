@@ -939,51 +939,169 @@ footer nav a {
 
     /*=== cardápio ===*/
     .cardapio {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 3rem 2rem;
-        gap: 2rem;
-    }
+    background: linear-gradient(160deg, #FFD9A0, #FFE4BE);
+    padding: 6vw 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
 
-    .cardapio-sidebar {
-        width: 280px;
-        flex-shrink: 0;
-    }
+/* Botão Personalizar Cardápio */
+.btn-personalizar {
+    display: block;
+    text-align: center;
+    background: #2C3E1C;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 4vw;
+    margin-bottom: 4vw;
+}
 
-    .cardapio-content {
-        flex: 1;
-    }
+/* Lista de dias */
+.dias-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    margin-bottom: 4vw;
+}
 
-    .refeicoes-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+.dia-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    color: #2C3E1C;
+    border: none;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+}
 
-    .btn-personalizar,
-    .dia-btn,
-    .porcoes-card,
-    .refeicao-card,
-    .dica-dia {
-        padding: 1rem 1.2rem;
-    }
-    .cardapio-content p{
-        font-size: 16px;
-    }
-    .cardapio-titulo h1 {
-        font-size: 2.2rem;
-    }
-    .cardapio{
-        font-size: 22px;
-    }
-    .refeicao-card span{
-        font-size: 14px;
-    }
-    .dica-dia p{
-        font-size: 18px;
-    }
-    .cardapio h1{
-        font-weight:650 ;
-    }
+.dia-nome {
+    font-weight: 700;
+}
 
+.dia-kcal {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.dia-btn.ativo {
+    background: #9AB17A;
+    color: #fff;
+}
+
+/* Porções individuais */
+.porcoes-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 4vw;
+}
+
+.porcoes-card h3 {
+    color: #2C3E1C;
+    margin-bottom: 2vw;
+}
+
+.porcoes-card ul {
+    list-style: none;
+}
+
+.porcoes-card li {
+    display: flex;
+    justify-content: space-between;
+    color: #395224;
+    padding: 2vw 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.porcoes-card li:last-child {
+    border-bottom: none;
+}
+
+/* Título e subtítulo */
+.cardapio-titulo {
+    text-align: center;
+    margin-bottom: 4vw;
+}
+
+.cardapio-titulo h1 {
+    color: #2C3E1C;
+    font-size: 1.8rem;
+    margin-bottom: 2vw;
+}
+
+.cardapio-titulo p {
+    color: #395224;
+    font-size: 0.9rem;
+}
+
+/* Grid de refeições */
+.refeicoes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    margin-bottom: 4vw;
+}
+
+.refeicao-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 4vw;
+}
+
+.refeicao-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.refeicao-badge {
+    background: #9AB17A;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vw 3vw;
+    border-radius: 20px;
+}
+
+.refeicao-kcal {
+    color: #2C3E1C;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.refeicao-nome {
+    color: #2C3E1C;
+    font-weight: 600;
+}
+
+/* Dica do dia */
+.dica-dia {
+    background: #9AB17A;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5vw 4vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.dica-icone {
+    font-size: 1.5rem;
+}
+
+.dica-dia p {
+    font-size: 0.9rem;
+}
     /*=== footer ===*/
 
     footer {
