@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #ul{
+            display: none;
+        }
+
+        button {
+            background-color: red;
+            color: aliceblue;
+            padding: 1vw 2vw;
+        }
+    </style>
+
+    <button id="botao" onclick="botao()" >Clique aqui</button>
+
+    <ul id="ul">
+        <li>
+            <img src="Imagens/WhatsApp Image 2026-09-21 at 14.07.35 (1).jpeg" alt="">
+        </li>
+        <li>
+            <img src="Imagens/WhatsApp Image 2026-09-21 at 14.07.35 (2).jpeg" alt="">
+        </li>
+        <li>
+            <img src="Imagens/WhatsApp Image 2026-09-21 at 14.07.35.jpeg" alt="">
+        </li>
+    </ul>
+
+    <script>
+        let button = document.getElementById('botao');
+        let ul = document.getElementById('ul');
+
+        function botao() {
+            button.style.display = "none";
+
+            ul.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
