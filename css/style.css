@@ -356,7 +356,136 @@ header {
 
 
 /*=== dicas ===*/
-
+section.dicas {
+    background-color: #FBE3B9;
+    text-align: center;
+    padding: 10vw 6vw 12vw;
+}
+ 
+section.dicas .subtitulo {
+    color: #9AB17A;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    margin-bottom: 3vw;
+}
+ 
+section.dicas h1 {
+    color: #2C3E1C;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8vw;
+}
+ 
+/* MOBILE */
+.grid-dicas {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 6vw;
+}
+ 
+/* linha vertical (tronco) do lado esquerdo */
+.grid-dicas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6vw;
+    width: 8px;
+    background-color: #9AB17A;
+    border-radius: 4px;
+}
+ 
+.ramo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 9vw;
+}
+ 
+.ramo:last-child {
+    margin-bottom: 0;
+}
+ 
+.conector {
+    display: block;
+    order: 1;
+    flex: 0 0 8vw;
+    height: 8px;
+    background-color: #9AB17A;
+    position: relative;
+}
+ 
+/* bolinha  */
+.conector::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #9AB17A;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+ 
+.card-dica,
+.card-flutuante {
+    order: 2;
+    flex: 1;
+    width: auto;
+    max-width: none;
+    text-align: left;
+    margin: 0;
+}
+ 
+.card-dica {
+    border-radius: 1.2rem;
+    padding: 5vw 6vw;
+    color: #fff;
+}
+ 
+.card-dica h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 2vw;
+}
+ 
+.card-dica p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+ 
+.card-dica.claro {
+    background-color: #9AB17A;
+}
+ 
+.card-dica.escuro {
+    background-color: #2C3E1C;
+}
+ 
+.card-flutuante {
+    background-color: #fff;
+    border-radius: 1.2rem;
+    padding: 4.5vw 6vw;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+ 
+.card-flutuante h4 {
+    color: #2C3E1C;
+    font-weight: 700;
+    margin-bottom: 2vw;
+    font-size: 1rem;
+}
+ 
+.card-flutuante p {
+    color: #2C3E1C;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
 
 
 /*=== equilíbrio ===*/
@@ -906,7 +1035,84 @@ footer nav a {
 
 
     /*=== dicas ===*/
-
+  section.dicas {
+        padding: 4vw 3vw 8vw;
+    }
+ 
+    section.dicas .subtitulo {
+        font-size: 1rem;
+        margin-bottom: 0.5vw;
+    }
+ 
+    section.dicas h1 {
+        font-size: 2.6rem;
+        max-width: 700px;
+        margin: 0 auto 5vw;
+    }
+ 
+    /*tronco central */
+    .grid-dicas {
+        max-width: 1200px;
+        padding: 2vw 0;
+    }
+ 
+    .grid-dicas::before {
+        left: 50%;
+        width: 8px;
+        transform: translateX(-50%);
+    }
+ 
+    /* ramo  */
+    .ramo {
+        width: 50%;
+        margin-bottom: 3vw;
+    }
+ 
+    .ramo.direita {
+        margin-left: auto;
+        padding-left: 1vw;
+    }
+ 
+    .ramo.esquerda {
+        margin-right: auto;
+        padding-right: 1vw;
+    }
+ 
+    .conector {
+        order: 0;
+        flex: 0 0 70px;
+    }
+ 
+    .card-dica,
+    .card-flutuante {
+        order: 0;
+    }
+ 
+    .ramo.esquerda .conector::before {
+        left: auto;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+ 
+    .card-dica {
+        padding: 2vw 2.2vw;
+        border-radius: 1.5rem;
+    }
+ 
+    .card-dica h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1vw;
+    }
+ 
+    .card-dica p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+ 
+    .card-flutuante {
+        padding: 1.8vw 2.2vw;
+        border-radius: 1.5rem;
+    }
 
     /*=== equilíbrio ===*/
 
