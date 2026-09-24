@@ -181,3 +181,161 @@ if (receitasGrid) {
         if (e.key === 'Escape') fecharModal();
     });
 }
+
+
+//Código da página Cardápio
+const cardapioData = {
+    segunda: {
+        kcalTotal: 1300,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 280, nome: 'Aveia com frutas e mel' },
+            almoco: { rotulo: 'Almoço', kcal: 520, nome: 'Arroz integral, feijão e salada' },
+            lanche: { rotulo: 'Lanche', kcal: 180, nome: 'Iogurte com granola caseira' },
+            jantar: { rotulo: 'Jantar', kcal: 320, nome: 'Sopa de legumes cremosa' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Arroz integral', qtd: '4 col. sopa' },
+            { nome: 'Frango grelhado', qtd: '120g' },
+            { nome: 'Legumes cozidos', qtd: '1 xícara' },
+            { nome: 'Frutas secas', qtd: '4 col. sopa' }
+        ]
+    },
+    terca: {
+        kcalTotal: 1210,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 250, nome: 'Pão integral com ovos' },
+            almoco: { rotulo: 'Almoço', kcal: 480, nome: 'Quinoa, frango e brócolis' },
+            lanche: { rotulo: 'Lanche', kcal: 150, nome: 'Mix de castanhas' },
+            jantar: { rotulo: 'Jantar', kcal: 330, nome: 'Omelete de legumes' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Quinoa cozida', qtd: '4 col. sopa' },
+            { nome: 'Frango desfiado', qtd: '100g' },
+            { nome: 'Brócolis cozido', qtd: '1 xícara' },
+            { nome: 'Azeite', qtd: '1 col. chá' }
+        ]
+    },
+    quarta: {
+        kcalTotal: 1340,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 300, nome: 'Vitamina de banana e aveia' },
+            almoco: { rotulo: 'Almoço', kcal: 540, nome: 'Batata doce, peixe e salada' },
+            lanche: { rotulo: 'Lanche', kcal: 170, nome: 'Iogurte com frutas vermelhas' },
+            jantar: { rotulo: 'Jantar', kcal: 330, nome: 'Sopa de abóbora' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Batata doce', qtd: '1 unidade média' },
+            { nome: 'Peixe grelhado', qtd: '120g' },
+            { nome: 'Salada verde', qtd: '1 prato pequeno' },
+            { nome: 'Azeite', qtd: '1 col. chá' }
+        ]
+    },
+       quinta: {
+        kcalTotal: 1230,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 270, nome: 'Crepioca com queijo e tomate' },
+            almoco: { rotulo: 'Almoço', kcal: 500, nome: 'Macarrão integral com frango e legumes' },
+            lanche: { rotulo: 'Lanche', kcal: 160, nome: 'Maçã com pasta de amendoim' },
+            jantar: { rotulo: 'Jantar', kcal: 300, nome: 'Wrap integral de atum com salada' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Macarrão integral', qtd: '3 col. sopa' },
+            { nome: 'Frango em cubos', qtd: '110g' },
+            { nome: 'Legumes refogados', qtd: '1 xícara' },
+            { nome: 'Azeite', qtd: '1 col. chá' }
+        ]
+    },
+    sexta: {
+        kcalTotal: 1290,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 260, nome: 'Panqueca de banana e aveia' },
+            almoco: { rotulo: 'Almoço', kcal: 530, nome: 'Arroz integral, lentilha e peixe assado' },
+            lanche: { rotulo: 'Lanche', kcal: 190, nome: 'Smoothie de frutas vermelhas' },
+            jantar: { rotulo: 'Jantar', kcal: 310, nome: 'Salada completa com grão-de-bico' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Arroz integral', qtd: '4 col. sopa' },
+            { nome: 'Lentilha cozida', qtd: '3 col. sopa' },
+            { nome: 'Peixe assado', qtd: '120g' },
+            { nome: 'Salada de folhas', qtd: '1 prato pequeno' }
+        ]
+    },
+    sabado: {
+        kcalTotal: 1410,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 310, nome: 'Ovos mexidos com abacate e torrada integral' },
+            almoco: { rotulo: 'Almoço', kcal: 560, nome: 'Strogonoff leve de frango com arroz e salada' },
+            lanche: { rotulo: 'Lanche', kcal: 200, nome: 'Barra de cereal caseira' },
+            jantar: { rotulo: 'Jantar', kcal: 340, nome: 'Pizza de frigideira com legumes' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Strogonoff de frango', qtd: '1 concha' },
+            { nome: 'Arroz integral', qtd: '4 col. sopa' },
+            { nome: 'Batata palha assada', qtd: '2 col. sopa' },
+            { nome: 'Salada de tomate', qtd: '1 prato pequeno' }
+        ]
+    },
+    domingo: {
+        kcalTotal: 1270,
+        refeicoes: {
+            cafe:   { rotulo: 'Café',   kcal: 290, nome: 'Panqueca integral com frutas' },
+            almoco: { rotulo: 'Almoço', kcal: 550, nome: 'Carne assada, purê de mandioquinha e salada' },
+            lanche: { rotulo: 'Lanche', kcal: 150, nome: 'Frutas picadas com chia' },
+            jantar: { rotulo: 'Jantar', kcal: 280, nome: 'Caldo verde leve' }
+        },
+        porcoesAlmoco: [
+            { nome: 'Carne assada', qtd: '110g' },
+            { nome: 'Purê de mandioquinha', qtd: '3 col. sopa' },
+            { nome: 'Salada verde', qtd: '1 prato pequeno' },
+            { nome: 'Azeite', qtd: '1 col. chá' }
+        ]
+    }
+};
+
+const diasLista = document.getElementById('diasLista');
+
+if (diasLista) {
+    const botoesDia = diasLista.querySelectorAll('.dia-btn');
+    const refeicoesGrid = document.getElementById('refeicoesGrid');
+    const porcoesLista = document.getElementById('porcoesLista');
+
+    function renderizarDia(dia) {
+        const dados = cardapioData[dia];
+
+        // Atualiza kcal total exibida em cada botão de dia
+        botoesDia.forEach(btn => {
+            const diaBtn = btn.dataset.dia;
+            btn.querySelector('.dia-kcal').textContent = `${cardapioData[diaBtn].kcalTotal} kcal totais`;
+            btn.classList.toggle('ativo', diaBtn === dia);
+        });
+
+        // Renderiza as 4 refeições
+        refeicoesGrid.innerHTML = '';
+        Object.values(dados.refeicoes).forEach(refeicao => {
+            const card = document.createElement('div');
+            card.className = 'refeicao-card';
+            card.innerHTML = `
+                <div class="refeicao-topo">
+                    <span class="refeicao-badge">${refeicao.rotulo}</span>
+                    <span class="refeicao-kcal">${refeicao.kcal} kcal</span>
+                </div>
+                <p class="refeicao-nome">${refeicao.nome}</p>
+            `;
+            refeicoesGrid.appendChild(card);
+        });
+
+        // Renderiza porções individuais (referentes ao almoço)
+        porcoesLista.innerHTML = '';
+        dados.porcoesAlmoco.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `<span>${item.nome}</span><span>${item.qtd}</span>`;
+            porcoesLista.appendChild(li);
+        });
+    }
+
+    botoesDia.forEach(btn => {
+        btn.addEventListener('click', () => renderizarDia(btn.dataset.dia));
+    });
+
+    renderizarDia('segunda');
+}

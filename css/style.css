@@ -879,82 +879,204 @@ section.dicas h1 {
 
 
 /*=== cardápio ===*/
-section.cardapio {
-    background-color: #FFE6C3;
+/*=== cardápio ===*/
+.cardapio {
+    background: linear-gradient(160deg, #FFD9A0, #FFE4BE);
+    padding: 6vw 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+/* Botão Personalizar Cardápio */
+.btn-personalizar {
+    display: block;
     text-align: center;
+    background: #2C3E1C;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 4vw;
+    margin-bottom: 4vw;
 }
 
-section.cardapio h1 {
-    font-size: 2rem;
-    color: #2C3E1C;
+/* Lista de dias */
+.dias-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    margin-bottom: 4vw;
+}
 
+.dia-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    color: #2C3E1C;
+    border: none;
+    border-radius: 20px;
+    padding: 3vw 4vw;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dia-nome {
+    font-weight: 700;
+}
+
+.dia-kcal {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.dia-btn.ativo {
+    background: #9AB17A;
+    color: #fff;
+}
+
+/* Porções individuais */
+.porcoes-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 4vw;
+}
+
+.porcoes-card h3 {
+    color: #2C3E1C;
+    margin-bottom: 2vw;
+}
+
+.porcoes-card ul {
+    list-style: none;
+}
+
+.porcoes-card li {
+    display: flex;
+    justify-content: space-between;
+    color: #395224;
+    padding: 2vw 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.porcoes-card li:last-child {
+    border-bottom: none;
+}
+
+/* Título e subtítulo */
+.cardapio-titulo {
+    text-align: center;
+    margin-bottom: 4vw;
+}
+
+.cardapio-titulo h1 {
+    color: #2C3E1C;
+    font-size: 1.8rem;
+    margin-bottom: 2vw;
+}
+
+.cardapio-titulo p {
+    color: #395224;
+    font-size: 0.9rem;
+}
+
+/* Grid de refeições */
+.refeicoes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    margin-bottom: 4vw;
+}
+
+.refeicao-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 4vw;
+}
+
+.refeicao-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.refeicao-badge {
+    background: #9AB17A;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vw 3vw;
+    border-radius: 20px;
+}
+
+.refeicao-kcal {
+    color: #2C3E1C;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.refeicao-nome {
+    color: #2C3E1C;
     font-weight: 600;
-    font-style: normal;
-    padding: 32px 20px 40px 20px;
-
 }
 
-.planejarrefeicoes {
-    color: #2C3E1C;
-    font-size: 1rem;
-
-    font-weight: 530;
-    font-style: normal;
-    padding: 0 20px 40px 20px;
-
+/* Dica do dia */
+.dica-dia {
+    background: #9AB17A;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5vw 4vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
 }
 
-.btncardapio {
-    padding: 32px 60px 32px 60px;
-    background-color: #2C3E1CCC;
-    ;
-    color: white;
-    border-radius: 47px;
-    margin: 0 0 40px 0;
+.dica-icone {
+    font-size: 1.5rem;
 }
 
-.selected {
+.dica-dia p {
+    font-size: 0.9rem;
+}
+.dias-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    margin-bottom: 4vw;
 
-    margin: 0 40px 0 40px;
-    padding: 25px;
-    background-color: #9AB17A;
-    color: white;
-    border-radius: 47px;
+    max-height: 16rem;          /* altura da área visível: ajuste como preferir */
+    overflow-y: auto;           /* rola só essa lista */
+    padding-right: 0.5rem;      /* espaço para a barra não colar nos botões */
+    overscroll-behavior: contain; /* não rola a página quando chega ao fim da lista */
+
+    scrollbar-width: thin;
+    scrollbar-color: #9AB17A transparent;
 }
 
-.cal {
-    padding: 5px;
+.dias-lista::-webkit-scrollbar {
+    width: 6px;
 }
 
-.dia {
-    padding: 5px;
-    font-weight: 850;
+.dias-lista::-webkit-scrollbar-thumb {
+    background: #9AB17A;
+    border-radius: 10px;
 }
 
-.unselected {
-    margin: 40px 40px 40px 40px;
-    padding: 25px;
-    background-color: white;
-    border-radius: 47px;
+.dias-lista::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-
-.Dica {
-    background-color: #9AB17A;
-    border-radius: 47px;
-    padding: 50px;
-    gap: 20px;
-
+/* Impede o botão de encolher dentro do container rolável */
+.dias-lista li {
+    flex-shrink: 0;
 }
-
-.Dica p {
-    color: #2C3E1C;
-}
-
-.Dica span {
-    font-weight: 800;
-}
-
 
 /*=== footer ===*/
 
@@ -1144,170 +1266,42 @@ footer nav a {
 
 
     /*=== cardápio ===*/
-    .cardapio {
-    background: linear-gradient(160deg, #FFD9A0, #FFE4BE);
-    padding: 6vw 4vw;
-    display: flex;
-    flex-direction: column;
-    gap: 5vw;
-}
+     .cardapio {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
 
-/* Botão Personalizar Cardápio */
-.btn-personalizar {
-    display: block;
-    text-align: center;
-    background: #2C3E1C;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 20px;
-    padding: 4vw;
-    margin-bottom: 4vw;
-}
+    .cardapio-sidebar {
+        width: 280px;
+        flex-shrink: 0;
+    }
 
-/* Lista de dias */
-.dias-lista {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 3vw;
-    margin-bottom: 4vw;
-}
+    .cardapio-content {
+        flex: 1;
+    }
 
-.dia-btn {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #fff;
-    color: #2C3E1C;
-    border: none;
-    border-radius: 20px;
-    padding: 3vw 4vw;
-    font-family: inherit;
-    cursor: pointer;
-    text-align: left;
-}
+    .refeicoes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
-.dia-nome {
-    font-weight: 700;
-}
+    .btn-personalizar,
+    .dia-btn,
+    .porcoes-card,
+    .refeicao-card,
+    .dica-dia {
+        padding: 1rem 1.2rem;
+    }
 
-.dia-kcal {
-    font-size: 0.8rem;
-    opacity: 0.8;
-}
+    .cardapio-titulo h1 {
+        font-size: 2.2rem;
+    }
+    .dias-lista {
+        max-height: 20rem;
+        gap: 0.8rem;
+    }
 
-.dia-btn.ativo {
-    background: #9AB17A;
-    color: #fff;
-}
-
-/* Porções individuais */
-.porcoes-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 4vw;
-}
-
-.porcoes-card h3 {
-    color: #2C3E1C;
-    margin-bottom: 2vw;
-}
-
-.porcoes-card ul {
-    list-style: none;
-}
-
-.porcoes-card li {
-    display: flex;
-    justify-content: space-between;
-    color: #395224;
-    padding: 2vw 0;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-}
-
-.porcoes-card li:last-child {
-    border-bottom: none;
-}
-
-/* Título e subtítulo */
-.cardapio-titulo {
-    text-align: center;
-    margin-bottom: 4vw;
-}
-
-.cardapio-titulo h1 {
-    color: #2C3E1C;
-    font-size: 1.8rem;
-    margin-bottom: 2vw;
-}
-
-.cardapio-titulo p {
-    color: #395224;
-    font-size: 0.9rem;
-}
-
-/* Grid de refeições */
-.refeicoes-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4vw;
-    margin-bottom: 4vw;
-}
-
-.refeicao-card {
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
-    padding: 4vw;
-}
-
-.refeicao-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2vw;
-}
-
-.refeicao-badge {
-    background: #9AB17A;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 1vw 3vw;
-    border-radius: 20px;
-}
-
-.refeicao-kcal {
-    color: #2C3E1C;
-    font-weight: 700;
-    font-size: 0.85rem;
-}
-
-.refeicao-nome {
-    color: #2C3E1C;
-    font-weight: 600;
-}
-
-/* Dica do dia */
-.dica-dia {
-    background: #9AB17A;
-    color: #fff;
-    border-radius: 20px;
-    padding: 5vw 4vw;
-    display: flex;
-    align-items: center;
-    gap: 3vw;
-}
-
-.dica-icone {
-    font-size: 1.5rem;
-}
-
-.dica-dia p {
-    font-size: 0.9rem;
-}
     /*=== footer ===*/
 
     footer {
