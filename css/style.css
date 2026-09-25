@@ -1293,9 +1293,13 @@ footer nav a {
     .dica-dia {
         padding: 1rem 1.2rem;
     }
-
+    .refeicao-badge{
+        font-size: 1rem;
+    }
     .cardapio-titulo h1 {
-        font-size: 2.2rem;
+        font-size: 3.2rem;
+        font-weight: 550;
+        
     }
     .dias-lista {
         max-height: 20rem;
